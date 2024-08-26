@@ -40,4 +40,9 @@ export default defineConfig({
       include: [],
     },
   },
+  server: {
+    hmr: {
+      overlay: false,
+    },
+  },
 });
