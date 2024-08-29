@@ -20,7 +20,7 @@ export function PageLayout({
   return (
     <>
       <Header cart={cart} isLoggedIn={isLoggedIn} />
-      <main className="flex-grow">{children}</main>
+      <main className="flex-grow mt-[69px]">{children}</main>
       <Footer />
     </>
   );

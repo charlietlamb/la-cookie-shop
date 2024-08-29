@@ -27,7 +27,6 @@ export default function Homepage() {
   const setBoxes = useSetAtom(boxesAtom);
   const setSelectedBox = useSetAtom(selectedBoxAtom);
   useEffect(() => {
-    console.log(boxes);
     setBoxes([
       boxes.products.nodes[0].variants.nodes[0],
       boxes.products.nodes[1].variants.nodes[0],

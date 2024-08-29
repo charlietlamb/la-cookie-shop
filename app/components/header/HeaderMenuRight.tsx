@@ -14,7 +14,7 @@ export function HeaderMenuRight({
   isLoggedIn: boolean;
 }) {
   return (
-    <nav className="border-sand flex items-center justify-end w-full gap-2 border-b">
+    <nav className="border-green flex items-center justify-end w-full gap-2 border-b">
       <HeaderLink to="/shop">Shop</HeaderLink>
       <CartSheet cart={cart} />
       <SearchSheet />

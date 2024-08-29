@@ -8,7 +8,7 @@ export default function HeaderPopover() {
     <Popover open={!!headerKey}>
       <PopoverTrigger />
       <PopoverContent
-        className="bg-white/80 backdrop-blur-sm border-sand ml-14 border rounded-none"
+        className="bg-white/80 backdrop-blur-sm border-green ml-14 border rounded-none"
         style={{width: 'calc(100vw - 112px)'}}
         side="bottom"
         sideOffset={28}

@@ -1,9 +1,7 @@
 import {
   bundleAtom,
   bundleQuantityAtom,
-  isPetiteBoxSelectedAtom,
-  MAX_GRANDE_QUANTITY,
-  MAX_PETITE_QUANTITY,
+  MAX_QUANTITY,
   selectedBoxAtom,
 } from '~/store/bundle';
 import {Button} from '../ui/button';
@@ -16,7 +14,6 @@ export default function BundleAddToCart() {
   const bundle = useAtomValue(bundleAtom);
   const selectedVariant = useAtomValue(selectedBoxAtom);
   const setCartOpen = useSetAtom(cartAtom);
-  const isPetiteBoxSelected = useAtomValue(isPetiteBoxSelectedAtom);
   const quantity = useAtomValue(bundleQuantityAtom);
 
   return (
@@ -46,11 +43,7 @@ export default function BundleAddToCart() {
       <Button
         variant="actionSandInverse"
         className="p-size mt-4"
-        disabled={
-          bundle.length === 0 ||
-          (isPetiteBoxSelected && quantity != MAX_PETITE_QUANTITY) ||
-          (!isPetiteBoxSelected && quantity != MAX_GRANDE_QUANTITY)
-        }
+        disabled={quantity != MAX_QUANTITY}
       >
         Add to cart
       </Button>

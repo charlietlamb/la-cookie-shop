@@ -4,7 +4,7 @@ export default function Logo() {
       <p className="whitespace-nowrap h3-size font-medium leading-none">
         La Cookie Shop
       </p>
-      <p className="p-size -mt-2 leading-none">Lisbon</p>
+      <p className="p-size italilc -mt-2 leading-none">Lisbon</p>
     </div>
   );
 }

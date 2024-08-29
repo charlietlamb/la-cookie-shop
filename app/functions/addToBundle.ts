@@ -7,10 +7,10 @@ export function addToBundle(
 ): BundleItem[] {
   console.log(bundle);
 
-  const existingItem = bundle.find((item) => item.cookie.id === cookie.id);
+  const existingItem = bundle.find((item) => item.cookie.name === cookie.name);
   if (existingItem) {
     return bundle.map((item) =>
-      item.cookie.id === cookie.id
+      item.cookie.name === cookie.name
         ? {...item, quantity: item.quantity + 1}
         : item,
     );

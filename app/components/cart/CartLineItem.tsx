@@ -28,7 +28,7 @@ export function CartLineItem({
     <li key={id} className="flex flex-col gap-2">
       <div className="flex gap-2">
         {image && (
-          <div className="border-brown group relative block h-full border">
+          <div className="border-green group relative block h-full border">
             <Image
               alt={title}
               data={image}
@@ -61,7 +61,7 @@ export function CartLineItem({
               }
             }}
           >
-            <p className="font-silk text-brown uppercase">{product.title}</p>
+            <p className="font-silk text-green uppercase">{product.title}</p>
           </Link>
           <ProductPrice price={line?.cost?.totalAmount} />
           <CartLineQuantity line={line} />
