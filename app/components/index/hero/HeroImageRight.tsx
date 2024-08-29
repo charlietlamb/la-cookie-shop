@@ -31,7 +31,7 @@ export default function HeroImageLeft() {
   }, [animate, scope]);
 
   return (
-    <div className="width-frame bottom-8 right-8 border-dark shadow-baseDark hover:translate-x-boxShadowX hover:translate-y-boxShadowY hover:shadow-none duration-600 absolute z-40 overflow-hidden transition-all border-2 rounded-none">
+    <div className="width-frame bottom-8 md:flex right-8 border-dark shadow-baseDark hover:translate-x-boxShadowX hover:translate-y-boxShadowY hover:shadow-none duration-600 absolute z-40 hidden overflow-hidden transition-all border-2 rounded-none">
       <img
         src="/images/cookie-dark-tea.jpeg"
         alt="Hero Image Left"

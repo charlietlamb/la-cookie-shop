@@ -40,9 +40,9 @@ module.exports = {
         boxShadowYSmall: '2px',
       },
       colors: {
-        green: '9FAD86',
+        green: '#9FAD86',
         brown: '#5E452A',
-        pink: 'E5C6B7',
+        pink: '#E5C6B7',
         oil: '#C3C8B6',
         sand: '#D3BF94',
         dark: '#231E1F',

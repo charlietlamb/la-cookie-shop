@@ -1,14 +1,9 @@
 import {headerAtom} from '~/store/header';
 import {Popover, PopoverContent, PopoverTrigger} from '../ui/popover';
 import {useAtom} from 'jotai';
-import {useEffect} from 'react';
 
 export default function HeaderPopover() {
   const [headerKey, setHeaderKey] = useAtom(headerAtom);
-  useEffect(() => {
-    console.log(headerKey);
-    console.log(!!headerKey);
-  }, [headerKey]);
   return (
     <Popover open={!!headerKey}>
       <PopoverTrigger />

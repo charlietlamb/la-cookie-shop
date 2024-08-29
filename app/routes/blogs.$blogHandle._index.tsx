@@ -66,9 +66,9 @@ export default function Blog() {
   const {articles} = blog;
 
   return (
-    <div className="blog">
+    <div className="native">
       <h1>{blog.title}</h1>
-      <div className="blog-grid">
+      <div className="child">
         <PaginatedResourceSection connection={articles}>
           {({node: article, index}) => (
             <ArticleItem

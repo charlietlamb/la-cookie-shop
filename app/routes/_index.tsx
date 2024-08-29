@@ -1,17 +1,10 @@
 import {defer, type LoaderFunctionArgs} from '@shopify/remix-oxygen';
-import {Await, useLoaderData, Link, type MetaFunction} from '@remix-run/react';
-import {Suspense} from 'react';
-import {Image, Money} from '@shopify/hydrogen';
-import type {
-  FeaturedCollectionFragment,
-  ProductFragment,
-  RecommendedProductsQuery,
-} from 'storefrontapi.generated';
+import {useLoaderData, type MetaFunction} from '@remix-run/react';
 import Index from '~/components/index/Index';
-import {COOKIES_QUERY} from '~/graphql/index/FeaturedProductsQuery';
+import {COLLECTION_QUERY} from '~/graphql/index/CollectionQuery';
 
 export const meta: MetaFunction = () => {
-  return [{title: 'Hydrogen | Home'}];
+  return [{title: 'La Cookie Shop'}];
 };
 
 export async function loader(args: LoaderFunctionArgs) {
@@ -33,17 +26,8 @@ async function loadCriticalData({context}: LoaderFunctionArgs) {
     context.storefront.query(FEATURED_COLLECTION_QUERY),
     // Add other queries here, so that they are loaded in parallel
   ]);
-  // const res = await context.storefront.query(COOKIES_QUERY, {
-  //   variables: {
-  //     collectionId: 'gid://shopify/Collection/278972268613',
-  //     country: context.storefront.i18n.country,
-  //     language: context.storefront.i18n.language,
-  //   },
-  // });
-  // if (!res.collection) throw new Error('No collection found...');
   return {
     featuredCollection: collections.nodes[0],
-    // cookies: res.collection.products.nodes as ProductFragment[],
   };
 }
 
@@ -68,7 +52,6 @@ function loadDeferredData({context}: LoaderFunctionArgs) {
 
 export default function Homepage() {
   const data = useLoaderData<typeof loader>();
-  console.log(data);
   return <Index />;
 }
 

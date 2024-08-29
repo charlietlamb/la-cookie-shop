@@ -31,7 +31,7 @@ export default function HeroImageLeft() {
   }, [animate, scope]);
 
   return (
-    <div className="width-frame overflow-hidden rounded-none z-20 top-[120px] absolute left-8 border-2 border-dark shadow-baseDark hover:translate-x-boxShadowX hover:translate-y-boxShadowY hover:shadow-none transition-all duration-600">
+    <div className="width-frame overflow-hidden hidden md:flex rounded-none z-40 top-[120px] absolute left-8 border-2 border-dark shadow-baseDark hover:translate-x-boxShadowX hover:translate-y-boxShadowY hover:shadow-none transition-all duration-600">
       <img
         src="/images/cookies-stack-mag.jpeg"
         alt="Hero Image Left"

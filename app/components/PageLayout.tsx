@@ -7,38 +7,21 @@ import {Footer} from '~/components/footer/Footer';
 import {Header} from '~/components/header/Header';
 
 interface PageLayoutProps {
-  cart: Promise<CartApiQueryFragment | null>;
-  footer: Promise<FooterQuery | null>;
-  header: HeaderQuery;
-  isLoggedIn: Promise<boolean>;
-  publicStoreDomain: string;
+  cart: CartApiQueryFragment | null;
+  isLoggedIn: boolean;
   children?: React.ReactNode;
 }
 
 export function PageLayout({
   cart,
   children = null,
-  footer,
-  header,
   isLoggedIn,
-  publicStoreDomain,
 }: PageLayoutProps) {
   return (
     <>
-      {header && (
-        <Header
-          header={header}
-          cart={cart}
-          isLoggedIn={isLoggedIn}
-          publicStoreDomain={publicStoreDomain}
-        />
-      )}
-      <main>{children}</main>
-      <Footer
-        footer={footer}
-        header={header}
-        publicStoreDomain={publicStoreDomain}
-      />
+      <Header cart={cart} isLoggedIn={isLoggedIn} />
+      <main className="flex-grow">{children}</main>
+      <Footer />
     </>
   );
 }

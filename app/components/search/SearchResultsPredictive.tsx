@@ -1,5 +1,6 @@
 import {Link, useFetcher, type Fetcher} from '@remix-run/react';
 import {Image, Money} from '@shopify/hydrogen';
+import {ServerCrash} from 'lucide-react';
 import React, {useRef, useEffect} from 'react';
 import {
   getEmptyPredictiveSearchResult,
@@ -283,9 +284,15 @@ function SearchResultsPredictiveEmpty({
   }
 
   return (
-    <p>
-      No results found for <q>{term.current}</q>
-    </p>
+    <div className="flex items-center justify-center gap-2">
+      <ServerCrash
+        strokeWidth={0.8}
+        className="text-brown size-10 flex-shrink-0"
+      />
+      <p className="font-silk">
+        Sorry, there was no results found for <q>{term.current}</q>
+      </p>
+    </div>
   );
 }
 

@@ -1,29 +1,30 @@
 import type {CartApiQueryFragment} from 'storefrontapi.generated';
-import type {CartLayout} from '~/components/CartMain';
 import {CartForm, Money, type OptimisticCart} from '@shopify/hydrogen';
+import {Separator} from '../ui/separator';
+import {Button} from '../ui/button';
+import {Input} from '../ui/input';
 
 type CartSummaryProps = {
   cart: OptimisticCart<CartApiQueryFragment | null>;
-  layout: CartLayout;
 };
 
-export function CartSummary({cart, layout}: CartSummaryProps) {
-  const className =
-    layout === 'page' ? 'cart-summary-page' : 'cart-summary-aside';
-
+export function CartSummary({cart}: CartSummaryProps) {
   return (
-    <div aria-labelledby="cart-summary" className={className}>
-      <h4>Totals</h4>
-      <dl className="cart-subtotal">
-        <dt>Subtotal</dt>
-        <dd>
-          {cart.cost?.subtotalAmount?.amount ? (
-            <Money data={cart.cost?.subtotalAmount} />
-          ) : (
-            '-'
-          )}
-        </dd>
-      </dl>
+    <div className="flex flex-col gap-2 mt-auto">
+      <Separator className="bg-brown mb-2" />
+      <div className="flex flex-col">
+        <h4 className="font-silk h4-size text-brown uppercase">Totals</h4>
+        <dl className="flex items-center gap-2">
+          <dt className="text-brown font-medium">Subtotal:</dt>
+          <dd className="font-silk mt-0.5">
+            {cart.cost?.subtotalAmount?.amount ? (
+              <Money data={cart.cost?.subtotalAmount} />
+            ) : (
+              '-'
+            )}
+          </dd>
+        </dl>
+      </div>
       <CartDiscounts discountCodes={cart.discountCodes} />
       <CartCheckoutActions checkoutUrl={cart.checkoutUrl} />
     </div>
@@ -33,12 +34,11 @@ function CartCheckoutActions({checkoutUrl}: {checkoutUrl?: string}) {
   if (!checkoutUrl) return null;
 
   return (
-    <div>
-      <a href={checkoutUrl} target="_self">
-        <p>Continue to Checkout &rarr;</p>
-      </a>
-      <br />
-    </div>
+    <a href={checkoutUrl} target="_self">
+      <Button variant="actionSand" className="w-full">
+        Continue to Checkout
+      </Button>
+    </a>
   );
 }
 
@@ -70,10 +70,11 @@ function CartDiscounts({
 
       {/* Show an input to apply a discount */}
       <UpdateDiscountForm discountCodes={codes}>
-        <div>
-          <input type="text" name="discountCode" placeholder="Discount code" />
-          &nbsp;
-          <button type="submit">Apply</button>
+        <div className="flex items-center gap-1">
+          <Input type="text" name="discountCode" placeholder="Discount code" />
+          <Button type="submit" variant="actionSandInverse">
+            Apply
+          </Button>
         </div>
       </UpdateDiscountForm>
     </div>

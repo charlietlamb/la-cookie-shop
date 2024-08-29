@@ -13,7 +13,7 @@ interface FooterProps {
 
 export function Footer() {
   return (
-    <footer className="bg-sand grid grid-cols-2 text-white">
+    <footer className="bg-sand grid grid-cols-3 py-8 text-white">
       <FooterBrand />
     </footer>
   );

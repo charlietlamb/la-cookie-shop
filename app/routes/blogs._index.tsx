@@ -51,9 +51,9 @@ export default function Blogs() {
   const {blogs} = useLoaderData<typeof loader>();
 
   return (
-    <div className="blogs">
+    <div className="native">
       <h1>Blogs</h1>
-      <div className="blogs-grid">
+      <div className="child">
         <PaginatedResourceSection connection={blogs}>
           {({node: blog}) => (
             <Link

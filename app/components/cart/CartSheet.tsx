@@ -5,12 +5,12 @@ import {ShoppingCart} from 'lucide-react';
 import {cartAtom} from '~/store/open';
 import {useAtom} from 'jotai';
 
-export default function CartSheet({cart}: {cart: CartApiQueryFragment}) {
+export default function CartSheet({cart}: {cart: CartApiQueryFragment | null}) {
   const [isOpen, setIsOpen] = useAtom(cartAtom);
   return (
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
       <SheetTrigger>
-        <ShoppingCart />
+        <ShoppingCart strokeWidth={1.5} className="text-brown mb-1" />
       </SheetTrigger>
       <SheetContent>
         <CartMain cart={cart} layout="aside" />

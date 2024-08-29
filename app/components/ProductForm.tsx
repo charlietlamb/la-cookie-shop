@@ -1,11 +1,12 @@
 import {Link} from '@remix-run/react';
 import {type VariantOption, VariantSelector} from '@shopify/hydrogen';
+import {useSetAtom} from 'jotai';
 import type {
   ProductFragment,
   ProductVariantFragment,
 } from 'storefrontapi.generated';
 import {AddToCartButton} from '~/components/AddToCartButton';
-import {useAside} from '~/components/Aside';
+import {cartAtom} from '~/store/open';
 
 export function ProductForm({
   product,
@@ -16,7 +17,7 @@ export function ProductForm({
   selectedVariant: ProductFragment['selectedVariant'];
   variants: Array<ProductVariantFragment>;
 }) {
-  const {open} = useAside();
+  const open = useSetAtom(cartAtom);
   return (
     <div className="product-form">
       <VariantSelector
@@ -30,7 +31,7 @@ export function ProductForm({
       <AddToCartButton
         disabled={!selectedVariant || !selectedVariant.availableForSale}
         onClick={() => {
-          open('cart');
+          open(true);
         }}
         lines={
           selectedVariant

@@ -16,6 +16,12 @@ export default async function handleRequest(
       checkoutDomain: context.env.PUBLIC_CHECKOUT_DOMAIN,
       storeDomain: context.env.PUBLIC_STORE_DOMAIN,
     },
+    defaultSrc: [
+      'https://rsms.me',
+      'https://cdn.shopify.com',
+      'https://shop.app',
+    ],
+    styleSrc: ['https://rsms.me'],
   });
 
   const body = await renderToReadableStream(

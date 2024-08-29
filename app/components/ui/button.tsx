@@ -12,20 +12,27 @@ const buttonVariants = cva(
         default:
           'bg-transparent border-2 rounded-xl border-brown text-brown hover:bg-brown/20 hover:rounded-lg',
         hero: 'bg-transparent font-inter uppercase border rounded-none font-[200] p-size border-brown text-brown hover:text-dark hover:border-dark hover:scale-105 duration-600',
+        actionSand:
+          'bg-transparent font-inter uppercase border rounded-none font-[200] border-sand text-sand hover:bg-sand hover:text-brown duration-600',
+        actionSandInverse:
+          'bg-sand font-inter uppercase border rounded-none font-[200] border-sand text-brown hover:bg-transparent hover:text-sand duration-600 hover:scale-y-105',
         destructive:
           'bg-destructive text-destructive-foreground hover:bg-destructive/90',
         outline:
           'border border-input bg-background hover:bg-accent hover:text-accent-foreground',
         secondary:
           'bg-secondary text-secondary-foreground hover:bg-secondary/80',
-        ghost: 'hover:bg-accent hover:text-accent-foreground',
+        ghost: 'text-sand',
+        ghostBrown: 'text-brown',
         link: 'text-primary underline-offset-4 hover:underline',
+        pointer: 'bg-transparent text-sand border-sand border',
       },
       size: {
         default: 'h-10 px-4 py-2',
         sm: 'h-9 rounded-md px-3',
         lg: 'h-11 rounded-md px-8',
         icon: 'h-10 w-10',
+        auto: 'w-auto h-auto',
       },
     },
     defaultVariants: {
