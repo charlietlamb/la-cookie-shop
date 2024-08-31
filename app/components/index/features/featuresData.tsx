@@ -1,29 +1,27 @@
-import {HeartHandshake} from 'lucide-react';
-
 export const featuresData = [
   {
-    title: 'Easy to use',
+    title: 'Artisanal Excellence',
     description:
-      'Our platform is designed to be user-friendly and easy to navigate.',
-    icon: <HeartHandshake strokeWidth={1.5} className="size-10" />,
+      'Our cookies are handcrafted with love, using only the finest ingredients sourced from local Portuguese markets.',
+    icon: '🍪',
   },
   {
-    title: 'Secure',
+    title: 'Lisbon-Inspired Flavors',
     description:
-      'Our platform is designed to be user-friendly and easy to navigate.',
-    icon: <HeartHandshake strokeWidth={1.5} className="size-10" />,
+      "Experience unique flavors inspired by Lisbon's rich culinary heritage, from Pastéis de Nata to Port Wine infusions.",
+    icon: '🇵🇹',
   },
   {
-    title: 'Secure',
+    title: 'Customizable Gift Boxes',
     description:
-      'Our platform is designed to be user-friendly and easy to navigate.',
-    icon: <HeartHandshake strokeWidth={1.5} className="size-10" />,
+      'Create your own bespoke cookie selection, perfect for gifts or indulging yourself in a moment of luxury.',
+    icon: '🎁',
   },
   {
-    title: 'Secure',
+    title: 'Cozy Tasting Experience',
     description:
-      'Our platform is designed to be user-friendly and easy to navigate.',
-    icon: <HeartHandshake strokeWidth={1.5} className="size-10" />,
+      'Visit our charming shop in the heart of Lisbon for a warm, inviting atmosphere and freshly baked treats.',
+    icon: '☕',
   },
 ];
 

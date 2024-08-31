@@ -72,7 +72,7 @@ function CartDiscounts({
       <UpdateDiscountForm discountCodes={codes}>
         <div className="flex items-center gap-1">
           <Input type="text" name="discountCode" placeholder="Discount code" />
-          <Button type="submit" variant="actionSandInverse">
+          <Button type="submit" variant="actionGreenInverse">
             Apply
           </Button>
         </div>

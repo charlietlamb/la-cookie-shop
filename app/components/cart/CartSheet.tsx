@@ -10,7 +10,7 @@ export default function CartSheet({cart}: {cart: CartApiQueryFragment | null}) {
   return (
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
       <SheetTrigger>
-        <ShoppingCart strokeWidth={1.5} className="text-brown mb-1" />
+        <ShoppingCart strokeWidth={1.5} />
       </SheetTrigger>
       <SheetContent>
         <CartMain cart={cart} layout="aside" />

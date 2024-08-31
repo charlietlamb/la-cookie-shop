@@ -61,7 +61,7 @@ export function CartLineItem({
               }
             }}
           >
-            <p className="font-silk text-green uppercase">{product.title}</p>
+            <p className="font-silk text-brown uppercase">{product.title}</p>
           </Link>
           <ProductPrice price={line?.cost?.totalAmount} />
           <CartLineQuantity line={line} />

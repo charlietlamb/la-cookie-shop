@@ -14,7 +14,7 @@ export default function HeaderLink({
     <Link
       to={to}
       className={cn(
-        'uppercase font-light font-silk leading-none text-lg',
+        'uppercase font-light font-silk leading-none lg:text-lg text-md whitespace-nowrap hover:text-green transition-colors duration-300',
         className,
       )}
     >

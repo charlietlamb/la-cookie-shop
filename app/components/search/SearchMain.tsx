@@ -23,7 +23,7 @@ export default function SearchMain() {
               ref={inputRef}
               type="search"
             />
-            <Button onClick={goToSearch} variant="actionSandInverse">
+            <Button onClick={goToSearch} variant="actionGreenInverse">
               <Search strokeWidth={1} />
             </Button>
           </div>
@@ -47,7 +47,7 @@ export default function SearchMain() {
           }
 
           return (
-            <div className="divide-sand flex flex-col divide-y">
+            <div className="divide-green flex flex-col divide-y">
               <SearchResultsPredictive.Queries
                 queries={queries}
                 inputRef={inputRef}
@@ -80,7 +80,7 @@ export default function SearchMain() {
                 >
                   <Button
                     className="text-md flex items-center w-full gap-2"
-                    variant="actionSandInverse"
+                    variant="actionGreenInverse"
                   >
                     View all results for <q>{term.current}</q>
                     <ArrowRight strokeWidth={1} />

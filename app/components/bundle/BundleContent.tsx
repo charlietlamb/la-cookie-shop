@@ -1,7 +1,7 @@
-import BundleAddToCart from './BundleAddToCart';
 import BundleSelectionOptions from './selection/BundleSelectionOptions';
 import BundleTitle from './BundleTitle';
 import BundleSummary from './summary/BundleSummary';
+import BundleAction from './action/BundleAction';
 
 export default function BundleContent() {
   return (
@@ -9,7 +9,7 @@ export default function BundleContent() {
       <BundleTitle />
       <BundleSelectionOptions />
       <BundleSummary />
-      <BundleAddToCart />
+      <BundleAction />
     </div>
   );
 }

@@ -14,8 +14,8 @@ const buttonVariants = cva(
         hero: 'bg-transparent font-inter uppercase border rounded-none font-[200] p-size border-brown text-brown hover:text-dark hover:border-dark hover:scale-105 duration-600',
         actionSand:
           'bg-transparent font-inter uppercase border rounded-none font-[200] border-sand text-sand hover:bg-sand hover:text-brown duration-600',
-        actionSandInverse:
-          'bg-sand font-inter uppercase border rounded-none font-[200] border-sand text-brown hover:bg-transparent hover:text-sand duration-600 hover:scale-y-105',
+        actionGreenInverse:
+          'bg-green font-inter uppercase border rounded-none font-[200] border-green text-white hover:bg-transparent hover:text-green duration-600',
         destructive:
           'bg-destructive text-destructive-foreground hover:bg-destructive/90',
         outline:
@@ -24,6 +24,8 @@ const buttonVariants = cva(
           'bg-secondary text-secondary-foreground hover:bg-secondary/80',
         ghost: 'text-sand',
         ghostBrown: 'text-brown',
+        green:
+          'bg-green text-white font-silk uppercase flex items-center leading-none',
         link: 'text-primary underline-offset-4 hover:underline',
         pointer: 'bg-transparent text-sand border-sand border',
       },

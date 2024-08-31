@@ -27,11 +27,12 @@ export default function FeaturesFeature({
       }}
       transition={{duration: 0.6}}
     >
-      {feature.icon}
+      <p className="h1-size">{feature.icon}</p>
       <div className="flex flex-col items-center">
-        <h3 className="font-silk h3-size capitalize">{feature.title}</h3>
-        <Separator className="w-full mt-auto" />
-        <p className="font-light text-center">{feature.description}</p>
+        <h3 className="font-silk h4-size text-brown text-center capitalize">
+          {feature.title}
+        </h3>
+        <p className="font-[200] text-center">{feature.description}</p>
       </div>
     </motion.div>
   );

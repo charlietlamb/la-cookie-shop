@@ -5,7 +5,9 @@ import {COLLECTION_QUERY} from '~/graphql/index/CollectionQuery';
 import {boxesAtom, selectedBoxAtom} from '~/store/bundle';
 import {useSetAtom} from 'jotai';
 import {useEffect} from 'react';
-
+import {PRODUCT_QUERY} from '~/routes/products.$handle';
+import {PRODUCT_SELLING_PLAN_QUERY} from '~/components/bundle/graphql/ProductSellingPlanQuery';
+import {ProductWithPlanFragment} from 'storefrontapi.generated';
 export const meta: MetaFunction = () => {
   return [{title: 'La Cookie Shop'}];
 };
@@ -13,25 +15,31 @@ export const meta: MetaFunction = () => {
 export async function loader({context}: LoaderFunctionArgs) {
   const {storefront} = context;
 
-  const {collection: boxes} = await storefront.query(COLLECTION_QUERY, {
+  const {product: petite} = await storefront.query(PRODUCT_SELLING_PLAN_QUERY, {
     variables: {
-      id: 'gid://shopify/Collection/279067820101',
+      handle: 'la-cookie-box-petite',
+      selectedOptions: [],
     },
   });
-  return defer({boxes});
+  const {product: grande} = await storefront.query(PRODUCT_SELLING_PLAN_QUERY, {
+    variables: {
+      handle: 'la-cookie-box-grande',
+      selectedOptions: [],
+    },
+  });
+  return defer({petite, grande});
 }
 
 export default function Homepage() {
-  const {boxes} = useLoaderData<typeof loader>();
-
+  const {petite, grande} = useLoaderData<typeof loader>();
   const setBoxes = useSetAtom(boxesAtom);
   const setSelectedBox = useSetAtom(selectedBoxAtom);
   useEffect(() => {
     setBoxes([
-      boxes.products.nodes[0].variants.nodes[0],
-      boxes.products.nodes[1].variants.nodes[0],
+      petite as ProductWithPlanFragment,
+      grande as ProductWithPlanFragment,
     ]);
-    setSelectedBox(boxes.products.nodes[0].variants.nodes[0]);
+    setSelectedBox(petite as ProductWithPlanFragment);
   }, []);
   return <Bundle />;
 }

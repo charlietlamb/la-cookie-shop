@@ -4,7 +4,10 @@ import Logo from '../brand/Logo';
 export default function HeaderLogo() {
   const navigate = useNavigate();
   return (
-    <div className="px-16 cursor-pointer" onClick={() => navigate('/')}>
+    <div
+      className="xl:px-16 lg:px-12 px-4 cursor-pointer"
+      onClick={() => navigate('/')}
+    >
       <Logo />
     </div>
   );

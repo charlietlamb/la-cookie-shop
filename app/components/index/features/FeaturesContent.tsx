@@ -1,4 +1,3 @@
-import {MotionValue} from 'framer-motion';
 import FeaturesFeatures from './FeaturesFeatures';
 import FeaturesTrustPilot from './FeaturesTrustPilot';
 

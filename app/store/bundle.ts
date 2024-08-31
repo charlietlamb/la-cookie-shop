@@ -1,7 +1,10 @@
 import {atom} from 'jotai';
 import {cookieData, CookieData} from '~/data/cookieData';
 import {atomWithLocalStorage} from './atomWithLocalStorage';
-import {ProductVariant} from '@shopify/hydrogen/storefront-api-types';
+import {
+  ProductVariantFragment,
+  ProductWithPlanFragment,
+} from 'storefrontapi.generated';
 
 export const bundleAtom = atomWithLocalStorage<BundleItem[]>('bundle', []);
 export const selectedCookieAtom = atomWithLocalStorage<CookieData>(
@@ -22,8 +25,12 @@ export const individualItemsAtom = atom<CookieData[]>((get) =>
   get(bundleAtom).flatMap((box) => Array(box.quantity).fill(box.cookie)),
 );
 
-export const boxesAtom = atom<ProductVariant[]>([]);
-export const selectedBoxAtom = atom<ProductVariant | null>(null);
+export const boxesAtom = atom<ProductWithPlanFragment[]>([]);
+export const selectedBoxAtom = atom<ProductWithPlanFragment | null>(null);
+export const selectedVariantAtom = atom<ProductVariantFragment | null>(
+  (get) => get(selectedBoxAtom)?.variants.nodes[0] ?? null,
+);
+
+export const subscriptionAtom = atom<boolean>(false);
 
 export const MAX_QUANTITY = 10;
-export const PETITE_BOX_ID = 'gid://shopify/ProductVariant/41776600481861';

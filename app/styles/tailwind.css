@@ -261,7 +261,7 @@
 }
 
 .predictive-search-result h5 {
-  @apply font-silk text-brown text-xl uppercase;
+  @apply font-silk text-green text-xl uppercase;
 }
 
 .predictive-search-result-item a {
@@ -277,5 +277,5 @@
 }
 
 .predictive-search-result-item a div span {
-  @apply text-base font-light;
+  @apply text-brown text-base font-light;
 }

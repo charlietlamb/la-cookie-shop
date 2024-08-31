@@ -1,7 +1,10 @@
-import {PRODUCT_VARIANTS_FRAGMENT} from '~/routes/products.$handle';
+import {
+  PRODUCT_FRAGMENT,
+  PRODUCT_VARIANTS_FRAGMENT,
+} from '~/routes/products.$handle';
 
 export const COLLECTION_QUERY = `#graphql
-  ${PRODUCT_VARIANTS_FRAGMENT}
+  ${PRODUCT_FRAGMENT}
   query CollectionQuery($id: ID!) {
     collection(id: $id) {
       id
@@ -9,7 +12,7 @@ export const COLLECTION_QUERY = `#graphql
       handle
       products(first: 4, reverse: true) {
         nodes {
-          ...ProductVariants
+          ...ProductFragment
         }
       }
     }
