@@ -1,4 +1,5 @@
 import {
+  boxesAtom,
   bundleAtom,
   bundleQuantityAtom,
   MAX_QUANTITY,
@@ -7,14 +8,15 @@ import {
   subscriptionAtom,
 } from '~/store/bundle';
 import {Button} from '../../ui/button';
-import {useAtomValue, useSetAtom} from 'jotai';
+import {useAtom, useAtomValue, useSetAtom} from 'jotai';
 import {AddToCartButton} from '../../AddToCartButton';
 import {cartAtom} from '~/store/open';
 import {getOrderDetails} from '~/functions/getOrderDetails';
 import {useEffect, useState} from 'react';
 
 export default function BundleAddToCart() {
-  const bundle = useAtomValue(bundleAtom);
+  const [bundle, setBundle] = useAtom(bundleAtom);
+  const boxes = useAtomValue(boxesAtom);
   const selectedVariant = useAtomValue(selectedVariantAtom);
   const selectedBox = useAtomValue(selectedBoxAtom);
   const setCartOpen = useSetAtom(cartAtom);
@@ -23,18 +25,16 @@ export default function BundleAddToCart() {
   const [sellingPlanId, setSellingPlanId] = useState(
     selectedBox?.sellingPlanGroups.nodes[0]?.sellingPlans.nodes[0]?.id,
   );
+  const [packaging, setPackaging] = useState(selectedBox?.title);
   useEffect(() => {
+    if (!selectedBox) return;
     setSellingPlanId(
       selectedBox?.sellingPlanGroups.nodes[subscription ? 1 : 0]?.sellingPlans
         .nodes[0]?.id,
     );
-    console.log('---');
-    console.log(selectedBox);
-    console.log(
-      selectedBox?.sellingPlanGroups.nodes[subscription ? 1 : 0]?.sellingPlans
-        .nodes[0]?.id,
-    );
+    setPackaging(selectedBox?.id == boxes[0].id ? 'Standard' : 'Luxury');
   }, [selectedBox, subscription]);
+  if (!selectedBox || !selectedVariant) return null;
   return (
     <AddToCartButton
       disabled={!selectedVariant || !selectedVariant.availableForSale}
@@ -52,6 +52,10 @@ export default function BundleAddToCart() {
                   {
                     key: 'Order Details',
                     value: getOrderDetails(bundle),
+                  },
+                  {
+                    key: 'Order Packaging',
+                    value: packaging ?? 'err: no packaging selected',
                   },
                   {
                     key: 'Order Type',

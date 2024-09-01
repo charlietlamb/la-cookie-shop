@@ -4,15 +4,19 @@ import {cn} from '~/lib/utils';
 
 export default function ProductSummary({
   attributes,
+  className,
+  start = false,
 }: {
   attributes: Pick<Attribute, 'key' | 'value'>[];
+  start?: boolean;
+  className?: string;
 }) {
   console.log(attributes);
   const orderDetails = attributes[0].value;
   if (!orderDetails) return 'No details found...';
   const orderDetailsArray = orderDetails.split(',');
   return (
-    <div className="font-silk grid grid-cols-2 gap-2 text-sm">
+    <div className={cn('font-silk grid grid-cols-2 gap-2 text-sm', className)}>
       {orderDetailsArray.map((detail, index) => (
         <div
           className={cn(
@@ -20,6 +24,7 @@ export default function ProductSummary({
             orderDetailsArray.length % 2 == 1 &&
               index == orderDetailsArray.length - 1 &&
               'col-span-2 justify-center',
+            start && 'justify-start',
           )}
           key={detail}
         >

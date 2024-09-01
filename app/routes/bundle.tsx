@@ -23,7 +23,7 @@ export async function loader({context}: LoaderFunctionArgs) {
   });
   const {product: grande} = await storefront.query(PRODUCT_SELLING_PLAN_QUERY, {
     variables: {
-      handle: 'la-cookie-box-grande',
+      handle: 'la-cookie-shop-box-grande',
       selectedOptions: [],
     },
   });

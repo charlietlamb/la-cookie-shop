@@ -21,22 +21,15 @@ export function CartLineItem({
   line: CartLine;
 }) {
   const {id, merchandise, attributes} = line;
-  const {product, title, image, selectedOptions} = merchandise;
+  const {product, title, image} = merchandise;
   const setCartOpen = useSetAtom(cartAtom);
 
   return (
     <li key={id} className="flex flex-col gap-2">
       <div className="flex gap-2">
         {image && (
-          <div className="border-green group relative block h-full border">
-            <Image
-              alt={title}
-              data={image}
-              height={100}
-              loading="lazy"
-              width={100}
-              className="aspect-square block"
-            />
+          <div className="group border-green w-32 !aspect-square relative flex items-center justify-center overflow-hidden border">
+            <Image alt={title} data={image} loading="lazy" />
 
             <div className="group-hover:flex bg-black/50 absolute inset-0 items-center justify-center hidden cursor-pointer">
               <CartForm

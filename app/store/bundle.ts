@@ -30,7 +30,6 @@ export const selectedBoxAtom = atom<ProductWithPlanFragment | null>(null);
 export const selectedVariantAtom = atom<ProductVariantFragment | null>(
   (get) => get(selectedBoxAtom)?.variants.nodes[0] ?? null,
 );
-
 export const subscriptionAtom = atom<boolean>(false);
 
 export const MAX_QUANTITY = 10;

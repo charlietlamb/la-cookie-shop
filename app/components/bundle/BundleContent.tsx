@@ -1,7 +1,10 @@
 import BundleSelectionOptions from './selection/BundleSelectionOptions';
 import BundleTitle from './BundleTitle';
 import BundleSummary from './summary/BundleSummary';
-import BundleAction from './action/BundleAction';
+import BundlePackaging from './packaging/BundlePackaging';
+import BundleOrderSummary from './orderSummary/BundleOrderSummary';
+import {BundlePlanSelector} from './plan/BundlePlanSelector';
+import BundleAddToCart from './action/BundleAddToCart';
 
 export default function BundleContent() {
   return (
@@ -9,7 +12,10 @@ export default function BundleContent() {
       <BundleTitle />
       <BundleSelectionOptions />
       <BundleSummary />
-      <BundleAction />
+      <BundlePackaging />
+      <BundlePlanSelector />
+      <BundleOrderSummary />
+      <BundleAddToCart />
     </div>
   );
 }

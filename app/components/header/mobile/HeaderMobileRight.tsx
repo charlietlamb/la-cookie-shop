@@ -9,7 +9,7 @@ export default function HeaderMobileRight({
 }) {
   return (
     <div className="flex items-center justify-end gap-2">
-      <CartSheet cart={cart} />
+      <CartSheet cart={cart} mobile />
       <SearchSheet />
     </div>
   );
