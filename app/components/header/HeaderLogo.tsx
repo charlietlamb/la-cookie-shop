@@ -5,7 +5,7 @@ export default function HeaderLogo() {
   const navigate = useNavigate();
   return (
     <div
-      className="xl:px-16 lg:px-12 px-4 cursor-pointer"
+      className="xl:px-16 lg:px-12 md:flex-grow-0 flex-grow px-4 cursor-pointer"
       onClick={() => navigate('/')}
     >
       <Logo />

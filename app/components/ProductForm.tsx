@@ -6,7 +6,7 @@ import type {
   ProductVariantFragment,
 } from 'storefrontapi.generated';
 import {AddToCartButton} from '~/components/AddToCartButton';
-import {cartAtom} from '~/store/open';
+import {useOpenStore} from '~/store/open';
 
 export function ProductForm({
   product,
@@ -17,7 +17,7 @@ export function ProductForm({
   selectedVariant: ProductFragment['selectedVariant'];
   variants: Array<ProductVariantFragment>;
 }) {
-  const open = useSetAtom(cartAtom);
+  const {setCartOpen} = useOpenStore();
   return (
     <div className="product-form">
       <VariantSelector
@@ -31,7 +31,7 @@ export function ProductForm({
       <AddToCartButton
         disabled={!selectedVariant || !selectedVariant.availableForSale}
         onClick={() => {
-          open(true);
+          setCartOpen(true);
         }}
         lines={
           selectedVariant

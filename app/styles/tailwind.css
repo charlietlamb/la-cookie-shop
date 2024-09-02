@@ -190,8 +190,12 @@
   @apply md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-4xl;
 }
 
+.hero-size {
+  @apply md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-3xl;
+}
+
 .h1-size {
-  @apply md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-2xl;
+  @apply md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-3xl;
 }
 
 .h2-size {

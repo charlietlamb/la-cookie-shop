@@ -4,19 +4,19 @@ export default function HeaderPopoverContent() {
   return (
     <div className="grid grid-cols-5 gap-4">
       <HeaderPopoverContentItem
-        to="/our-story"
+        to="/story"
         title="Our story"
         image="/images/cookie-mag-tea.jpeg"
         index={0}
       />
       <HeaderPopoverContentItem
-        to="/hostpitality"
-        title="Hostpitality"
+        to="/hospitality"
+        title="Hospitality"
         image="/images/cookie-bowl-tea.jpeg"
         index={1}
       />
       <HeaderPopoverContentItem
-        to="/corporate-gifting"
+        to="/corporate"
         title="Corporate"
         image="/images/cookie-hand.jpg"
         index={2}

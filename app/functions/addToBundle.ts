@@ -5,8 +5,6 @@ export function addToBundle(
   bundle: BundleItem[],
   cookie: CookieData,
 ): BundleItem[] {
-  console.log(bundle);
-
   const existingItem = bundle.find((item) => item.cookie.name === cookie.name);
   if (existingItem) {
     return bundle.map((item) =>

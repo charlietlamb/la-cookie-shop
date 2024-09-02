@@ -10,10 +10,10 @@ import OurCookiesCarouselItem from './OurCookiesCarouselItem';
 
 export default function OurCookiesCarousel() {
   return (
-    <Carousel className="md:hidden flex flex-col w-full">
+    <Carousel className="md:hidden padding-main flex flex-col w-full">
       <CarouselContent style={{width: 'calc(100%-40px)'}}>
-        {cookieData.map((cookie: CookieData) => (
-          <CarouselItem key={cookie.id}>
+        {cookieData.map((cookie: CookieData, index: number) => (
+          <CarouselItem key={cookie.name}>
             <OurCookiesCarouselItem cookie={cookie} />
           </CarouselItem>
         ))}

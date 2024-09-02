@@ -12,8 +12,10 @@ const buttonVariants = cva(
         default:
           'bg-transparent border-2 rounded-xl border-brown text-brown hover:bg-brown/20 hover:rounded-lg',
         hero: 'bg-transparent font-inter uppercase border rounded-none font-[200] p-size border-brown text-brown hover:text-dark hover:border-dark hover:scale-105 duration-600',
-        actionSand:
-          'bg-transparent font-inter uppercase border rounded-none font-[200] border-sand text-sand hover:bg-sand hover:text-brown duration-600',
+        actionGreen:
+          'bg-transparent font-inter uppercase border rounded-none font-[200] border-green text-green hover:bg-green hover:text-white duration-600',
+        actionWhite:
+          'bg-transparent font-inter uppercase border rounded-none font-[200] border-white text-white hover:bg-white hover:text-dark duration-600',
         actionGreenInverse:
           'bg-green font-inter uppercase border rounded-none font-[200] border-green text-white hover:bg-transparent hover:text-green duration-600',
         destructive:

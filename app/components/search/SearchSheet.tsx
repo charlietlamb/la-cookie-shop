@@ -1,13 +1,13 @@
 import {Sheet, SheetContent, SheetTrigger} from '../ui/sheet';
 import {useAtom} from 'jotai';
 import SearchMain from './SearchMain';
-import {searchAtom} from '~/store/open';
 import {Search} from 'lucide-react';
+import {useOpenStore} from '~/store/open';
 
 export default function SearchSheet() {
-  const [isOpen, setIsOpen] = useAtom(searchAtom);
+  const {searchOpen, setSearchOpen} = useOpenStore();
   return (
-    <Sheet open={isOpen} onOpenChange={setIsOpen}>
+    <Sheet open={searchOpen} onOpenChange={setSearchOpen}>
       <SheetTrigger>
         <Search strokeWidth={1.5} />
       </SheetTrigger>

@@ -11,7 +11,6 @@ export default function ProductSummary({
   start?: boolean;
   className?: string;
 }) {
-  console.log(attributes);
   const orderDetails = attributes[0].value;
   if (!orderDetails) return 'No details found...';
   const orderDetailsArray = orderDetails.split(',');

@@ -7,9 +7,9 @@ import {ProductPrice} from '../ProductPrice';
 import type {CartApiQueryFragment} from 'storefrontapi.generated';
 import ProductSummary from './ProductSummary';
 import {useSetAtom} from 'jotai';
-import {cartAtom} from '~/store/open';
 import {Trash2} from 'lucide-react';
 import {CartLineQuantity} from './CartLineQuantity';
+import {useOpenStore} from '~/store/open';
 
 type CartLine = OptimisticCartLine<CartApiQueryFragment>;
 
@@ -22,8 +22,7 @@ export function CartLineItem({
 }) {
   const {id, merchandise, attributes} = line;
   const {product, title, image} = merchandise;
-  const setCartOpen = useSetAtom(cartAtom);
-
+  const {setCartOpen} = useOpenStore();
   return (
     <li key={id} className="flex flex-col gap-2">
       <div className="flex gap-2">

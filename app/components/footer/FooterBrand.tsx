@@ -4,7 +4,7 @@ import Socials from '../brand/Socials';
 export default function FooterBrand() {
   return (
     <div className="flex flex-col items-center">
-      <Logo />
+      <Logo className="text-white" />
       <Socials />
     </div>
   );

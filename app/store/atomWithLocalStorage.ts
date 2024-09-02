@@ -25,7 +25,6 @@ export function atomWithLocalStorage<T>(key: string, initialValue: T) {
         typeof update === 'function'
           ? (update as (prev: T) => T)(get(baseAtom))
           : update;
-      console.log('setting');
       set(baseAtom, nextValue);
       if (typeof window !== 'undefined') {
         localStorage.setItem(key, JSON.stringify(nextValue));

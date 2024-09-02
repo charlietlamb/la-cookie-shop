@@ -5,7 +5,7 @@ import HeaderMobileMenu from './HeaderMobileMenu';
 export default function HeaderMobileLeft() {
   return (
     <Sheet>
-      <SheetTrigger>
+      <SheetTrigger className="md:hidden flex">
         <Menu strokeWidth={1.5} />
       </SheetTrigger>
       <SheetContent side="left" className="rounded-l-none rounded-r-lg">

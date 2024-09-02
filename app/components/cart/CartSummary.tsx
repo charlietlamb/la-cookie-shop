@@ -35,7 +35,7 @@ function CartCheckoutActions({checkoutUrl}: {checkoutUrl?: string}) {
 
   return (
     <a href={checkoutUrl} target="_self">
-      <Button variant="actionSand" className="w-full">
+      <Button variant="actionGreen" className="w-full">
         Continue to Checkout
       </Button>
     </a>

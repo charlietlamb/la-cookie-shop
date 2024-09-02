@@ -1,9 +1,8 @@
 import {useNavigate} from '@remix-run/react';
 import {CartMainProps} from './CartMain';
-import {useSetAtom} from 'jotai';
-import {cartAtom} from '~/store/open';
 import CookieButton from '../utils/CookieButton';
 import {AnimatePresence, motion} from 'framer-motion';
+import {useOpenStore} from '~/store/open';
 
 export default function CartEmpty({
   hidden = false,
@@ -11,8 +10,8 @@ export default function CartEmpty({
   hidden?: boolean;
   layout?: CartMainProps['layout'];
 }) {
-  const setCartOpen = useSetAtom(cartAtom);
   const navigate = useNavigate();
+  const {setCartOpen} = useOpenStore();
   return (
     <AnimatePresence>
       {!hidden && (
@@ -28,7 +27,7 @@ export default function CartEmpty({
             started!
           </p>
           <CookieButton
-            variant="actionSand"
+            variant="actionGreen"
             className="w-full"
             onClick={() => {
               setCartOpen(false);

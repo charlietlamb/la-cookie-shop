@@ -21,6 +21,7 @@ export type RootLoader = typeof loader;
 /**
  * This is important to avoid re-fetching root queries on sub-navigations
  */
+
 export const shouldRevalidate: ShouldRevalidateFunction = ({
   formMethod,
   currentUrl,
