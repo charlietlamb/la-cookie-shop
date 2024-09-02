@@ -7,6 +7,7 @@ import CartHeader from './CartHeader';
 import CartEmpty from './CartEmpty';
 import {useEffect, useRef} from 'react';
 import autoAnimate from '@formkit/auto-animate';
+import {CartLine} from '@shopify/hydrogen/storefront-api-types';
 
 export type CartLayout = 'page' | 'aside';
 
@@ -30,15 +31,19 @@ export function CartMain({layout, cart: originalCart}: CartMainProps) {
   useEffect(() => {
     parent.current && autoAnimate(parent.current);
   }, [parent]);
-
+  useEffect(() => {
+    console.log(cart);
+    console.log(cart?.lines?.nodes);
+  }, [cart]);
   return (
     <div className="flex flex-col h-full gap-2">
       <CartHeader count={cart?.totalQuantity} />
       <CartEmpty hidden={linesCount} layout={layout} />
       <ul ref={parent} className="flex flex-col gap-4 overflow-y-auto">
-        {(cart?.lines?.nodes ?? []).map((line) => (
-          <CartLineItem key={line.id} line={line} layout={layout} />
-        ))}
+        {(cart?.lines?.nodes ?? []).map((line) => {
+          if (line.id.includes('pending')) return;
+          return <CartLineItem key={line.id} line={line} layout={layout} />;
+        })}
       </ul>
       {cartHasItems && <CartSummary cart={cart} />}
     </div>

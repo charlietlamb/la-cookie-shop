@@ -2,7 +2,7 @@ import type {CartLineUpdateInput} from '@shopify/hydrogen/storefront-api-types';
 import type {CartLayout} from '~/components/cart/CartMain';
 import {CartForm, Image, type OptimisticCartLine} from '@shopify/hydrogen';
 import {useVariantUrl} from '~/lib/variants';
-import {Link} from '@remix-run/react';
+import {Link, useNavigate} from '@remix-run/react';
 import {ProductPrice} from '../ProductPrice';
 import type {CartApiQueryFragment} from 'storefrontapi.generated';
 import ProductSummary from './ProductSummary';
@@ -20,6 +20,7 @@ export function CartLineItem({
   layout: CartLayout;
   line: CartLine;
 }) {
+  console.log(line);
   const {id, merchandise, attributes} = line;
   const {product, title, image} = merchandise;
   const {setCartOpen} = useOpenStore();
@@ -59,7 +60,7 @@ export function CartLineItem({
           <CartLineQuantity line={line} />
         </div>
       </div>
-      <ProductSummary attributes={attributes} />
+      {attributes.length > 0 && <ProductSummary attributes={attributes} />}
     </li>
   );
 }
