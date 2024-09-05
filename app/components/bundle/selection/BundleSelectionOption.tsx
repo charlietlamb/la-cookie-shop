@@ -13,9 +13,17 @@ import {
 export default function BundleSelectionOption({
   cookie,
   index,
+  className,
+  disabled = false,
+  small = false,
+  hero = false,
 }: {
   cookie: CookieData;
   index: number;
+  disabled?: boolean;
+  small?: boolean;
+  className?: string;
+  hero?: boolean;
 }) {
   const [bundle, setBundle] = useAtom(bundleAtom);
   const quantity = useAtomValue(bundleQuantityAtom);
@@ -28,12 +36,31 @@ export default function BundleSelectionOption({
         cookieData.length % 2 === 1 &&
           cookieData[cookieData.length - 1].name === cookie.name &&
           'col-span-2',
+        className,
       )}
       initial={{opacity: 0, y: 50}}
       whileInView={{opacity: 1, y: 0}}
       viewport={{once: true, amount: 0.3}}
       transition={{duration: 0.6, delay: index * 0.1}}
       onClick={() => {
+        if (hero) {
+          const targetElement = document.getElementById(
+            `cookie-${cookie.name}`,
+          );
+          if (targetElement) {
+            targetElement.classList.add('scroll-mt-[100px]');
+            targetElement.scrollIntoView({
+              behavior: 'smooth',
+            });
+            // Optionally remove the class after scrolling
+            setTimeout(
+              () => targetElement.classList.remove('scroll-mt-[100px]'),
+              1000,
+            );
+          }
+          return;
+        }
+        if (disabled) return;
         setSelectedCookie(cookie);
         if (quantity >= MAX_QUANTITY) return;
         const newBundle = addToBundle(bundle, cookie);
@@ -47,10 +74,10 @@ export default function BundleSelectionOption({
         viewport={{once: true}}
         transition={{duration: 0.4, delay: index * 0.1 + 0.2}}
       >
-        <img width={150} src={cookie.image} alt={cookie.name} />
+        <img width={small ? 80 : 150} src={cookie.image} alt={cookie.name} />
       </motion.div>
       <motion.h5
-        className="h4-size font-silk"
+        className={cn('h4-size font-silk text-center', small && 'p-size')}
         initial={{opacity: 0}}
         whileInView={{opacity: 1}}
         viewport={{once: true}}
@@ -59,7 +86,7 @@ export default function BundleSelectionOption({
         {cookie.name}
       </motion.h5>
       <motion.p
-        className="text-sm font-light text-center"
+        className={cn('text-sm font-light text-center', small && 'text-xs')}
         initial={{opacity: 0}}
         whileInView={{opacity: 1}}
         viewport={{once: true}}

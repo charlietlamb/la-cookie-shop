@@ -3,7 +3,7 @@ import OurCookiesCarouselItem from './OurCookiesCarouselItem';
 
 export default function OurCookiesLayout() {
   return (
-    <div className="flex flex-col w-full gap-8">
+    <div className="padding-main flex flex-col w-full gap-8">
       {cookieData.map((cookie, index) => (
         <OurCookiesCarouselItem
           cookie={cookie}

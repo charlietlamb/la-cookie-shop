@@ -15,20 +15,20 @@ export default function StoryJourney() {
         Join Our Journey
       </h3>
       <p className="mb-6 text-lg font-light text-center">
-        From our humble beginnings in a Parisian kitchen to our current status
-        as a beloved European brand, every step of La Cookie Shop's journey has
-        been guided by our passion for creating joy through exceptional cookies.
-        But our story is far from over - in fact, we believe the best chapters
-        are yet to be written.
+        At La Cookie Shop, our story is still unfolding, and we want you to be
+        part of it. Every cookie we create, every flavor we explore, and every
+        new idea we bring to life is inspired by the joy we share with our
+        customers. Whether you're indulging in our classic creations or
+        discovering a new flavor profile for the first time, you're joining us
+        in a journey of culinary exploration and creativity.
       </p>
       <p className="mb-8 text-lg font-light text-center">
-        We invite you to be part of our ongoing story. Whether you're a
-        long-time fan or discovering us for the first time, every cookie you
-        enjoy, every visit you make to our shops, and every moment you share
-        with loved ones over our creations becomes a part of the La Cookie Shop
-        tale. Join us as we continue to explore new flavors, push the boundaries
-        of what a cookie can be, and spread happiness, one delicious bite at a
-        time.
+        We invite you to follow along as we continue to push the limits of what
+        a cookie can be. From seasonal flavors to special collaborations,
+        there's always something exciting on the horizon. Stay connected with
+        us, share your moments of cookie joy, and become part of the La Cookie
+        Shop family. Together, we'll continue spreading happiness, one delicious
+        bite at a time.
       </p>
       <motion.div
         className="flex justify-center"

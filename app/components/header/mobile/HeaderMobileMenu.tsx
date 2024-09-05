@@ -4,11 +4,12 @@ import {useAtomValue} from 'jotai';
 import OffersHeader from '~/components/offers/OffersHeader';
 import HeaderMobileMoreHeader from './HeaderMobileMoreHeader';
 import HeaderMobileMenuHeader from './HeaderMobileMenuHeader';
+import HeaderMobileMenuFooter from './HeaderMobileMenuFooter';
 
 export default function HeaderMobileMenu() {
   const header = useAtomValue(headerAtom);
   return (
-    <div className="flex flex-col w-full">
+    <div className="flex flex-col w-full overflow-y-auto">
       {header === '/offers' ? (
         <OffersHeader />
       ) : header === '/more' ? (
@@ -17,6 +18,7 @@ export default function HeaderMobileMenu() {
         <HeaderMobileMenuHeader />
       )}
       <HeaderMobileMenuContent />
+      <HeaderMobileMenuFooter />
     </div>
   );
 }

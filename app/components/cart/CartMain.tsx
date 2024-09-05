@@ -31,10 +31,6 @@ export function CartMain({layout, cart: originalCart}: CartMainProps) {
   useEffect(() => {
     parent.current && autoAnimate(parent.current);
   }, [parent]);
-  useEffect(() => {
-    console.log(cart);
-    console.log(cart?.lines?.nodes);
-  }, [cart]);
   return (
     <div className="flex flex-col h-full gap-2">
       <CartHeader count={cart?.totalQuantity} />

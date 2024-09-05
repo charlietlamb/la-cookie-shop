@@ -14,6 +14,7 @@ import StoryHeading from './StoryHeading';
 import StoryValues from './StoryValues';
 import StoryCommunity from './StoryCommunity';
 import StoryJourney from './StoryJourney';
+import StoryFounder from './StoryFounder';
 
 export default function Story() {
   return (
@@ -26,9 +27,9 @@ export default function Story() {
       >
         <StoryHeading />
         <StoryStart />
+        <StoryFounder />
         <StoryTabs />
         <StoryValues />
-        <StoryCommunity />
         <StoryJourney />
       </motion.div>
     </div>

@@ -180,3 +180,34 @@ button.reset:hover:not(:has(> *)) {
 .account-logout {
   display: inline-block;
 }
+
+.custom-shape-divider-top-1725546706 {
+  position: absolute;
+  top: 300px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1725546706 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 150px;
+}
+
+.custom-shape-divider-top-1725546706 .shape-fill {
+  fill: #e5c6b7;
+}
+
+.custom-shape-divider-top-1725546706.bundle {
+  position: absolute;
+  top: 400px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}

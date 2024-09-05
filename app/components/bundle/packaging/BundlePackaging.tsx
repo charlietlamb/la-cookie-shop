@@ -1,6 +1,7 @@
 import {AnimatePresence, motion} from 'framer-motion';
 import {useAtom, useAtomValue} from 'jotai';
 import {Gift, Plus} from 'lucide-react';
+import {RadioGroup, RadioGroupItem} from '~/components/ui/radio-group';
 import AnimatedCheck from '~/components/utils/AnimatedCheck';
 import {cn} from '~/lib/utils';
 import {boxesAtom, selectedBoxAtom} from '~/store/bundle';
@@ -27,8 +28,7 @@ export default function BundlePackaging() {
       whileInView="visible"
       viewport={{once: true, amount: 0.3}}
       className={cn(
-        'flex gap-2 items-center p-2 rounded-lg border border-green bg-white cursor-pointer hover:border-greenDark transition-all duration-300',
-        selectedBox.id === boxes[1].id && 'border-greenDark',
+        'flex gap-2 flex-col items-center mx-8 p-2 py-4 rounded-lg border border-green bg-white cursor-pointer transition-all duration-300',
       )}
       onClick={() => {
         if (selectedBox.id === boxes[1].id) {
@@ -38,48 +38,47 @@ export default function BundlePackaging() {
         }
       }}
     >
-      <motion.div variants={contentVariants}>
-        <Gift
-          strokeWidth={1}
-          className={cn(
-            'flex-shrink-0 w-10 h-10 transition-colors duration-1000',
-            selectedBox.id === boxes[1].id && 'text-pink',
-          )}
-        />
-      </motion.div>
-      <motion.div
-        variants={contentVariants}
-        className="flex flex-col w-full gap-1 pr-2"
+      <RadioGroup
+        value={selectedBox.id}
+        className="sm:grid-cols-2 grid w-full grid-cols-1"
       >
-        <div className="flex items-center justify-between w-full">
-          <h5 className="font-silk text-lg font-bold leading-none uppercase">
-            Luxury Packaging
-          </h5>
-          <AnimatePresence>
-            {selectedBox.id === boxes[0].id ? (
-              <motion.div
-                initial={{opacity: 0}}
-                animate={{opacity: 1}}
-                exit={{opacity: 0}}
-                transition={{duration: 0.6}}
-                className="flex items-center"
-              >
-                <Plus strokeWidth={1} className="flex-shrink-0 w-5 h-5 mb-1" />
-                <p className="font-silk">
-                  €
-                  {parseFloat(boxes[1].variants.nodes[0].price.amount) -
-                    parseFloat(boxes[0].variants.nodes[0].price.amount)}
-                </p>
-              </motion.div>
-            ) : (
-              <AnimatedCheck className="text-pink flex-shrink-0 w-6 h-6" />
-            )}
-          </AnimatePresence>
+        <div
+          className="sm:flex-col flex items-center justify-center gap-2"
+          onClick={() => setSelectedBox(boxes[0])}
+        >
+          <div className="flex items-center justify-center w-40 h-24 overflow-hidden">
+            <img src="/packaging/basic.png" alt="basic" />
+          </div>
+          <RadioGroupItem
+            className="text-green border-green"
+            value={boxes[0].id}
+            id={boxes[0].id}
+          />
         </div>
-        <p className="text-sm font-light leading-none">
-          Add luxury gift packaging to your bundle.
+        <div
+          className="sm:flex-col flex items-center justify-center gap-2"
+          onClick={() => setSelectedBox(boxes[1])}
+        >
+          <div className="flex items-center justify-center w-40 h-24 overflow-hidden">
+            <img src="/packaging/luxury.png" alt="luxury" />
+          </div>
+          <RadioGroupItem
+            className="text-green border-green"
+            value={boxes[1].id}
+            id={boxes[1].id}
+          />
+        </div>
+      </RadioGroup>
+      <div className="flex items-center justify-center gap-2">
+        <p className=" font-silk text-md leading-none">
+          Limited Edition Packaging (+€12)
         </p>
-      </motion.div>
+        <AnimatePresence>
+          {selectedBox.id === boxes[1].id && (
+            <AnimatedCheck className="flex-shrink-0 w-5 h-5" />
+          )}
+        </AnimatePresence>
+      </div>
     </motion.div>
   );
 }

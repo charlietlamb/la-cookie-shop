@@ -66,9 +66,7 @@ export default function Article() {
     <div className="native">
       <h1>{title}</h1>
 
-      <h4>
-        {publishedDate} &middot; {author?.name}
-      </h4>
+      <h4>{publishedDate}</h4>
       {image && <Image data={image} sizes="90vw" loading="eager" />}
       <div
         dangerouslySetInnerHTML={{__html: contentHtml}}

@@ -19,7 +19,7 @@ export default function BundleDisplay() {
     <AnimatePresence mode="wait">
       {selectedCookie && (
         <motion.div
-          className="sticky top-0 flex flex-col w-full h-full min-h-full"
+          className="md:sticky relative top-0 flex flex-col w-full h-full min-h-full"
           initial={{opacity: 0, y: 50}}
           animate={{opacity: 1, y: 0}}
           transition={{duration: 0.6}}

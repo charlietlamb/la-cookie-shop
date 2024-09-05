@@ -4,7 +4,7 @@ import {Separator} from '../ui/separator';
 export default function BundleTitle() {
   return (
     <motion.div
-      className="flex flex-col gap-2"
+      className="flex flex-col gap-2 px-8"
       initial={{opacity: 0, y: 20}}
       whileInView={{opacity: 1, y: 0}}
       viewport={{once: true, amount: 0.3}}

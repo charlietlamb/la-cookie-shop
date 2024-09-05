@@ -44,7 +44,7 @@ export default function BundleSummary() {
 
   return (
     <motion.div
-      className="flex flex-col gap-4 mt-4"
+      className="flex flex-col gap-4 px-8 mt-4"
       ref={parent}
       variants={containerVariants}
       initial="hidden"
@@ -53,7 +53,7 @@ export default function BundleSummary() {
     >
       <BundleSummaryHeader />
       <motion.div
-        className="md:grid-cols-5 grid grid-cols-3 gap-4 p-4 bg-white rounded-lg"
+        className="md:grid-cols-5 border-green grid grid-cols-3 gap-4 p-4 bg-white border rounded-lg"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"

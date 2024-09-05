@@ -18,6 +18,8 @@ const buttonVariants = cva(
           'bg-transparent font-inter uppercase border rounded-none font-[200] border-white text-white hover:bg-white hover:text-dark duration-600',
         actionGreenInverse:
           'bg-green font-inter uppercase border rounded-none font-[200] border-green text-white hover:bg-transparent hover:text-green duration-600',
+        actionDarkInverse:
+          'bg-dark font-inter uppercase border rounded-none font-[200] border-dark text-white hover:bg-transparent hover:text-dark duration-600',
         destructive:
           'bg-destructive text-destructive-foreground hover:bg-destructive/90',
         outline:
@@ -35,8 +37,10 @@ const buttonVariants = cva(
         default: 'h-10 px-4 py-2',
         sm: 'h-9 rounded-md px-3',
         lg: 'h-11 rounded-md px-8',
+        xl: 'lg:h-14 md:h-12 h-12 rounded-none px-10',
         icon: 'h-10 w-10',
         auto: 'w-auto h-auto',
+        black: 'h3-size px-8 py-4 rounded-none h-auto',
       },
     },
     defaultVariants: {

@@ -1,5 +1,6 @@
 import {motion} from 'framer-motion';
 import {useAtomValue} from 'jotai';
+import {useEffect, useState, useMemo} from 'react';
 import ProductSummary from '~/components/cart/ProductSummary';
 import {Separator} from '~/components/ui/separator';
 import {getOrderDetails} from '~/functions/getOrderDetails';
@@ -33,12 +34,31 @@ export default function BundleOrderSummary() {
   const subscription = useAtomValue(subscriptionAtom);
   const boxes = useAtomValue(boxesAtom);
   const selectedBox = useAtomValue(selectedBoxAtom);
+  const [luxuryPackaging, setLuxuryPackaging] = useState(
+    boxes[1]?.id === selectedBox?.id,
+  );
+
+  useEffect(() => {
+    setLuxuryPackaging(boxes[1]?.id === selectedBox?.id);
+  }, [boxes, selectedBox]);
+
+  const basePrice = useMemo(() => {
+    return parseFloat(selectedBox?.variants.nodes[0]?.price.amount || '0');
+  }, [selectedBox]);
+
+  const finalPrice = useMemo(() => {
+    let price = basePrice;
+    if (subscription) {
+      price *= 0.8; // 20% discount for subscription
+    }
+    return price;
+  }, [basePrice, luxuryPackaging, subscription]);
+
   if (!boxes || !selectedBox) return null;
-  const luxuryPackaging = boxes[1].id === selectedBox?.id;
 
   return (
     <motion.div
-      className="border-green flex flex-col items-center p-4 bg-white border rounded-lg"
+      className="border-green flex flex-col items-center p-4 mx-8 bg-white border rounded-lg"
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
@@ -72,6 +92,10 @@ export default function BundleOrderSummary() {
         </motion.div>
         <motion.div className="font-silk" variants={itemVariants}>
           Packaging: {luxuryPackaging ? 'Luxury' : 'Standard'}
+        </motion.div>
+        <motion.div className="font-silk" variants={itemVariants}>
+          Price: €{finalPrice.toFixed(2)}{' '}
+          {subscription && <span> / month</span>}
         </motion.div>
       </motion.div>
     </motion.div>
