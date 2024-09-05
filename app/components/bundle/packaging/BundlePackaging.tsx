@@ -28,8 +28,7 @@ export default function BundlePackaging() {
       whileInView="visible"
       viewport={{once: true, amount: 0.3}}
       className={cn(
-        'flex gap-2 flex-col items-center mx-8 p-2 py-4 rounded-lg border border-green bg-white cursor-pointer hover:border-greenDark transition-all duration-300',
-        selectedBox.id === boxes[1].id && 'border-greenDark',
+        'flex gap-2 flex-col items-center mx-8 p-2 py-4 rounded-lg border border-green bg-white cursor-pointer transition-all duration-300',
       )}
       onClick={() => {
         if (selectedBox.id === boxes[1].id) {

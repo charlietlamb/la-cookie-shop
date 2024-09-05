@@ -1,6 +1,6 @@
 import {motion} from 'framer-motion';
 
-export default function InfoGif() {
+export default function IndexCorporateImage() {
   return (
     <motion.div
       className="shadow-baseWhite lg:w-1/2 w-full overflow-hidden rounded-lg"
@@ -10,8 +10,8 @@ export default function InfoGif() {
       transition={{duration: 0.6, ease: 'easeOut'}}
     >
       <motion.img
-        src="/gifs/gif1.gif"
-        alt="gif"
+        src="/images/cookies-stack-mag.jpeg"
+        alt="cookies"
         initial={{opacity: 0, y: 20}}
         whileInView={{opacity: 1, y: 0}}
         viewport={{once: true, amount: 0.3}}

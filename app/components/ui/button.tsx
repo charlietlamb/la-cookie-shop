@@ -18,6 +18,8 @@ const buttonVariants = cva(
           'bg-transparent font-inter uppercase border rounded-none font-[200] border-white text-white hover:bg-white hover:text-dark duration-600',
         actionGreenInverse:
           'bg-green font-inter uppercase border rounded-none font-[200] border-green text-white hover:bg-transparent hover:text-green duration-600',
+        actionDarkInverse:
+          'bg-dark font-inter uppercase border rounded-none font-[200] border-dark text-white hover:bg-transparent hover:text-dark duration-600',
         destructive:
           'bg-destructive text-destructive-foreground hover:bg-destructive/90',
         outline:
