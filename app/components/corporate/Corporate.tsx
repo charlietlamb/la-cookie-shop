@@ -60,49 +60,110 @@ export default function Corporate() {
         </motion.div>
       </motion.section>
 
-      <Tabs defaultValue="team-building" className="padding-main w-full">
+      <Tabs defaultValue="corporate-gifting" className="padding-main w-full">
         <TabsList className="md:grid-cols-3 grid w-full grid-cols-1">
-          <TabsTrigger value="team-building" className="font-silk uppercase">
-            Team Building
-          </TabsTrigger>
-          <TabsTrigger value="client-events" className="font-silk uppercase">
-            Client Events
+          <TabsTrigger
+            value="corporate-gifting"
+            className="font-silk uppercase"
+          >
+            Corporate Gifting
           </TabsTrigger>
           <TabsTrigger value="custom-branding" className="font-silk uppercase">
             Custom Branding
           </TabsTrigger>
+          <TabsTrigger value="events" className="font-silk uppercase">
+            Events
+          </TabsTrigger>
         </TabsList>
-        <TabsContent value="team-building">
+        <TabsContent value="corporate-gifting">
           <CorporateCard
-            title="Cookie Crafting Workshops"
-            image="/images/cookie-mag-tea.jpeg"
-            content={[
-              `Boost team morale and creativity with our interactive cookie crafting workshops. Led by our expert bakers, these sessions provide a fun and delicious way for your team to bond and collaborate.`,
-              `Participants will learn the art of cookie decoration, fostering teamwork and communication skills while creating edible masterpieces. It's a sweet way to strengthen your team's connection and celebrate their achievements.`,
-            ]}
-          />
-        </TabsContent>
-        <TabsContent value="client-events">
-          <CorporateCard
-            title="Impress Your Clients"
+            title="Corporate Gifting & Events"
             image="/images/cookies-mag.jpeg"
             content={[
-              'Make your client meetings and appreciation events unforgettable with our gourmet cookie experiences. From elegant cookie and tea pairings to custom flavor creations, we offer unique ways to engage and delight your valued partners.',
-              'Our professional staff can curate a selection of cookies that complement your event theme or client preferences, ensuring a memorable and tasteful impression that sets your business apart.',
+              `Impress your clients, colleagues, and guests with the luxurious taste of La Cookie Shop. Our gourmet cookies make the perfect gift for corporate events, holiday celebrations, and special occasions, offering a sophisticated blend of indulgence and elegance that will leave a lasting impression.`,
+              `Each of our cookies is thoughtfully crafted with the finest ingredients, ensuring that every bite reflects the exceptional quality and attention to detail that defines our brand. From classic flavors to unique, signature creations, our cookies are designed to delight and elevate any occasion.`,
             ]}
           />
         </TabsContent>
         <TabsContent value="custom-branding">
           <CorporateCard
-            title="Branded Cookie Creations"
+            title="Custom Branding & Personalized Gift Boxes"
             image="/images/cookie-bowl.jpeg"
             content={[
-              `Extend your brand's reach with our custom-branded cookies. Whether for trade shows, product launches, or corporate gifts, our skilled artisans can create cookies featuring your logo, company colors, or product designs.`,
-              `These unique, edible branded items serve as delightful conversation starters and leave a lasting impression on clients and partners. Let us help you make your mark in the most delicious way possible.`,
+              `Looking to make an even bigger impact? We offer custom branding options to ensure your corporate gifts are as unique as your business. Our personalized gift boxes allow you to showcase your brand while treating your recipients to an unforgettable experience. Choose from a range of cookie flavors and premium packaging options, all adorned with your company's logo, colors, and messaging, to create a gift that is as thoughtful as it is delicious.`,
+              `Whether you're expressing gratitude to clients, celebrating milestones, or recognizing your team, our custom branding solutions ensure your gifts stand out and make a lasting impression.`,
+            ]}
+          />
+        </TabsContent>
+        <TabsContent value="events">
+          <CorporateCard
+            title="Sweet Additions to Your Events"
+            image="/images/cookie-mag-tea.jpeg"
+            content={[
+              `La Cookie Shop's cookies are a standout addition to any corporate event, meeting, or celebration. From elegant cookie platters to custom-branded packaging for favors or giveaways, we offer a variety of options to enhance your event and leave a memorable impression on attendees.`,
+              `Our cookies bring a touch of luxury and sophistication to any gathering, making them the perfect sweet treat for your next corporate function.`,
             ]}
           />
         </TabsContent>
       </Tabs>
+
+      <motion.section
+        initial={{opacity: 0, y: 50}}
+        whileInView={{opacity: 1, y: 0}}
+        viewport={{once: true, amount: 0.3}}
+        transition={{duration: 0.6}}
+        className="padding-main md:flex-row flex flex-col items-center gap-12 mt-16"
+      >
+        <motion.div
+          initial={{opacity: 0, scale: 0.9}}
+          whileInView={{opacity: 1, scale: 1}}
+          viewport={{once: true}}
+          transition={{duration: 0.6, delay: 0.3}}
+          className="md:w-1/2 w-full"
+        >
+          <img
+            src="/images/cookies-stack-mag.jpeg"
+            alt="Let's Create Something Special Together"
+            className="w-full h-auto rounded-lg shadow-lg"
+          />
+        </motion.div>
+        <motion.div
+          initial={{opacity: 0, x: 20}}
+          whileInView={{opacity: 1, x: 0}}
+          viewport={{once: true}}
+          transition={{duration: 0.6, delay: 0.6}}
+          className="md:w-1/2 w-full"
+        >
+          <h2 className="font-silk text-green mb-4 text-3xl uppercase">
+            Let's Create Something Special Together
+          </h2>
+          <motion.p
+            initial={{opacity: 0, y: 20}}
+            whileInView={{opacity: 1, y: 0}}
+            viewport={{once: true}}
+            transition={{duration: 0.6, delay: 0.9}}
+            className="mb-4 text-lg font-light"
+          >
+            At La Cookie Shop, we believe in making every corporate gifting and
+            event experience truly exceptional. Whether you need custom-branded
+            cookies for a large company-wide event or a few tailored gift boxes
+            for VIP clients, we're here to help.
+          </motion.p>
+          <motion.p
+            initial={{opacity: 0, y: 20}}
+            whileInView={{opacity: 1, y: 0}}
+            viewport={{once: true}}
+            transition={{duration: 0.6, delay: 1.2}}
+            className="text-lg font-light"
+          >
+            Contact us today at sales@lacookieshop.com to discuss how we can
+            create a custom package, complete with your branding, that perfectly
+            fits your vision and needs. Let us help you make your next corporate
+            gift or event unforgettable with the elegance, indulgence, and
+            personal touch of La Cookie Shop's gourmet cookies.
+          </motion.p>
+        </motion.div>
+      </motion.section>
     </div>
   );
 }

@@ -1,27 +1,27 @@
 export const featuresData = [
   {
-    title: 'Artisanal Excellence',
+    title: 'Health-Conscious Indulgence',
     description:
-      'Our cookies are handcrafted with love, using only the finest ingredients sourced from local Portuguese markets.',
+      'Enjoy the richness of gourmet cookies with less sugar and fat, delivering a balanced, guilt-free indulgence that never sacrifices flavor.',
     icon: '🍪',
   },
   {
-    title: 'Lisbon-Inspired Flavors',
+    title: 'Locally Sourced, Premium Ingredients',
     description:
-      "Experience unique flavors inspired by Lisbon's rich culinary heritage, from Pastéis de Nata to Port Wine infusions.",
+      'We pride ourselves on using the finest, locally sourced ingredients from our Portuguese farmers, ensuring every cookie is crafted with exceptional quality and care.',
     icon: '🇵🇹',
   },
   {
-    title: 'Customizable Gift Boxes',
+    title: 'Unique Parisian-Inspired Flavors',
+    description:
+      'Experience a fusion of Parisian elegance and bold flavors, with cookies inspired by iconic French desserts like Ispahan, creating a taste adventure in every bite.',
+    icon: '🍰',
+  },
+  {
+    title: 'Customisable Gift Boxes',
     description:
       'Create your own bespoke cookie selection, perfect for gifts or indulging yourself in a moment of luxury.',
     icon: '🎁',
-  },
-  {
-    title: 'Cozy Tasting Experience',
-    description:
-      'Visit our charming shop in the heart of Lisbon for a warm, inviting atmosphere and freshly baked treats.',
-    icon: '☕',
   },
 ];
 

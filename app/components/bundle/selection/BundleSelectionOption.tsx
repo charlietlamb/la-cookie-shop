@@ -16,12 +16,14 @@ export default function BundleSelectionOption({
   className,
   disabled = false,
   small = false,
+  hero = false,
 }: {
   cookie: CookieData;
   index: number;
   disabled?: boolean;
   small?: boolean;
   className?: string;
+  hero?: boolean;
 }) {
   const [bundle, setBundle] = useAtom(bundleAtom);
   const quantity = useAtomValue(bundleQuantityAtom);
@@ -41,6 +43,23 @@ export default function BundleSelectionOption({
       viewport={{once: true, amount: 0.3}}
       transition={{duration: 0.6, delay: index * 0.1}}
       onClick={() => {
+        if (hero) {
+          const targetElement = document.getElementById(
+            `cookie-${cookie.name}`,
+          );
+          if (targetElement) {
+            targetElement.classList.add('scroll-mt-[100px]');
+            targetElement.scrollIntoView({
+              behavior: 'smooth',
+            });
+            // Optionally remove the class after scrolling
+            setTimeout(
+              () => targetElement.classList.remove('scroll-mt-[100px]'),
+              1000,
+            );
+          }
+          return;
+        }
         if (disabled) return;
         setSelectedCookie(cookie);
         if (quantity >= MAX_QUANTITY) return;

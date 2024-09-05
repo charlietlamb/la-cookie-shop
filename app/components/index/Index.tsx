@@ -4,6 +4,7 @@ import Signature from '../signature/Signature';
 import Blog from './blog/Blog';
 import IndexCorporate from './corporate/IndexCorporate';
 import Features from './features/Features';
+import Flavours from './flavours/Flavours';
 import Hero from './hero/Hero';
 import Info from './info/Info';
 import OurCookies from './ourCookies/OurCookies';
@@ -17,8 +18,9 @@ export default function Index() {
       <Bundle className="py-16" index />
       <Signature />
       <IndexCorporate />
+      <OurCookies className="pb-16" index />
+      <Flavours />
       <Blog />
-      <OurCookies className="py-16" index />
       <Faq />
     </>
   );

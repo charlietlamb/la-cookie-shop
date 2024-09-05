@@ -6,6 +6,7 @@ import useSetHeaderOpen from '../utils/useSetHeaderOpen';
 import {cn} from '~/lib/utils';
 import Faq from '../faq/Faq';
 import Signature from '../signature/Signature';
+import BundleHero from './hero/BundleHero';
 
 export default function Bundle({
   className,
@@ -19,6 +20,7 @@ export default function Bundle({
   useSetHeaderOpen(setHeaderOpen, height);
   return (
     <div>
+      <BundleHero />
       <div
         className={cn(
           'padding-main bundle md:flex-row relative flex flex-col py-8 gap-4 md:gap-0',

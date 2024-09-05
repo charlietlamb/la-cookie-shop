@@ -6,6 +6,7 @@ import {useOpenStore} from '~/store/open';
 import useWindowDimensions from '~/components/utils/useWindowDimensions';
 import useSetHeaderOpen from '~/components/utils/useSetHeaderOpen';
 import Faq from '~/components/faq/Faq';
+import OurCookiesHero from './OurCookiesHero';
 
 export default function OurCookies({
   className,
@@ -20,12 +21,10 @@ export default function OurCookies({
   return (
     <div>
       <div
-        className={cn(
-          'flex flex-col items-center gap-12 pt-16 padding-main',
-          className,
-        )}
+        className={cn('flex flex-col items-center gap-12 relative', className)}
       >
-        <OurCookiesTitle />
+        <OurCookiesHero />
+        {/* <OurCookiesTitle /> */}
         <OurCookiesLayout />
       </div>
       {!index && <Faq />}

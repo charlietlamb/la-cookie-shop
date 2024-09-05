@@ -24,26 +24,28 @@ export default function StoryStart() {
       >
         <h3 className="font-silk text-green mb-4 text-3xl">Our Beginnings</h3>
         <p className="mb-4 text-lg font-light">
-          La Cookie Shop's journey began in a small Parisian kitchen, where our
-          founder, Marie, experimented with combining classic American cookie
-          recipes with refined European patisserie techniques. Inspired by her
-          travels and culinary training, Marie set out to create cookies that
-          were not just treats, but experiences.
+          La Cookie Shop was founded on the idea that a cookie can be more than
+          just a treat—it can be a luxurious experience. This vision first took
+          shape during a trip to Paris when Britt encountered the famous Ispahan
+          dessert by Pierre Hermé. The delicate blend of rose, raspberries, and
+          lychee inspired Britt to reimagine these refined flavors in a more
+          accessible format. Why couldn't such an elegant dessert be enjoyed on
+          the go, without the need for a knife and fork?
         </p>
         <p className="mb-4 text-lg font-light">
-          What started as a passion project quickly gained a following. Word
-          spread about these unique cookies that offered the comforting
-          familiarity of American classics with the elegance and complexity of
-          French pastries. Before long, La Cookie Shop had outgrown Marie's
-          kitchen and found its first home in a charming storefront in the heart
-          of Paris.
+          Returning home to Lisbon, Britt set out to create a cookie that would
+          embody the same sophistication and bold flavors as the Ispahan
+          dessert, but with the satisfying chew and convenience of an
+          American-style cookie. The result was the Rose Berry cookie—a
+          delectable fusion of rose, strawberries, raspberries, and
+          lychee-infused white chocolate, encapsulating the perfect balance of
+          elegance and comfort.
         </p>
         <p className="text-lg font-light">
-          Today, La Cookie Shop has grown into a beloved brand with multiple
-          locations across Europe, but our commitment to quality, innovation,
-          and the simple joy of a perfect cookie remains unchanged. Each bite is
-          a testament to our journey and the fusion of cultures that inspired
-          our creation.
+          This was just the beginning. At La Cookie Shop, Britt continues to
+          push the boundaries of flavor, crafting cookies that are not only
+          delicious but also thoughtful, innovative, and deeply inspired by her
+          love of luxury and gourmet cuisine.
         </p>
       </motion.div>
     </motion.section>

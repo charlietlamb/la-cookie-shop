@@ -15,5 +15,5 @@ export async function loader(args: LoaderFunctionArgs) {
 }
 
 export default function Homepage() {
-  return <OurCookies className="py-16" />;
+  return <OurCookies />;
 }

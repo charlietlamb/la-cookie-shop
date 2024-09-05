@@ -1,23 +1,44 @@
 import {useNavigate} from '@remix-run/react';
 import {Button} from '~/components/ui/button';
 import {motion} from 'framer-motion';
+import {Separator} from '~/components/ui/separator';
+import {separatorVariants} from '../ourCookies/OurCookiesTitle';
 
 export default function Blog() {
   const navigate = useNavigate();
 
   return (
-    <motion.div className="padding-main flex flex-col items-center gap-8 py-16">
+    <motion.div className="padding-main md:gap-8 flex flex-col items-center gap-4 py-16">
       <motion.h3
-        className="title-size font-silk text-center"
+        className="title-size font-silk text-center uppercase"
         initial={{opacity: 0, y: 20}}
         whileInView={{opacity: 1, y: 0}}
         viewport={{once: true}}
         transition={{duration: 0.6, ease: 'easeOut', delay: 0.2}}
       >
-        Blog
+        Our Blog
       </motion.h3>
       <motion.div
-        className="md:grid-cols-2 grid grid-cols-1 gap-8"
+        initial="hidden"
+        animate="visible"
+        variants={separatorVariants}
+        className="w-full"
+      >
+        <Separator className="bg-dark mb-2" />
+      </motion.div>
+      <motion.p
+        className="md:max-w-[50%] pb-8 font-light text-center"
+        initial={{opacity: 0, y: 20}}
+        whileInView={{opacity: 1, y: 0}}
+        viewport={{once: true}}
+        transition={{duration: 0.6, ease: 'easeOut', delay: 0.2}}
+      >
+        Discover the art of gourmet cookies, culinary inspiration, and the
+        latest from La Cookie Shop with our blog – your source for
+        behind-the-scenes stories, seasonal flavors, and expert tips.
+      </motion.p>
+      <motion.div
+        className="md:grid-cols-2 grid grid-cols-1 gap-16"
         initial={{opacity: 0, y: 20}}
         whileInView={{opacity: 1, y: 0}}
         viewport={{once: true}}

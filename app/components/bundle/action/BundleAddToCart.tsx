@@ -112,7 +112,9 @@ export default function BundleAddToCart() {
             )}
             disabled={quantity != MAX_QUANTITY}
           >
-            {quantity == MAX_QUANTITY ? 'Add to cart' : 'Add more cookies'}
+            {quantity == MAX_QUANTITY
+              ? `Add to cart €${selectedVariant.price.amount}`
+              : 'Add more cookies'}
           </Button>
         </motion.div>
       </AddToCartButton>
