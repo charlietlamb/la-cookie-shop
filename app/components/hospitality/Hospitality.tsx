@@ -64,15 +64,39 @@ export default function Hospitality() {
       </motion.section>
 
       <Tabs defaultValue="in-store" className="padding-main w-full">
-        <TabsList className="md:grid-cols-3 grid w-full grid-cols-1">
-          <TabsTrigger value="in-store" className="font-silk uppercase">
+        <TabsList className="grid w-full grid-cols-3">
+          <TabsTrigger
+            value="in-store"
+            className="font-silk md:hidden uppercase"
+          >
+            Fresh
+          </TabsTrigger>
+          <TabsTrigger
+            value="in-store"
+            className="font-silk md:block hidden uppercase"
+          >
             Freshly Baked on Premises
           </TabsTrigger>
-          <TabsTrigger value="events" className="font-silk uppercase">
+          <TabsTrigger value="events" className="font-silk md:hidden uppercase">
+            Events
+          </TabsTrigger>
+          <TabsTrigger
+            value="events"
+            className="font-silk md:block hidden uppercase"
+          >
             Events & Catering
           </TabsTrigger>
-          <TabsTrigger value="corporate" className="font-silk uppercase">
+          <TabsTrigger
+            value="corporate"
+            className="font-silk md:block hidden uppercase"
+          >
             Corporate Gifting
+          </TabsTrigger>
+          <TabsTrigger
+            value="corporate"
+            className="font-silk md:hidden uppercase"
+          >
+            Corporate
           </TabsTrigger>
         </TabsList>
         <TabsContent value="in-store">

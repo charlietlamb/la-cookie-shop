@@ -21,11 +21,12 @@ export default function CookieButton({
   return (
     <Button
       variant={variant as ButtonProps['variant']}
-      className={cn('group gap-1', className)}
+      className={cn('group gap-1 p-2', className)}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       onClick={onClick}
       disabled={disabled}
+      size="auto"
     >
       {children}
       <AnimatePresence>

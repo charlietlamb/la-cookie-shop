@@ -1666,6 +1666,14 @@ body {
   width: 40%;
 }
 
+.w-\[200px\] {
+  width: 200px;
+}
+
+.w-\[300px\] {
+  width: 300px;
+}
+
 .min-w-0 {
   min-width: 0px;
 }
@@ -4807,6 +4815,14 @@ body {
     top: 0px;
   }
 
+  .md\:col-span-1 {
+    grid-column: span 1 / span 1;
+  }
+
+  .md\:mb-6 {
+    margin-bottom: 1.5rem;
+  }
+
   .md\:block {
     display: block;
   }
@@ -4867,6 +4883,10 @@ body {
     width: 50%;
   }
 
+  .md\:w-\[400px\] {
+    width: 400px;
+  }
+
   .md\:min-w-60 {
     min-width: 15rem;
   }
@@ -4923,6 +4943,10 @@ body {
     gap: 4rem;
   }
 
+  .md\:gap-6 {
+    gap: 1.5rem;
+  }
+
   .md\:whitespace-nowrap {
     white-space: nowrap;
   }
@@ -4939,6 +4963,11 @@ body {
   .md\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  .md\:py-16 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
 
   .md\:pb-1 {

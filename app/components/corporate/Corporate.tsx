@@ -61,15 +61,30 @@ export default function Corporate() {
       </motion.section>
 
       <Tabs defaultValue="corporate-gifting" className="padding-main w-full">
-        <TabsList className="md:grid-cols-3 grid w-full grid-cols-1">
+        <TabsList className="grid w-full grid-cols-3">
           <TabsTrigger
             value="corporate-gifting"
-            className="font-silk uppercase"
+            className="font-silk md:hidden uppercase"
+          >
+            Gifting
+          </TabsTrigger>
+          <TabsTrigger
+            value="corporate-gifting"
+            className="font-silk md:block hidden uppercase"
           >
             Corporate Gifting
           </TabsTrigger>
-          <TabsTrigger value="custom-branding" className="font-silk uppercase">
+          <TabsTrigger
+            value="custom-branding"
+            className="font-silk md:block hidden uppercase"
+          >
             Custom Branding
+          </TabsTrigger>
+          <TabsTrigger
+            value="custom-branding"
+            className="font-silk md: uppercase"
+          >
+            Branding
           </TabsTrigger>
           <TabsTrigger value="events" className="font-silk uppercase">
             Events

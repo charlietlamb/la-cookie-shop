@@ -47,9 +47,9 @@ export default function IndexCorporateText() {
       >
         <Button
           variant="actionDarkInverse"
-          size="xl"
+          size="auto"
           onClick={() => navigate('/corporate')}
-          className="h2-size rounded-none"
+          className="h2-size p-2 rounded-none"
         >
           Corporate Gifting & Events
         </Button>

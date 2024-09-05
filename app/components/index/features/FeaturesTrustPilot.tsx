@@ -2,7 +2,7 @@ import {motion} from 'framer-motion';
 export default function FeaturesTrustPilot() {
   return (
     <motion.div
-      className="flex items-center justify-center w-full gap-4"
+      className="md:flex-row flex flex-col items-center justify-center w-full gap-4"
       initial={{opacity: 0, y: 50}}
       animate={{
         opacity: 1,

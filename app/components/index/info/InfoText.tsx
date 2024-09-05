@@ -48,9 +48,9 @@ export default function InfoText() {
       >
         <Button
           variant="actionDarkInverse"
-          size="xl"
+          size="auto"
           onClick={() => navigate('/story')}
-          className="h2-size rounded-none"
+          className="h2-size p-2 rounded-none"
         >
           Our Story
         </Button>

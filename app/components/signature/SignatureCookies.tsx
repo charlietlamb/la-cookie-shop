@@ -6,18 +6,15 @@ export default function SignatureCookies({
   hero = false,
   className,
   flavours = false,
+  bundle = false,
 }: {
   hero?: boolean;
   className?: string;
   flavours?: boolean;
+  bundle?: boolean;
 }) {
   return (
-    <div
-      className={cn(
-        'lg:grid-cols-5 md:grid-cols-6 grid grid-cols-1 gap-2',
-        className,
-      )}
-    >
+    <div className={cn('lg:grid-cols-5 grid-cols-6 grid  gap-2', className)}>
       {cookieData.map((cookie, index) => (
         <BundleSelectionOption
           key={cookie.name}
@@ -26,10 +23,11 @@ export default function SignatureCookies({
           hero={hero}
           index={index}
           className={cn(
-            'w-full col-span-2 lg:col-span-1 cursor-default',
+            'w-full col-span-2 lg:col-span-1 cursor-default flex flex-col justify-start',
             index > 2 && 'col-span-3 lg:col-span-1',
-            hero && 'cursor-pointer',
+            hero && 'cursor-pointer flex flex-col justify-start',
             flavours && 'flex flex-col justify-start',
+            bundle && 'flex flex-col justify-start',
           )}
           small
         />

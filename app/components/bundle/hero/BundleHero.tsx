@@ -21,7 +21,7 @@ export default function OurCookiesHero() {
           </motion.h1>
           <img width={150} src="/logo/logo.PNG" alt="logo" />
         </div>
-        <SignatureCookies />
+        <SignatureCookies bundle />
       </div>
     </div>
   );

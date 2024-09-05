@@ -12,13 +12,13 @@ export default function HeaderMobileMenuMore() {
     >
       <HeaderMobileBack />
       <HeaderPopoverContentItem
-        to="/our-story"
+        to="/story"
         title="Our story"
         image="/images/cookie-mag-tea.jpeg"
         index={0}
       />
       <HeaderPopoverContentItem
-        to="/hostpitality"
+        to="/hospitality"
         title="Hostpitality"
         image="/images/cookie-bowl-tea.jpeg"
         index={1}
