@@ -30,7 +30,6 @@ export default function Story() {
         <StoryFounder />
         <StoryTabs />
         <StoryValues />
-        <StoryCommunity />
         <StoryJourney />
       </motion.div>
     </div>

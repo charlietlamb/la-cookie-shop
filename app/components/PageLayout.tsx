@@ -16,7 +16,7 @@ export function PageLayout({
   return (
     <>
       <Header cart={cart} isLoggedIn={isLoggedIn} />
-      <main className="flex-grow mt-[60px] lg:mt-[72px] xl:mt-[80px]">
+      <main className="relative flex-grow mt-[60px] lg:mt-[72px] xl:mt-[80px]">
         {children}
       </main>
       <Footer />

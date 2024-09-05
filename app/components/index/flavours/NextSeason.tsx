@@ -12,7 +12,7 @@ export default function NextSeason() {
           )}
         >
           <Cookie key={index} className="w-20 h-20" strokeWidth={1} />
-          <p className="font-silk text-xl">??</p>
+          <p className="font-silk text-xl">?</p>
         </div>
       ))}
     </div>

@@ -35,7 +35,7 @@ export default function Signature() {
         <SignatureText />
       </motion.div>
       <motion.div
-        className="lg:w-1/2 flex flex-col justify-start w-full gap-4"
+        className="lg:w-1/2 flex flex-col items-center justify-start w-full gap-4"
         variants={itemVariants}
       >
         <motion.div variants={itemVariants}>

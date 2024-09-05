@@ -6,6 +6,13 @@ import {separatorVariants} from '../ourCookies/OurCookiesTitle';
 
 export default function Blog() {
   const navigate = useNavigate();
+  const descriptions = new Map([
+    [
+      'Pairings',
+      'How to pair cookies with unique flavour combinations, such as wine, cheese and tea.',
+    ],
+    ['Lifestyle', 'What is the right occasion for each cookie?'],
+  ]);
 
   return (
     <motion.div className="padding-main md:gap-8 flex flex-col items-center gap-4 py-16">
@@ -86,6 +93,19 @@ export default function Blog() {
             >
               {category}
             </motion.h4>
+            <motion.p
+              className="font-silk text-center max-w-[70%]"
+              initial={{opacity: 0, y: 20}}
+              whileInView={{opacity: 1, y: 0}}
+              viewport={{once: true}}
+              transition={{
+                duration: 0.6,
+                ease: 'easeOut',
+                delay: 1 + index * 0.2,
+              }}
+            >
+              {descriptions.get(category)}
+            </motion.p>
             <motion.div
               initial={{opacity: 0, y: 20}}
               whileInView={{opacity: 1, y: 0}}
@@ -98,6 +118,7 @@ export default function Blog() {
             >
               <Button
                 variant="actionDarkInverse"
+                size="black"
                 onClick={() =>
                   navigate(`/blogs/news/${category.toLowerCase()}`)
                 }

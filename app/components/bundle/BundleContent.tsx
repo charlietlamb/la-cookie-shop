@@ -19,7 +19,11 @@ const containerVariants = {
   },
 };
 
-export default function BundleContent() {
+export default function BundleContent({
+  bundleRef,
+}: {
+  bundleRef: React.RefObject<HTMLDivElement> | undefined;
+}) {
   return (
     <motion.div
       className="bg-greenLight md:flex-order-1 flex flex-col w-full gap-4 py-8 rounded-lg"
@@ -27,6 +31,7 @@ export default function BundleContent() {
       initial="hidden"
       whileInView="visible"
       viewport={{once: true, amount: 0.1}}
+      ref={bundleRef}
     >
       <BundleTitle />
       <BundleSelectionOptions />

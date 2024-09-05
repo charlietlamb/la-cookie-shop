@@ -113,7 +113,13 @@ export default function BundleAddToCart() {
             disabled={quantity != MAX_QUANTITY}
           >
             {quantity == MAX_QUANTITY
-              ? `Add to cart €${selectedVariant.price.amount}`
+              ? `Add to cart €${
+                  subscription
+                    ? (parseFloat(selectedVariant.price.amount) * 0.8).toFixed(
+                        2,
+                      )
+                    : parseFloat(selectedVariant.price.amount).toFixed(2)
+                }`
               : 'Add more cookies'}
           </Button>
         </motion.div>

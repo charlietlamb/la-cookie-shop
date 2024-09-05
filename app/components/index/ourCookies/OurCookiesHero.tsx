@@ -21,6 +21,15 @@ export default function OurCookiesHero() {
           </motion.h1>
           <img width={150} src="/logo/logo.PNG" alt="logo" />
         </div>
+        <motion.p
+          initial={{opacity: 0, y: 20}}
+          whileInView={{opacity: 1, y: 0}}
+          viewport={{once: true}}
+          transition={{duration: 0.6, ease: 'easeOut', delay: 0.2}}
+          className="font-silk w-full py-4 pb-8 text-lg text-center"
+        >
+          Click to find out more.
+        </motion.p>
         <SignatureCookies hero />
       </div>
     </div>

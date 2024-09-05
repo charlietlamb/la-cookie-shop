@@ -96,7 +96,7 @@ export default function SignatureButton() {
             )}
             disabled={quantity != MAX_QUANTITY}
           >
-            {quantity == MAX_QUANTITY ? 'Add to cart' : 'Add more cookies'}
+            Add to cart €{parseFloat(selectedVariant.price.amount).toFixed(2)}
           </Button>
         </motion.div>
       </AddToCartButton>

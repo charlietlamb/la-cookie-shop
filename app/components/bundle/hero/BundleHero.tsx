@@ -17,7 +17,7 @@ export default function OurCookiesHero() {
             viewport={{once: true}}
             transition={{duration: 0.6, ease: 'easeOut', delay: 0.2}}
           >
-            Create Your Bespoke <br /> Cookie Box
+            Curate Your Bespoke <br /> Cookie Box
           </motion.h1>
           <img width={150} src="/logo/logo.PNG" alt="logo" />
         </div>

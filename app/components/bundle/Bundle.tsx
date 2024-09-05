@@ -7,17 +7,21 @@ import {cn} from '~/lib/utils';
 import Faq from '../faq/Faq';
 import Signature from '../signature/Signature';
 import BundleHero from './hero/BundleHero';
+import {useSetBundleOpen} from '../utils/useSetBundleOpen';
 
 export default function Bundle({
   className,
   index = false,
+  bundleRef,
 }: {
   className?: string;
   index?: boolean;
+  bundleRef?: React.RefObject<HTMLDivElement>;
 }) {
-  const {setHeaderOpen} = useOpenStore();
+  const {setHeaderOpen, setBundleOpen} = useOpenStore();
   const {height} = useWindowDimensions();
   useSetHeaderOpen(setHeaderOpen, height);
+  useSetBundleOpen(setBundleOpen, bundleRef);
   return (
     <div>
       <BundleHero />
@@ -28,7 +32,7 @@ export default function Bundle({
         )}
       >
         <BundleDisplay />
-        <BundleContent />
+        <BundleContent bundleRef={bundleRef} />
       </div>
       {!index && (
         <>
