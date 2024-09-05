@@ -29,9 +29,11 @@ module.exports = {
         baseBrown: '4px 4px 0px 0px rgba(94, 69, 42, 1)',
         baseSand: '4px 4px 0px 0px rgba(211, 191, 148, 1)',
         baseDark: '4px 4px 0px 0px rgba(35, 30, 31, 1)',
+        baseWhite: '4px 4px 0px 0px rgba(255, 255, 255, 1)',
         smallBrown: '2px 2px 0px 0px rgba(94, 69, 42, 1)',
         smallSand: '2px 2px 0px 0px rgba(211, 191, 148, 1)',
         smallDark: '2px 2px 0px 0px rgba(35, 30, 31, 1)',
+        smallWhite: '2px 2px 0px 0px rgba(255, 255, 255, 1)',
       },
       translate: {
         boxShadowX: '4px',

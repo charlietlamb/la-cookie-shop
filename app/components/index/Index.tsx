@@ -1,6 +1,8 @@
 import Bundle from '../bundle/Bundle';
+import Signature from '../signature/Signature';
 import Features from './features/Features';
 import Hero from './hero/Hero';
+import Info from './info/Info';
 import OurCookies from './ourCookies/OurCookies';
 
 export default function Index() {
@@ -8,7 +10,9 @@ export default function Index() {
     <>
       <Hero />
       <Features />
-      <Bundle />
+      <Info />
+      <Bundle className="py-16" />
+      <Signature />
       <OurCookies className="py-16" />
     </>
   );

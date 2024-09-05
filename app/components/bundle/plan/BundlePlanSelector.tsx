@@ -1,7 +1,7 @@
 import {motion} from 'framer-motion';
 import {Button} from '~/components/ui/button';
-import {useAtom} from 'jotai';
-import {subscriptionAtom} from '~/store/bundle';
+import {useAtom, useAtomValue} from 'jotai';
+import {selectedBoxAtom, subscriptionAtom} from '~/store/bundle';
 import {RadioGroup, RadioGroupItem} from '~/components/ui/radio-group';
 import {cn} from '~/lib/utils';
 
@@ -16,6 +16,8 @@ const itemVariants = {
 };
 
 export function BundlePlanSelector() {
+  const selectedBox = useAtomValue(selectedBoxAtom);
+  console.log(selectedBox);
   const [subscription, setSubscription] = useAtom(subscriptionAtom);
   const radioClassName =
     'border-green flex items-center w-full gap-2 p-2 border rounded-lg cursor-pointer bg-white hover:border-greenDark transition-all duration-300';
@@ -25,6 +27,7 @@ export function BundlePlanSelector() {
     <motion.div
       variants={containerVariants}
       initial="hidden"
+      className="bg-greenLight px-8"
       whileInView="visible"
       viewport={{once: true, amount: 0.3}}
     >
@@ -44,19 +47,42 @@ export function BundlePlanSelector() {
           <RadioGroupItem value="false" className={radioDotClassName}>
             One Time Purchase
           </RadioGroupItem>
-          One Time Purchase
+          <div className="flex items-center justify-between w-full gap-2">
+            One Time Purchase
+            <p className="text-sm">
+              €
+              {parseFloat(
+                selectedBox?.variants.nodes[0]?.price.amount || '0',
+              ).toFixed(2)}
+            </p>
+          </div>
         </motion.div>
         <motion.div
           variants={itemVariants}
           className={cn(radioClassName, subscription && 'border-greenDark')}
           onClick={() => setSubscription(true)}
         >
-          <RadioGroupItem value="true" className={radioDotClassName}>
-            Subscription - Delivered every 4 weeks
+          <RadioGroupItem value="true" className={cn(radioDotClassName)}>
+            <div>Subscribe & Save 20%</div>
           </RadioGroupItem>
-          <div className="flex flex-col">
-            Subscription - Delivered every 4 weeks
-            <p className="text-sm font-light">Edit, skip or cancel anytime</p>
+          <div className="flex items-center justify-between w-full gap-2">
+            Subscribe & Save 20%
+            <div className="flex items-center gap-2">
+              <p className="text-sm font-[200] line-through">
+                €
+                {parseFloat(
+                  selectedBox?.variants.nodes[0]?.price.amount || '0',
+                )}
+              </p>
+              <p className="text-sm">
+                €
+                {(
+                  parseFloat(
+                    selectedBox?.variants.nodes[0]?.price.amount || '0',
+                  ) * 0.8
+                ).toFixed(2)}
+              </p>
+            </div>
           </div>
         </motion.div>
       </RadioGroup>

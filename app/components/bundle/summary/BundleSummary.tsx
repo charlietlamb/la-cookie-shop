@@ -44,7 +44,7 @@ export default function BundleSummary() {
 
   return (
     <motion.div
-      className="flex flex-col gap-4 mt-4"
+      className="flex flex-col gap-4 px-8 mt-4"
       ref={parent}
       variants={containerVariants}
       initial="hidden"

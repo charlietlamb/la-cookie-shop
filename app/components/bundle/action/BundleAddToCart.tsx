@@ -14,6 +14,7 @@ import {AddToCartButton} from '../../AddToCartButton';
 import {getOrderDetails} from '~/functions/getOrderDetails';
 import {useEffect, useState} from 'react';
 import {useOpenStore} from '~/store/open';
+import {cn} from '~/lib/utils';
 
 const containerVariants = {
   hidden: {opacity: 0, y: 20},
@@ -63,6 +64,7 @@ export default function BundleAddToCart() {
       initial="hidden"
       whileInView="visible"
       viewport={{once: true, amount: 0.1}}
+      className="px-8"
       onClick={() => {
         if (quantity != MAX_QUANTITY) return;
         setCartOpen(true);
@@ -104,10 +106,13 @@ export default function BundleAddToCart() {
         <motion.div variants={buttonVariants}>
           <Button
             variant="green"
-            className="p-size mt-4"
+            className={cn(
+              'p-size mt-4',
+              quantity != MAX_QUANTITY && 'bg-red-500/50',
+            )}
             disabled={quantity != MAX_QUANTITY}
           >
-            Add to cart
+            {quantity == MAX_QUANTITY ? 'Add to cart' : 'Add more cookies'}
           </Button>
         </motion.div>
       </AddToCartButton>
