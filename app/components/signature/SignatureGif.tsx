@@ -4,7 +4,7 @@ export default function SignatureGif({className}: {className?: string}) {
   return (
     <div
       className={cn(
-        'shadow-basePink w-full overflow-hidden rounded-lg',
+        'shadow-basePink w-full overflow-hidden rounded-none',
         className,
       )}
     >

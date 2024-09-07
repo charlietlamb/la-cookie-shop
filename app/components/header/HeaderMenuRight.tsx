@@ -16,7 +16,7 @@ export function HeaderMenuRight({
   setCartOpen: (cartOpen: boolean) => void;
 }) {
   return (
-    <nav className="border-green md:pb-1 md:border-b md:w-full flex items-center justify-end h-full gap-2">
+    <nav className="border-sand md:pb-1 md:border-b md:w-full flex items-center justify-end h-full gap-2">
       <HeaderHoverLink to="/" className="md:flex items-center hidden">
         More
       </HeaderHoverLink>

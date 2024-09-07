@@ -20,14 +20,14 @@ export function BundlePlanSelector() {
   console.log(selectedBox);
   const [subscription, setSubscription] = useAtom(subscriptionAtom);
   const radioClassName =
-    'border-green flex items-center w-full gap-2 p-2 border rounded-lg cursor-pointer bg-white hover:border-greenDark transition-all duration-300';
-  const radioDotClassName = 'text-green border-green';
+    'border-sandLight flex items-center w-full gap-2 p-2 border rounded-none cursor-pointer bg-white hover:border-sandDark transition-all duration-300';
+  const radioDotClassName = 'text-sand border-sand';
 
   return (
     <motion.div
       variants={containerVariants}
       initial="hidden"
-      className="bg-greenLight px-8"
+      className="px-8"
       whileInView="visible"
       viewport={{once: true, amount: 0.3}}
     >
@@ -40,7 +40,7 @@ export function BundlePlanSelector() {
           variants={itemVariants}
           className={cn(
             radioClassName,
-            !subscription && 'border-greenDark hover:border-green',
+            !subscription && 'border-sand hover:border-sandDark',
           )}
           onClick={() => setSubscription(false)}
         >
@@ -59,7 +59,7 @@ export function BundlePlanSelector() {
         </motion.div>
         <motion.div
           variants={itemVariants}
-          className={cn(radioClassName, subscription && 'border-greenDark')}
+          className={cn(radioClassName, subscription && 'border-sand')}
           onClick={() => setSubscription(true)}
         >
           <RadioGroupItem value="true" className={cn(radioDotClassName)}>

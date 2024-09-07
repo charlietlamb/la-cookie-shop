@@ -3,7 +3,7 @@ import {Separator} from '../ui/separator';
 export default function CartHeader({count}: {count: number | undefined}) {
   return (
     <div>
-      <h4 className="font-silk h3-size text-green font-medium uppercase">
+      <h4 className="font-silk h3-size text-sand font-medium uppercase">
         Cart
       </h4>
       <p className="font-silk font-light">

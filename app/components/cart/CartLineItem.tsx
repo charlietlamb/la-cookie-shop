@@ -28,7 +28,7 @@ export function CartLineItem({
     <li key={id} className="flex flex-col gap-2">
       <div className="flex gap-2">
         {image && (
-          <div className="group border-green w-32 !aspect-square relative flex items-center justify-center overflow-hidden border">
+          <div className="group border-sand w-32 !aspect-square relative flex items-center justify-center overflow-hidden border">
             <Image alt={title} data={image} loading="lazy" />
 
             <div className="group-hover:flex bg-black/50 absolute inset-0 items-center justify-center hidden cursor-pointer">

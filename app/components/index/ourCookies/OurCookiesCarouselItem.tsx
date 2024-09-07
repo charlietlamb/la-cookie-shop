@@ -32,8 +32,8 @@ export default function OurCookiesCarouselItem({
       viewport={{once: true, amount: 0.3}}
       transition={{duration: 0.6, delay: index * 0.1}}
       className={cn(
-        'flex flex-col md:w-[80%] w-full gap-4 p-8 rounded-lg shadow-md',
-        odd ? 'bg-green' : 'bg-white border border-green ml-auto',
+        'flex flex-col lg:w-[80%] w-full gap-4 p-8 rounded-none shadow-md border border-sand',
+        odd ? 'bg-light ml-auto' : 'bg-white',
       )}
     >
       <motion.div
@@ -45,18 +45,17 @@ export default function OurCookiesCarouselItem({
       >
         <h4
           className={cn(
-            'h1-size font-silk flex-shrink-0 font-medium leading-none uppercase',
-            odd ? 'text-white' : 'text-green',
+            'h1-size font-silk md:flex-shrink-0 font-medium leading-none uppercase',
           )}
         >
           {cookie.name}
         </h4>
-        <Separator className={cn('flex-grow', odd ? 'bg-white' : 'bg-green')} />
+        <Separator className={cn('flex-grow bg-dark hidden md:block')} />
       </motion.div>
       <div
         className={cn(
-          'md:flex-row flex flex-col gap-6',
-          odd ? 'text-white' : 'text-dark md:flex-row-reverse',
+          'lg:flex-row flex flex-col gap-6',
+          odd ? '' : 'lg:flex-row-reverse',
         )}
       >
         <motion.div
@@ -65,8 +64,7 @@ export default function OurCookiesCarouselItem({
           viewport={{once: true}}
           transition={{duration: 0.6, delay: 0.6}}
           className={cn(
-            'aspect-square md:w-1/3 flex-shrink-0 w-full overflow-hidden border border-white rounded-lg shadow-lg',
-            odd ? 'border-white' : 'border-green',
+            'aspect-square lg:w-1/3 flex-shrink-0 w-full overflow-hidden border border-sand rounded-none shadow-lg',
           )}
         >
           <img
@@ -80,13 +78,13 @@ export default function OurCookiesCarouselItem({
           whileInView={{opacity: 1, y: 0}}
           viewport={{once: true}}
           transition={{duration: 0.6, delay: 0.9}}
-          className="md:w-2/3 flex flex-col gap-4"
+          className="lg:w-2/3 flex flex-col gap-4"
         >
-          <p className="font-[200] md:text-lg font-inter">
+          <p className="font-[200] lg:text-lg font-inter">
             {cookie.description}
           </p>
           <CookieButton
-            variant={odd ? 'actionWhite' : 'actionGreen'}
+            variant={'actionDarkInverse'}
             className="group p-text w-full mt-auto overflow-hidden"
             onClick={handleAddToBundle}
           >

@@ -3,7 +3,7 @@ import InfoText from './InfoText';
 
 export default function Info() {
   return (
-    <div className="bg-pink padding-main md:flex-row flex flex-col items-stretch gap-4 py-16">
+    <div className="padding-main md:flex-row text-dark bg-light flex flex-col items-stretch gap-4 py-16">
       <div className="flex-1">
         <InfoText />
       </div>

@@ -21,7 +21,7 @@ export default function BundleDisplayAccordion() {
     <AnimatePresence mode="wait">
       <motion.div
         key={selectedCookie.name}
-        className="md:px-8 w-full px-2 mt-4"
+        className="md:px-8 w-full mt-4"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -37,7 +37,7 @@ export default function BundleDisplayAccordion() {
               exit={{opacity: 0, y: -10}}
               transition={{duration: 0.3}}
             >
-              <AccordionTrigger className="font-silk text-green text-xl">
+              <AccordionTrigger className="font-silk text-xl">
                 Ingredients
               </AccordionTrigger>
               <AccordionContent>
@@ -62,7 +62,7 @@ export default function BundleDisplayAccordion() {
               exit={{opacity: 0, y: -10}}
               transition={{duration: 0.3, delay: 0.1}}
             >
-              <AccordionTrigger className="font-silk text-green text-xl">
+              <AccordionTrigger className="font-silk text-xl">
                 Description
               </AccordionTrigger>
               <AccordionContent>
@@ -85,7 +85,7 @@ export default function BundleDisplayAccordion() {
               exit={{opacity: 0, y: -10}}
               transition={{duration: 0.3, delay: 0.2}}
             >
-              <AccordionTrigger className="font-silk text-green text-xl">
+              <AccordionTrigger className="font-silk text-xl">
                 Complements
               </AccordionTrigger>
               <AccordionContent>

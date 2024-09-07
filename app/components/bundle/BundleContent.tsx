@@ -26,7 +26,7 @@ export default function BundleContent({
 }) {
   return (
     <motion.div
-      className="bg-greenLight md:flex-order-1 flex flex-col w-full gap-4 py-8 rounded-lg"
+      className="bg-light md:flex-order-1 flex flex-col w-full gap-4 py-8 rounded-none"
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"

@@ -11,7 +11,7 @@ export default function StoryStart() {
       <motion.img
         src="/images/cookie-mag-tea.jpeg"
         alt="La Cookie Shop Story"
-        className="md:w-1/3 w-full rounded-lg shadow-lg"
+        className="md:w-1/3 w-full rounded-none shadow-lg"
         initial={{opacity: 0, scale: 0.9}}
         animate={{opacity: 1, scale: 1}}
         transition={{duration: 1, delay: 0.6}}
@@ -22,7 +22,7 @@ export default function StoryStart() {
         animate={{opacity: 1, x: 0}}
         transition={{duration: 1, delay: 0.9}}
       >
-        <h3 className="font-silk text-green mb-4 text-3xl">Our Beginnings</h3>
+        <h3 className="font-silk text-sand mb-4 text-3xl">Our Beginnings</h3>
         <p className="mb-4 text-lg font-light">
           La Cookie Shop was founded on the idea that a cookie can be more than
           just a treat—it can be a luxurious experience. This vision first took

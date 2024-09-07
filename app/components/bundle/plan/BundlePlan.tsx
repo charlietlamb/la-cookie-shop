@@ -4,7 +4,7 @@ import {BundlePlanSelector} from './BundlePlanSelector';
 
 export default function BundlePlan() {
   return (
-    <div className="bg-pink rounded-t-lg">
+    <div className="bg-lightrounded-t-lg">
       <BundlePlanAdvice />
       <BundlePlanDetails />
       <BundlePlanSelector />

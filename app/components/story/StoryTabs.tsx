@@ -57,7 +57,7 @@ export default function StoryTabs() {
               className="w-full"
             >
               <TabsContent value="ingredients">
-                <Card className="text-green bg-white">
+                <Card className="text-sand bg-white">
                   <CardHeader>
                     <CardTitle className="font-silk text-dark md:text-2xl text-xl">
                       Premium Ingredients
@@ -69,7 +69,7 @@ export default function StoryTabs() {
                         <img
                           src="/images/cookie-bowl-tea.jpeg"
                           alt="Our Ingredients"
-                          className="w-full rounded-lg shadow-md"
+                          className="w-full rounded-none shadow-md"
                         />
                       </div>
                       <div className="text-dark">
@@ -94,7 +94,7 @@ export default function StoryTabs() {
                 </Card>
               </TabsContent>
               <TabsContent value="crafting">
-                <Card className="text-green bg-white">
+                <Card className="text-sand bg-white">
                   <CardHeader>
                     <CardTitle className="font-silk text-dark md:text-2xl text-xl">
                       Artisanal Craftsmanship
@@ -106,7 +106,7 @@ export default function StoryTabs() {
                         <img
                           src="/images/cookie-mag-tea.jpeg"
                           alt="Our Crafting Process"
-                          className="w-full rounded-lg shadow-md"
+                          className="w-full rounded-none shadow-md"
                         />
                       </div>
                       <div className="text-dark">
@@ -131,7 +131,7 @@ export default function StoryTabs() {
                 </Card>
               </TabsContent>
               <TabsContent value="quality">
-                <Card className="text-green bg-white">
+                <Card className="text-sand bg-white">
                   <CardHeader>
                     <CardTitle className="font-silk text-dark md:text-2xl text-xl">
                       Rigorous Quality Control
@@ -143,7 +143,7 @@ export default function StoryTabs() {
                         <img
                           src="/images/cookies-mag.jpeg"
                           alt="Quality Control"
-                          className="w-full rounded-lg shadow-md"
+                          className="w-full rounded-none shadow-md"
                         />
                       </div>
                       <div className="text-dark">

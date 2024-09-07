@@ -27,7 +27,7 @@ export default function CartEmpty({
             started!
           </p>
           <CookieButton
-            variant="actionGreen"
+            variant="actionSand"
             className="w-full"
             onClick={() => {
               setCartOpen(false);

@@ -7,7 +7,7 @@ export default function StoryFounder() {
       animate={{opacity: 1, x: 0}}
       transition={{duration: 1, delay: 0.9}}
     >
-      <h3 className="font-silk text-green mb-4 text-3xl">Our Founder</h3>
+      <h3 className="font-silk text-sand mb-4 text-3xl">Our Founder</h3>
       <p className="mb-4 text-lg font-light">
         Britt Moore's journey to founding La Cookie Shop is rooted in her
         passion for luxury and gourmet cuisine. Before venturing into the

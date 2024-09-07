@@ -3,7 +3,7 @@ import NextSeason from './NextSeason';
 
 export default function FlavoursText() {
   return (
-    <div className="flex flex-col flex-grow w-full h-full gap-4 text-white">
+    <div className=" flex flex-col flex-grow w-full h-full gap-4">
       <h2 className="font-silk big-size text-xl">
         New Flavours <br /> Every Season.
       </h2>

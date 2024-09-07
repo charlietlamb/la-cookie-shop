@@ -93,27 +93,27 @@ export const cookieData = [
     ],
   },
   {
-    name: 'Lemon Fiori',
+    name: 'Citrus Fiori',
     ingredients: [
       'Sweet Lemon',
       'Sicilian Citrus Blossoms',
       'Caramelized White Chocolate',
     ],
     image: '/cookies/CitrusFiori.png',
-    description: `The Lemon Fiori cookie is a blend of sweet lemon, Sicilian citrus blossoms, and caramelized white chocolate. This cookie offers a refreshing, citrusy flavor with hints of sweetness. The lemon provides a floral aroma, and the white chocolate adds a rich, creamy texture. This cookie is designed for those who enjoy a sophisticated treat that pairs well with a variety of beverages or stands out on its own.`,
+    description: `The Citrus Fiori cookie is a blend of sweet lemon, Sicilian citrus blossoms, and caramelized white chocolate. This cookie offers a refreshing, citrusy flavor with hints of sweetness. The lemon provides a floral aroma, and the white chocolate adds a rich, creamy texture. This cookie is designed for those who enjoy a sophisticated treat that pairs well with a variety of beverages or stands out on its own.`,
     complement: `This bright, citrusy cookie pairs wonderfully with a crisp Sancerre, such as Pascal Jolivet. The wine's mineral notes and citrus undertones complement the cookie's lemon flavors. For a non-alcoholic pairing, try it with Bellocq's White Nixon tea.`,
     reviews: [
       {
         name: 'Ava R.',
         rating: 5,
         description:
-          "The Lemon Fiori cookies are a burst of sunshine in every bite! The lemon flavor is bright and zesty, perfectly balanced by the sweetness of the white chocolate. They're refreshing and indulgent at the same time.",
+          "The Citrus Fiori cookies are a burst of sunshine in every bite! The lemon flavor is bright and zesty, perfectly balanced by the sweetness of the white chocolate. They're refreshing and indulgent at the same time.",
       },
       {
         name: 'Noah S.',
         rating: 5,
         description:
-          "I'm usually more of a chocolate cookie person, but these Lemon Fiori cookies have won me over. The citrus blossom adds such a unique, delicate flavor. They're the perfect summer treat!",
+          "I'm usually more of a chocolate cookie person, but these Citrus Fiori cookies have won me over. The citrus blossom adds such a unique, delicate flavor. They're the perfect summer treat!",
       },
       {
         name: 'Mia L.',

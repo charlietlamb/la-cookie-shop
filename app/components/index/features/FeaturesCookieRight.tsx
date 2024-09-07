@@ -4,17 +4,18 @@ import {useFeaturesContext} from './context';
 
 export default function FeaturesCookieRight() {
   const {scrollY} = useFeaturesContext();
-  const top = useSpring(scrollY);
-  const topValue = useTransform(() => top.get() / 2.5);
+  const topValue = useTransform(() => scrollY.get() / 2.5);
+  const opacity = useTransform(scrollY, [0, 300], [0, 1]);
   return (
     <motion.img
       src="/cookies/ChocolateTruffle.png"
       alt="Chocolate Truffle"
-      className="absolute right-0 z-20"
+      className="right-4 md:block absolute z-20 hidden"
       width={100}
       height={100}
       style={{
         top: topValue,
+        opacity: opacity,
       }}
     />
   );

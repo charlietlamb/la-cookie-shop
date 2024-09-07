@@ -3,7 +3,7 @@ import {Separator} from '~/components/ui/separator';
 export default function HeaderMobileMenuHeader() {
   return (
     <div>
-      <h4 className="font-silk h3-size text-green font-medium uppercase">
+      <h4 className="font-silk h3-size text-sand font-medium uppercase">
         Menu
       </h4>
       <p className="font-silk font-light">

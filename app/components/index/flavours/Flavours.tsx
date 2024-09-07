@@ -4,7 +4,7 @@ import {motion} from 'framer-motion';
 
 export default function Flavours() {
   return (
-    <div className="bg-green padding-main md:flex-row flex flex-col items-center gap-4 py-16">
+    <div className="bg-light padding-main md:flex-row flex flex-col items-center gap-4 py-16">
       <FlavoursText />
       <motion.div
         initial={{opacity: 0, scale: 0.9}}

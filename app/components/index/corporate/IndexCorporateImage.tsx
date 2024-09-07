@@ -3,7 +3,7 @@ import {motion} from 'framer-motion';
 export default function IndexCorporateImage() {
   return (
     <motion.div
-      className="shadow-baseWhitew-full flex items-center justify-center w-2/3 mx-auto overflow-hidden rounded-lg"
+      className="shadow-baseWhitew-full flex items-center justify-center w-2/3 mx-auto overflow-hidden"
       initial={{opacity: 0, scale: 0.9}}
       whileInView={{opacity: 1, scale: 1}}
       viewport={{once: true, amount: 0.3}}

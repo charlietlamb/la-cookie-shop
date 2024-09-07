@@ -8,7 +8,7 @@ export default function OurCookiesLayout() {
         <OurCookiesCarouselItem
           cookie={cookie}
           key={cookie.name}
-          index={index + 1}
+          index={index}
         />
       ))}
     </div>

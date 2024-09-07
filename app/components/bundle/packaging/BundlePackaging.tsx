@@ -28,7 +28,7 @@ export default function BundlePackaging() {
       whileInView="visible"
       viewport={{once: true, amount: 0.3}}
       className={cn(
-        'flex gap-2 flex-col items-center mx-8 p-2 py-4 rounded-lg border border-green bg-white cursor-pointer transition-all duration-300',
+        'flex gap-2 flex-col items-center mx-8 p-2 py-4 rounded-none border border-sand bg-white cursor-pointer transition-all duration-300',
       )}
       onClick={() => {
         if (selectedBox.id === boxes[1].id) {
@@ -50,7 +50,7 @@ export default function BundlePackaging() {
             <img src="/packaging/basic.png" alt="basic" />
           </div>
           <RadioGroupItem
-            className="text-green border-green"
+            className="text-sand border-sand"
             value={boxes[0].id}
             id={boxes[0].id}
           />
@@ -63,14 +63,14 @@ export default function BundlePackaging() {
             <img src="/packaging/luxury.png" alt="luxury" />
           </div>
           <RadioGroupItem
-            className="text-green border-green"
+            className="text-sand border-sand"
             value={boxes[1].id}
             id={boxes[1].id}
           />
         </div>
       </RadioGroup>
       <div className="flex items-center justify-center gap-2">
-        <p className=" font-silk text-md leading-none">
+        <p className="font-silk text-md leading-none text-center">
           Limited Edition Packaging (+€12)
         </p>
         <AnimatePresence>

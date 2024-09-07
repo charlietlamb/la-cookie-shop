@@ -29,7 +29,7 @@ export default function BundleDisplayReviews() {
     <AnimatePresence mode="wait">
       <motion.div
         key={selectedCookie.name}
-        className="px-2 mt-4 bg-white rounded-lg"
+        className="mt-4 bg-white rounded-none"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -38,7 +38,7 @@ export default function BundleDisplayReviews() {
         viewport={{once: false, amount: 0.1}}
       >
         <motion.h3
-          className="font-silk text-green mb-4 text-xl text-center"
+          className="font-silk text-sand mb-4 text-xl text-center"
           variants={itemVariants}
         >
           What Our Customers Think
@@ -47,7 +47,7 @@ export default function BundleDisplayReviews() {
           {selectedCookie.reviews.map((review, index) => (
             <motion.div
               key={index}
-              className="bg-greenLight p-3 rounded-md"
+              className="bg-light p-3 rounded-none"
               variants={itemVariants}
               transition={{duration: 0.3}}
             >

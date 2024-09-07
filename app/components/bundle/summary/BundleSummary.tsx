@@ -53,7 +53,7 @@ export default function BundleSummary() {
     >
       <BundleSummaryHeader />
       <motion.div
-        className="md:grid-cols-5 border-green grid grid-cols-3 gap-4 p-4 bg-white border rounded-lg"
+        className="md:grid-cols-5 border-sand grid grid-cols-3 gap-4 p-4 bg-white border rounded-none"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"

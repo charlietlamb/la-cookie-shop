@@ -14,7 +14,7 @@ export default function StoryCommunity() {
           <motion.img
             src="/images/cookie-bowl.jpeg"
             alt="Community Events"
-            className="md:w-1/3 w-full rounded-lg shadow-lg"
+            className="md:w-1/3 w-full rounded-none shadow-lg"
             initial={{opacity: 0, scale: 0.9}}
             animate={{opacity: 1, scale: 1}}
             transition={{duration: 1, delay: 2.1}}

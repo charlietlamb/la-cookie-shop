@@ -6,7 +6,7 @@ import {subscriptionAtom} from '~/store/bundle';
 export default function BundlePlanDetails() {
   const subscription = useAtomValue(subscriptionAtom);
   return (
-    <div className="rounded-t-xl bg-greenLight divide-dark flex items-center w-full px-8 py-4 divide-x">
+    <div className="rounded-t-xl bg-light divide-dark flex items-center w-full px-8 py-4 divide-x">
       <div className="flex flex-col items-center justify-center w-full">
         <div className="flex items-center gap-2">
           <CalendarCheck strokeWidth={1} />

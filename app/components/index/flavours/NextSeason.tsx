@@ -23,7 +23,7 @@ export default function NextSeason() {
             viewport={{once: true, amount: 0.5}}
             transition={{duration: 0.6, delay: index * 0.1 + 0.3}}
           >
-            <Cookie className="w-20 h-20" strokeWidth={1} />
+            <Cookie className="w-20 h-20" strokeWidth={0.5} />
           </motion.div>
           <motion.p
             initial={{opacity: 0}}

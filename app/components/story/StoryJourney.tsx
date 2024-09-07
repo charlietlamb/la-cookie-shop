@@ -11,7 +11,7 @@ export default function StoryJourney() {
       transition={{duration: 1, delay: 2.7}}
       className="padding-main w-full"
     >
-      <h3 className="font-silk text-green mb-6 text-3xl text-center">
+      <h3 className="font-silk text-sand mb-6 text-3xl text-center">
         Join Our Journey
       </h3>
       <p className="mb-6 text-lg font-light text-center">

@@ -3,7 +3,6 @@ import FeaturesCookieRight from './FeaturesCookieRight';
 import FeaturesContent from './FeaturesContent';
 import {useScroll} from 'framer-motion';
 import FeaturesCookieLeft from './FeaturesCookieLeft';
-import {motion} from 'framer-motion';
 import {FeaturesContext} from './context';
 export default function Features() {
   const scrollRef = useRef<HTMLDivElement | null>(null);
@@ -12,7 +11,7 @@ export default function Features() {
   });
   return (
     <FeaturesContext.Provider value={{scrollY}}>
-      <div className="bg-green padding-main-large relative py-32">
+      <div className="bg-light padding-main-large relative py-32">
         <FeaturesContent ref={scrollRef} />
         <FeaturesCookieRight />
         <FeaturesCookieLeft />

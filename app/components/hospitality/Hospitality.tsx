@@ -27,7 +27,7 @@ export default function Hospitality() {
           transition={{duration: 0.6, delay: 0.6}}
           className="md:w-1/3 w-full"
         >
-          <div className="overflow-hidden rounded-lg shadow-lg">
+          <div className="overflow-hidden rounded-none shadow-lg">
             <img
               src="/images/cookie-bowl-tea.jpeg"
               alt="La Cookie Shop Hospitality"
@@ -41,7 +41,7 @@ export default function Hospitality() {
           transition={{duration: 0.6, delay: 0.9}}
           className="md:w-2/3 w-full"
         >
-          <h2 className="font-silk text-green mb-4 text-3xl uppercase">
+          <h2 className="font-silk text-sand mb-4 text-3xl uppercase">
             Welcome to Our World of Sweetness
           </h2>
           <p className="mb-4 text-lg font-light">
@@ -149,7 +149,7 @@ export default function Hospitality() {
           <img
             src="/images/cookie-dark-tea.jpeg"
             alt="Partner with La Cookie Shop"
-            className="w-full h-auto rounded-lg shadow-lg"
+            className="w-full h-auto rounded-none shadow-lg"
           />
         </motion.div>
         <motion.div
@@ -159,7 +159,7 @@ export default function Hospitality() {
           transition={{duration: 0.6, delay: 0.6}}
           className="md:w-1/2 w-full"
         >
-          <h2 className="font-silk text-green mb-4 text-3xl uppercase">
+          <h2 className="font-silk text-sand mb-4 text-3xl uppercase">
             Partner with La Cookie Shop
           </h2>
           <motion.p

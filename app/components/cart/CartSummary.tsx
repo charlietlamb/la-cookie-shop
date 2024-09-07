@@ -35,7 +35,7 @@ function CartCheckoutActions({checkoutUrl}: {checkoutUrl?: string}) {
 
   return (
     <a href={checkoutUrl} target="_self">
-      <Button variant="actionGreen" className="w-full">
+      <Button variant="actionSand" className="w-full">
         Continue to Checkout
       </Button>
     </a>
@@ -72,7 +72,7 @@ function CartDiscounts({
       <UpdateDiscountForm discountCodes={codes}>
         <div className="flex items-center gap-1">
           <Input type="text" name="discountCode" placeholder="Discount code" />
-          <Button type="submit" variant="actionGreenInverse">
+          <Button type="submit" variant="actionSandInverse">
             Apply
           </Button>
         </div>

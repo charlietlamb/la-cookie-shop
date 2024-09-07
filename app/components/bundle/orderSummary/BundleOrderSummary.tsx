@@ -58,7 +58,7 @@ export default function BundleOrderSummary() {
 
   return (
     <motion.div
-      className="border-green flex flex-col items-center p-4 mx-8 bg-white border rounded-lg"
+      className="border-sand flex flex-col items-center p-4 mx-8 bg-white border rounded-none"
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
@@ -71,7 +71,10 @@ export default function BundleOrderSummary() {
         Bundle summary
       </motion.h5>
       <Separator />
-      <motion.div className="flex flex-col w-full" variants={itemVariants}>
+      <motion.div
+        className="flex flex-col w-full gap-2"
+        variants={itemVariants}
+      >
         {bundle.length > 0 ? (
           <ProductSummary
             attributes={[

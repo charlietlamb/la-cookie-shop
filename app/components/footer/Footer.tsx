@@ -3,7 +3,7 @@ import {Link} from '@remix-run/react';
 
 export function Footer() {
   return (
-    <footer className="bg-green py-8 text-white">
+    <footer className="bg-light py-8">
       <div className="padding-main md:grid-cols-4 grid grid-cols-1 gap-8">
         <FooterBrand />
         <div>

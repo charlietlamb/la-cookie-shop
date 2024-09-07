@@ -18,14 +18,19 @@ export default function ProductSummary({
   if (!orderDetails || !orderDetails.length) return 'No details found...';
   const orderDetailsArray = orderDetails.split(',');
   return (
-    <div className={cn('font-silk grid grid-cols-2 gap-2 text-sm', className)}>
+    <div
+      className={cn(
+        'font-silk grid grid-cols-1 md:grid-cols-2 gap-2 text-sm',
+        className,
+      )}
+    >
       {orderDetailsArray.map((detail, index) => (
         <div
           className={cn(
-            'flex items-center gap-1',
+            'flex items-center gap-1 justify-center md:justify-start',
             orderDetailsArray.length % 2 == 1 &&
               index == orderDetailsArray.length - 1 &&
-              'col-span-2 justify-center',
+              'md:col-span-2 justify-center',
             start && 'justify-start',
           )}
           key={detail}

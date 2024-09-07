@@ -19,7 +19,7 @@ export default function StoryValues() {
       </h3>
       <Accordion type="single" collapsible className="w-full">
         <AccordionItem value="item-1">
-          <AccordionTrigger className="font-silk text-green">
+          <AccordionTrigger className="font-silk text-sand">
             Quality Without Compromise
           </AccordionTrigger>
           <AccordionContent>
@@ -40,7 +40,7 @@ export default function StoryValues() {
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="item-2">
-          <AccordionTrigger className="font-silk text-green">
+          <AccordionTrigger className="font-silk text-sand">
             Innovation Rooted in Tradition
           </AccordionTrigger>
           <AccordionContent>
@@ -62,7 +62,7 @@ export default function StoryValues() {
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="item-3">
-          <AccordionTrigger className="font-silk text-green">
+          <AccordionTrigger className="font-silk text-sand">
             Sustainability and Responsibility
           </AccordionTrigger>
           <AccordionContent>

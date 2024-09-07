@@ -34,7 +34,7 @@ export default function Contact() {
         <img
           src="/images/cookie-mag-tea.jpeg"
           alt="La Cookie Shop"
-          className="object-cover w-full h-64 mb-8 rounded-lg shadow-md"
+          className="object-cover w-full h-64 mb-8 rounded-none shadow-md"
         />
 
         <div className="space-y-6">

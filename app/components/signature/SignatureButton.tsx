@@ -89,7 +89,7 @@ export default function SignatureButton() {
       >
         <motion.div variants={buttonVariants}>
           <Button
-            variant="green"
+            variant="actionDarkInverse"
             className={cn(
               'p-size',
               quantity != MAX_QUANTITY && 'bg-red-500/50',

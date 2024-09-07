@@ -23,7 +23,7 @@ export default function SearchMain() {
               ref={inputRef}
               type="search"
             />
-            <Button onClick={goToSearch} variant="actionGreenInverse">
+            <Button onClick={goToSearch} variant="actionSandInverse">
               <Search strokeWidth={1} />
             </Button>
           </div>
@@ -80,7 +80,7 @@ export default function SearchMain() {
                 >
                   <Button
                     className="text-md flex items-center w-full gap-2"
-                    variant="actionGreenInverse"
+                    variant="actionSandInverse"
                   >
                     View all results for <q>{term.current}</q>
                     <ArrowRight strokeWidth={1} />

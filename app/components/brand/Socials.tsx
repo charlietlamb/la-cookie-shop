@@ -3,7 +3,7 @@ import {FaFacebook, FaInstagram, FaPinterest} from 'react-icons/fa';
 
 export default function Socials() {
   return (
-    <div className="flex items-center justify-center w-full gap-4 text-white">
+    <div className=" flex items-center justify-center w-full gap-4">
       <Link to="/">
         <FaFacebook className="size-8" />
       </Link>

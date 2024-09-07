@@ -7,7 +7,7 @@ export default function FeaturesContent({
   ref: React.RefObject<HTMLDivElement>;
 }) {
   return (
-    <div ref={ref} className="flex flex-col gap-8 p-8 bg-white rounded-lg">
+    <div ref={ref} className="flex flex-col gap-8 p-8 bg-white rounded-none">
       <FeaturesTrustPilot />
       <FeaturesFeatures />
     </div>

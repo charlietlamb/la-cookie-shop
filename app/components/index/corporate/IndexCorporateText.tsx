@@ -13,7 +13,7 @@ export default function IndexCorporateText() {
       transition={{staggerChildren: 0.2}}
     >
       <motion.h2
-        className="font-silk big-size text-xl text-white"
+        className="font-silk big-size  text-xl"
         variants={{
           hidden: {opacity: 0, y: 20},
           visible: {opacity: 1, y: 0},
@@ -23,7 +23,7 @@ export default function IndexCorporateText() {
         La Cookie Shop: Corporate Gifting
       </motion.h2>
       <motion.p
-        className="text-lg font-light text-white"
+        className=" text-lg font-light"
         variants={{
           hidden: {opacity: 0, y: 20},
           visible: {opacity: 1, y: 0},
