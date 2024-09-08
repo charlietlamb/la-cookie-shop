@@ -45,6 +45,10 @@ export function links() {
       rel: 'stylesheet',
       href: 'https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap',
     },
+    {
+      rel: 'stylesheet',
+      href: 'https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap',
+    },
     {rel: 'stylesheet', href: appStyles},
     {
       rel: 'preconnect',
@@ -107,7 +111,7 @@ export function Layout({children}: {children?: React.ReactNode}) {
         <Meta />
         <Links />
       </head>
-      <body className="font-inter flex flex-col w-full min-h-screen">
+      <body className="font-hanken flex flex-col w-full min-h-screen">
         {data ? (
           <Analytics.Provider
             cart={data.cart}

@@ -19,7 +19,7 @@ export default function FeaturesFeature({
   });
   return (
     <motion.div
-      className="flex flex-col items-center justify-between flex-grow h-full gap-4"
+      className="flex flex-col items-center justify-start flex-grow h-full gap-4"
       initial={{opacity: 0, x: -50}}
       animate={{
         opacity: show ? 1 : 0,
@@ -32,7 +32,7 @@ export default function FeaturesFeature({
         <h3 className="font-cardo h4-size text-brown text-center capitalize">
           {feature.title}
         </h3>
-        <p className="font-[200] text-center md:text-base text-sm">
+        <p className="font-[200] text-center md:text-base text-sm mt-auto">
           {feature.description}
         </p>
       </div>

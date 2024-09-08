@@ -11,15 +11,15 @@ const buttonVariants = cva(
       variant: {
         default:
           'bg-transparent border-2 rounded-none border-brown text-brown hover:bg-brown/20 hover:rounded-none',
-        hero: 'bg-transparent font-inter uppercase border rounded-none font-[200] p-size border-brown text-brown hover:text-dark hover:border-dark hover:scale-105 duration-600',
+        hero: 'bg-transparent font-hanken uppercase border rounded-none font-[200] p-size border-brown text-brown hover:text-dark hover:border-dark hover:scale-105 duration-600',
         actionSand:
-          'bg-transparent font-inter uppercase border rounded-none font-[200] border-sand text-sand hover:bg-sand hover:text-white duration-600',
+          'bg-transparent font-hanken uppercase border rounded-none font-[200] border-sand text-sand hover:bg-sand hover:text-white duration-600',
         actionWhite:
-          'bg-transparent font-inter uppercase border rounded-none font-[200] border-white text-white hover:bg-white hover:text-dark duration-600',
+          'bg-transparent font-hanken uppercase border rounded-none font-[200] border-white text-white hover:bg-white hover:text-dark duration-600',
         actionSandInverse:
-          'bg-sand font-inter uppercase border rounded-none font-[200] border-sand text-white hover:bg-transparent hover:text-sand duration-600',
+          'bg-sand font-hanken uppercase border rounded-none font-[200] border-sand text-white hover:bg-transparent hover:text-sand duration-600',
         actionDarkInverse:
-          'bg-dark font-inter uppercase border rounded-none font-[200] border-dark text-white hover:bg-transparent hover:text-dark duration-600',
+          'bg-dark font-hanken uppercase border rounded-none font-[200] border-dark text-white hover:bg-transparent hover:text-dark duration-600',
         destructive:
           'bg-destructive text-destructive-foreground hover:bg-destructive/90',
         outline:

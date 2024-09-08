@@ -15,15 +15,13 @@ export default function CartSheet({
   setCartOpen: (cartOpen: boolean) => void;
 }) {
   return (
-    <div>
-      <Sheet open={cartOpen} onOpenChange={setCartOpen}>
-        <SheetTrigger>
-          <ShoppingCart strokeWidth={1.5} />
-        </SheetTrigger>
-        <SheetContent>
-          <CartMain cart={cart} layout="aside" />
-        </SheetContent>
-      </Sheet>
-    </div>
+    <Sheet open={cartOpen} onOpenChange={setCartOpen}>
+      <SheetTrigger>
+        <ShoppingCart strokeWidth={1.5} />
+      </SheetTrigger>
+      <SheetContent>
+        <CartMain cart={cart} layout="aside" />
+      </SheetContent>
+    </Sheet>
   );
 }

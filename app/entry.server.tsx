@@ -20,8 +20,10 @@ export default async function handleRequest(
       'https://rsms.me',
       'https://cdn.shopify.com',
       'https://shop.app',
+      'https://fonts.googleapis.com',
     ],
     styleSrc: ['https://rsms.me', 'https://fonts.googleapis.com'],
+    fontSrc: ['https://fonts.gstatic.com', 'self'], // Add this line
   });
 
   const body = await renderToReadableStream(

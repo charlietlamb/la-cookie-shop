@@ -22,8 +22,8 @@ module.exports = {
         800: '800ms',
       },
       fontFamily: {
-        silk: ['Cardo', 'Verdana', 'Segoe', 'sans-serif'],
-        inter: ['Inter var', defaultTheme.fontFamily.sans],
+        cardo: ['Cardo', 'sans-serif'],
+        hanken: ['Hanken Grotesk', 'sans-serif'],
       },
       boxShadow: {
         boxShadow: {

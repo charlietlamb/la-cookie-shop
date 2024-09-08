@@ -80,7 +80,7 @@ export default function OurCookiesCarouselItem({
           transition={{duration: 0.6, delay: 0.9}}
           className="lg:w-2/3 flex flex-col gap-4"
         >
-          <p className="font-[200] lg:text-lg font-inter">
+          <p className="font-[200] lg:text-lg font-hanken">
             {cookie.description}
           </p>
           <CookieButton

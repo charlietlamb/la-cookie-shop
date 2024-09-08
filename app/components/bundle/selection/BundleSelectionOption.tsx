@@ -74,10 +74,10 @@ export default function BundleSelectionOption({
         viewport={{once: true}}
         transition={{duration: 0.4, delay: index * 0.1 + 0.2}}
       >
-        <img width={small ? 80 : 150} src={cookie.image} alt={cookie.name} />
+        <img width={small ? 120 : 150} src={cookie.image} alt={cookie.name} />
       </motion.div>
       <motion.h5
-        className={cn('h4-size font-cardo text-center', small && 'p-size')}
+        className={cn('h4-size font-cardo text-center')}
         initial={{opacity: 0}}
         whileInView={{opacity: 1}}
         viewport={{once: true}}
@@ -86,7 +86,7 @@ export default function BundleSelectionOption({
         {cookie.name}
       </motion.h5>
       <motion.p
-        className={cn('text-sm font-light text-center', small && 'text-xs')}
+        className={cn('font-light text-center')}
         initial={{opacity: 0}}
         whileInView={{opacity: 1}}
         viewport={{once: true}}

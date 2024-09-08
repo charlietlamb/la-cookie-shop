@@ -18,7 +18,7 @@ export default function SignatureCookies({
   return (
     <div
       className={cn(
-        'lg:grid-cols-5 grid-cols-6 grid  gap-2',
+        'grid-cols-6 grid  gap-4',
         className,
         single && 'grid-cols-2',
       )}
@@ -31,8 +31,8 @@ export default function SignatureCookies({
           hero={hero}
           index={index}
           className={cn(
-            'w-full col-span-2 lg:col-span-1 cursor-default flex flex-col justify-start',
-            index > 2 && 'col-span-3 lg:col-span-1',
+            'w-full col-span-2 cursor-default flex flex-col justify-start',
+            index > 2 && 'col-span-3',
             hero && 'cursor-pointer flex flex-col justify-start',
             flavours && 'flex flex-col justify-start',
             bundle && 'flex flex-col justify-start',
