@@ -65,7 +65,7 @@ export default function Blog() {
             }}
           >
             <motion.div
-              className="w-80 xl:w-[500px] overflow-hidden"
+              className="w-80 xl:w-[500px] lg:h-[700px] h-[400px] md:h-[500px] flex flex-col items-center justify-center overflow-hidden"
               initial={{opacity: 0, scale: 0.9}}
               whileInView={{opacity: 1, scale: 1}}
               viewport={{once: true}}
@@ -76,7 +76,9 @@ export default function Blog() {
               }}
             >
               <img
-                src={`images/cookie-${index === 0 ? 'coffee-' : ''}mag.jpeg`}
+                src={`images/cookie-${
+                  index === 0 ? 'coffee-mag' : 'hand-creme'
+                }.jpeg`}
                 alt={`${category} blog image`}
               />
             </motion.div>

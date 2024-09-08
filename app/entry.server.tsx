@@ -21,9 +21,32 @@ export default async function handleRequest(
       'https://cdn.shopify.com',
       'https://shop.app',
       'https://fonts.googleapis.com',
+      'https://image.mux.com',
+      'https://inferred.litix.io',
+      'https://stream.mux.com',
     ],
     styleSrc: ['https://rsms.me', 'https://fonts.googleapis.com'],
-    fontSrc: ['https://fonts.gstatic.com', 'self'], // Add this line
+    fontSrc: ['https://fonts.gstatic.com', 'self'],
+    mediaSrc: [
+      'blob:',
+      'self',
+      'https://image.mux.com',
+      'https://inferred.litix.io',
+      'https://stream.mux.com',
+      'https://stream.mux.com',
+    ],
+    scriptSrc: [
+      'https://www.gstatic.com',
+      "'self'",
+      "'unsafe-inline'",
+      "'unsafe-eval'",
+      'http://localhost:*',
+      'https://cdn.shopify.com',
+      'https://shop.app',
+      'https://inferred.litix.io',
+      'https://stream.mux.com',
+    ],
+    connectSrc: ['*', 'https://inferred.litix.io'],
   });
 
   const body = await renderToReadableStream(

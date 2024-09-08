@@ -40,7 +40,6 @@ export const shouldRevalidate: ShouldRevalidateFunction = ({
 export function links() {
   return [
     {rel: 'stylesheet', href: tailwindMinCss},
-    {rel: 'stylesheet', href: 'https://rsms.me/inter/inter.css'},
     {
       rel: 'stylesheet',
       href: 'https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap',

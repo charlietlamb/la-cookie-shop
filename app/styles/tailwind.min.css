@@ -1321,6 +1321,18 @@ body {
   height: 1px;
 }
 
+.h-\[600px\] {
+  height: 600px;
+}
+
+.h-\[800px\] {
+  height: 800px;
+}
+
+.h-\[700px\] {
+  height: 700px;
+}
+
 .max-h-96 {
   max-height: 24rem;
 }
@@ -2412,6 +2424,11 @@ body {
   padding-right: 0px;
 }
 
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
 .px-10 {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
@@ -2540,11 +2557,6 @@ body {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
-}
-
-.px-1 {
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
 }
 
 .pb-1 {
@@ -3719,6 +3731,10 @@ body {
   color: rgb(94 69 42 / var(--tw-text-opacity));
 }
 
+mux-player {
+  --controls: none;
+}
+
 .file\:border-0::file-selector-button {
   border-width: 0px;
 }
@@ -4679,6 +4695,10 @@ body {
     height: 3rem;
   }
 
+  .md\:h-\[500px\] {
+    height: 500px;
+  }
+
   .md\:w-1\/2 {
     width: 50%;
   }
@@ -4782,10 +4802,6 @@ body {
     padding-bottom: 4rem;
   }
 
-  .md\:pb-1 {
-    padding-bottom: 0.25rem;
-  }
-
   .md\:pt-\[60px\] {
     padding-top: 60px;
   }
@@ -4827,16 +4843,16 @@ body {
 }
 
 @media (min-width: 1024px) {
-  .lg\:col-span-1 {
-    grid-column: span 1 / span 1;
-  }
-
   .lg\:mt-\[72px\] {
     margin-top: 72px;
   }
 
   .lg\:h-14 {
     height: 3.5rem;
+  }
+
+  .lg\:h-\[700px\] {
+    height: 700px;
   }
 
   .lg\:w-1\/2 {
@@ -4857,10 +4873,6 @@ body {
 
   .lg\:w-\[80\%\] {
     width: 80%;
-  }
-
-  .lg\:grid-cols-5 {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 
   .lg\:grid-cols-4 {

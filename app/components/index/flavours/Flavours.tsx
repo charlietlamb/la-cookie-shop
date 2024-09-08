@@ -1,6 +1,7 @@
 import SignatureGif from '~/components/signature/SignatureGif';
 import FlavoursText from './FlavoursText';
 import {motion} from 'framer-motion';
+import FlavoursGif from './FlavoursGif';
 
 export default function Flavours() {
   return (
@@ -12,7 +13,7 @@ export default function Flavours() {
         viewport={{once: true, amount: 0.3}}
         transition={{duration: 0.6, ease: 'easeOut'}}
       >
-        <SignatureGif />
+        <FlavoursGif />
       </motion.div>
     </div>
   );

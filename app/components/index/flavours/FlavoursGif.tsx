@@ -1,7 +1,7 @@
 import MuxPlayer from '@mux/mux-player-react';
 import {cn} from '~/lib/utils';
 
-export default function SignatureGif({className}: {className?: string}) {
+export default function FlavoursGif({className}: {className?: string}) {
   return (
     <div
       className={cn(
@@ -11,7 +11,7 @@ export default function SignatureGif({className}: {className?: string}) {
     >
       <MuxPlayer
         streamType="on-demand"
-        playbackId="2oCb7VjBRYI00fMu5aoWtSM8FaA4TXNctL01sUz2KH00Pk"
+        playbackId="CQ6abCeosXk7XbF4hN7hl1cvTgBkS00ofqHmcIWcJ2Gc"
         metadataVideoTitle="Placeholder (optional)"
         metadataViewerUserId="Placeholder (optional)"
         primaryColor="#FFFFFF"

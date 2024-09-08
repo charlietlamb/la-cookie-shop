@@ -1,4 +1,5 @@
 import {motion} from 'framer-motion';
+import MuxPlayer from '@mux/mux-player-react';
 
 export default function InfoGif() {
   return (
@@ -9,13 +10,16 @@ export default function InfoGif() {
       viewport={{once: true, amount: 0.3}}
       transition={{duration: 0.6, ease: 'easeOut'}}
     >
-      <motion.img
-        src="/gifs/gif1.gif"
-        alt="gif"
-        initial={{opacity: 0, y: 20}}
-        whileInView={{opacity: 1, y: 0}}
-        viewport={{once: true, amount: 0.3}}
-        transition={{duration: 0.6, delay: 0.2, ease: 'easeOut'}}
+      <MuxPlayer
+        streamType="on-demand"
+        playbackId="bQizv2WvxwWWVQiQI7AgALtYpejzA1lLDyBqD8tKoRQ"
+        metadataVideoTitle="Placeholder (optional)"
+        metadataViewerUserId="Placeholder (optional)"
+        primaryColor="#FFFFFF"
+        secondaryColor="#000000"
+        autoPlay
+        loop
+        muted
       />
     </motion.div>
   );

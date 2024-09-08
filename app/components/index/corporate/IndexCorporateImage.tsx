@@ -10,7 +10,7 @@ export default function IndexCorporateImage() {
       transition={{duration: 0.6, ease: 'easeOut'}}
     >
       <motion.img
-        src="/images/cookies-stack-mag.jpeg"
+        src="/images/cookie-candle.jpg"
         alt="cookies"
         initial={{opacity: 0, y: 20}}
         whileInView={{opacity: 1, y: 0}}

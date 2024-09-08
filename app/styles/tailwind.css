@@ -176,3 +176,7 @@
 .predictive-search-result-item a div span {
   @apply text-brown text-base font-light;
 }
+
+mux-player {
+  --controls: none;
+}
