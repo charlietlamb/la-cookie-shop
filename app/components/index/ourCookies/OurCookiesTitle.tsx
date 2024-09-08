@@ -29,7 +29,7 @@ export default function OurCookiesTitle() {
   return (
     <div className="padding-main flex flex-col items-center w-full">
       <motion.h2
-        className="font-silk title-size font-medium leading-none uppercase"
+        className="font-cardo title-size font-medium leading-none uppercase"
         initial="hidden"
         animate="visible"
         variants={titleVariants}

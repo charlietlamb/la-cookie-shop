@@ -30,7 +30,7 @@ export default function NextSeason() {
             whileInView={{opacity: 1}}
             viewport={{once: true, amount: 0.5}}
             transition={{duration: 0.6, delay: index * 0.1 + 0.6}}
-            className="font-silk text-xl"
+            className="font-cardo text-xl"
           >
             ?
           </motion.p>

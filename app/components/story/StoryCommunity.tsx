@@ -9,7 +9,7 @@ export default function StoryCommunity() {
       className="bg-green w-full py-16 text-white"
     >
       <div className="padding-main">
-        <h3 className="font-silk mb-6 text-3xl text-center">Our Community</h3>
+        <h3 className="font-cardo mb-6 text-3xl text-center">Our Community</h3>
         <div className="md:flex-row flex flex-col items-start gap-8">
           <motion.img
             src="/images/cookie-bowl.jpeg"

@@ -70,7 +70,7 @@ export default function BundlePackaging() {
         </div>
       </RadioGroup>
       <div className="flex items-center justify-center gap-2">
-        <p className="font-silk text-md leading-none text-center">
+        <p className="font-cardo text-md leading-none text-center">
           Limited Edition Packaging (+€12)
         </p>
         <AnimatePresence>

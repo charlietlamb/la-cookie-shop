@@ -1,3 +1,3 @@
 export default function OffersOffers() {
-  return <div className="font-silk">Coming Soon...</div>;
+  return <div className="font-cardo">Coming Soon...</div>;
 }

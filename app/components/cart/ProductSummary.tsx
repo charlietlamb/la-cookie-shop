@@ -14,13 +14,12 @@ export default function ProductSummary({
   const orderDetails = attributes.find(
     (attribute) => attribute.key === 'Order Details',
   )?.value;
-  console.log(orderDetails);
   if (!orderDetails || !orderDetails.length) return 'No details found...';
   const orderDetailsArray = orderDetails.split(',');
   return (
     <div
       className={cn(
-        'font-silk grid grid-cols-1 md:grid-cols-2 gap-2 text-sm',
+        'font-cardo grid grid-cols-1 md:grid-cols-2 gap-2 text-sm',
         className,
       )}
     >

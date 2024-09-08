@@ -17,7 +17,7 @@ export default function Blog() {
   return (
     <motion.div className="padding-main md:gap-8 flex flex-col items-center gap-4 py-16">
       <motion.h3
-        className="title-size font-silk text-center uppercase"
+        className="title-size font-cardo text-center uppercase"
         initial={{opacity: 0, y: 20}}
         whileInView={{opacity: 1, y: 0}}
         viewport={{once: true}}
@@ -81,7 +81,7 @@ export default function Blog() {
               />
             </motion.div>
             <motion.h4
-              className="font-silk h3-size"
+              className="font-cardo h3-size"
               initial={{opacity: 0, y: 20}}
               whileInView={{opacity: 1, y: 0}}
               viewport={{once: true}}
@@ -94,7 +94,7 @@ export default function Blog() {
               {category}
             </motion.h4>
             <motion.p
-              className="font-silk text-center max-w-[70%]"
+              className="font-cardo text-center max-w-[70%]"
               initial={{opacity: 0, y: 20}}
               whileInView={{opacity: 1, y: 0}}
               viewport={{once: true}}

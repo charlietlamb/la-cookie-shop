@@ -2,7 +2,6 @@ import {motion} from 'framer-motion';
 import {Mail, Phone, MapPin} from 'lucide-react';
 import {MetaFunction} from '@remix-run/react';
 import {useOpenStore} from '~/store/open';
-import {useEffect} from 'react';
 import useWindowDimensions from '../utils/useWindowDimensions';
 import useSetHeaderOpen from '../utils/useSetHeaderOpen';
 
@@ -20,7 +19,7 @@ export default function Contact() {
         initial={{opacity: 0, y: -50}}
         animate={{opacity: 1, y: 0}}
         transition={{duration: 0.6}}
-        className="h1-size font-silk text-dark mb-12 text-center"
+        className="h1-size font-cardo text-dark mb-12 text-center"
       >
         Get in Touch
       </motion.h1>

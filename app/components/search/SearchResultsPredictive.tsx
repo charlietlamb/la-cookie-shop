@@ -289,7 +289,7 @@ function SearchResultsPredictiveEmpty({
         strokeWidth={0.8}
         className="text-brown size-10 flex-shrink-0"
       />
-      <p className="font-silk">
+      <p className="font-cardo">
         Sorry, there was no results found for <q>{term.current}</q>
       </p>
     </div>

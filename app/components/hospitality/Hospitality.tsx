@@ -10,7 +10,7 @@ export default function Hospitality() {
         initial={{opacity: 0, y: -50}}
         animate={{opacity: 1, y: 0}}
         transition={{duration: 0.6}}
-        className="font-silk text-dark mb-8 text-4xl text-center uppercase"
+        className="font-cardo text-dark mb-8 text-4xl text-center uppercase"
       >
         Hospitality at La Cookie Shop
       </motion.h1>
@@ -41,7 +41,7 @@ export default function Hospitality() {
           transition={{duration: 0.6, delay: 0.9}}
           className="md:w-2/3 w-full"
         >
-          <h2 className="font-silk text-sand mb-4 text-3xl uppercase">
+          <h2 className="font-cardo text-sand mb-4 text-3xl uppercase">
             Welcome to Our World of Sweetness
           </h2>
           <p className="mb-4 text-lg font-light">
@@ -67,34 +67,37 @@ export default function Hospitality() {
         <TabsList className="grid w-full grid-cols-3">
           <TabsTrigger
             value="in-store"
-            className="font-silk md:hidden uppercase"
+            className="font-cardo md:hidden uppercase"
           >
             Fresh
           </TabsTrigger>
           <TabsTrigger
             value="in-store"
-            className="font-silk md:block hidden uppercase"
+            className="font-cardo md:block hidden uppercase"
           >
             Freshly Baked on Premises
           </TabsTrigger>
-          <TabsTrigger value="events" className="font-silk md:hidden uppercase">
+          <TabsTrigger
+            value="events"
+            className="font-cardo md:hidden uppercase"
+          >
             Events
           </TabsTrigger>
           <TabsTrigger
             value="events"
-            className="font-silk md:block hidden uppercase"
+            className="font-cardo md:block hidden uppercase"
           >
             Events & Catering
           </TabsTrigger>
           <TabsTrigger
             value="corporate"
-            className="font-silk md:block hidden uppercase"
+            className="font-cardo md:block hidden uppercase"
           >
             Corporate Gifting
           </TabsTrigger>
           <TabsTrigger
             value="corporate"
-            className="font-silk md:hidden uppercase"
+            className="font-cardo md:hidden uppercase"
           >
             Corporate
           </TabsTrigger>
@@ -159,7 +162,7 @@ export default function Hospitality() {
           transition={{duration: 0.6, delay: 0.6}}
           className="md:w-1/2 w-full"
         >
-          <h2 className="font-silk text-sand mb-4 text-3xl uppercase">
+          <h2 className="font-cardo text-sand mb-4 text-3xl uppercase">
             Partner with La Cookie Shop
           </h2>
           <motion.p

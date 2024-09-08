@@ -14,12 +14,12 @@ export default function StoryValues() {
       transition={{duration: 1, delay: 1.5}}
       className="padding-main w-full"
     >
-      <h3 className="font-silk text-dark mb-6 text-3xl text-center">
+      <h3 className="font-cardo text-sand mb-6 text-3xl text-center">
         Our Values
       </h3>
       <Accordion type="single" collapsible className="w-full">
         <AccordionItem value="item-1">
-          <AccordionTrigger className="font-silk text-sand">
+          <AccordionTrigger className="font-cardo text-dark">
             Quality Without Compromise
           </AccordionTrigger>
           <AccordionContent>
@@ -40,7 +40,7 @@ export default function StoryValues() {
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="item-2">
-          <AccordionTrigger className="font-silk text-sand">
+          <AccordionTrigger className="font-cardo text-dark">
             Innovation Rooted in Tradition
           </AccordionTrigger>
           <AccordionContent>
@@ -62,7 +62,7 @@ export default function StoryValues() {
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="item-3">
-          <AccordionTrigger className="font-silk text-sand">
+          <AccordionTrigger className="font-cardo text-dark">
             Sustainability and Responsibility
           </AccordionTrigger>
           <AccordionContent>

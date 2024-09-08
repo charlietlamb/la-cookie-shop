@@ -77,7 +77,7 @@ export default function BundleSelectionOption({
         <img width={small ? 80 : 150} src={cookie.image} alt={cookie.name} />
       </motion.div>
       <motion.h5
-        className={cn('h4-size font-silk text-center', small && 'p-size')}
+        className={cn('h4-size font-cardo text-center', small && 'p-size')}
         initial={{opacity: 0}}
         whileInView={{opacity: 1}}
         viewport={{once: true}}

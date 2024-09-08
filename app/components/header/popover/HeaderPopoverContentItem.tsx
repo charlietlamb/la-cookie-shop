@@ -32,7 +32,7 @@ export default function HeaderPopoverContentItem({
           <img src={image} alt={title} className="object-cover w-full h-full" />
         </div>
         <Separator className="bg-brown" />
-        <h4 className="font-silk h4-size text-brown uppercase">{title}</h4>
+        <h4 className="font-cardo h4-size text-brown uppercase">{title}</h4>
       </Link>
     </motion.div>
   );

@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap');
 
 @layer base {
   :root {
@@ -66,116 +67,6 @@
   body {
     @apply bg-background text-foreground;
   }
-  @font-face {
-    font-family: 'Silk-Serif';
-    src: url('/silk/Silk-Serif-ExtraLight.otf') format('opentype');
-    font-weight: 200;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: 'Silk-Serif';
-    src: url('/silk/Silk-Serif-ExtraLight-Italic.otf') format('opentype');
-    font-weight: 200;
-    font-style: italic;
-  }
-
-  @font-face {
-    font-family: 'Silk-Serif';
-    src: url('/silk/Silk-Serif-Light.otf') format('opentype');
-    font-weight: 300;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: 'Silk-Serif';
-    src: url('/silk/Silk-Serif-Light-Italic.otf') format('opentype');
-    font-weight: 300;
-    font-style: italic;
-  }
-
-  @font-face {
-    font-family: 'Silk-Serif';
-    src: url('/silk/Silk-Serif-Regular.otf') format('opentype');
-    font-weight: 400;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: 'Silk-Serif';
-    src: url('/silk/Silk-Serif-Regulalr-Italic.otf') format('opentype');
-    font-weight: 400;
-    font-style: italic;
-  }
-
-  @font-face {
-    font-family: 'Silk-Serif';
-    src: url('/silk/Silk-Serif-Medium.otf') format('opentype');
-    font-weight: 500;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: 'Silk-Serif';
-    src: url('/silk/Silk-Serif-Medium-Italic.otf') format('opentype');
-    font-weight: 500;
-    font-style: italic;
-  }
-
-  @font-face {
-    font-family: 'Silk-Serif';
-    src: url('/silk/Silk-Serif-Bold.otf') format('opentype');
-    font-weight: 800;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: 'Silk-Serif';
-    src: url('/silk/Silk-Serif-Bold-Italic.otf') format('opentype');
-    font-weight: 800;
-    font-style: italic;
-  }
-  @font-face {
-    font-family: 'Silk-Serif';
-    src: url('/silk/Silk-Serif-Bold.otf') format('opentype');
-    font-weight: 700;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: 'Silk-Serif';
-    src: url('/silk/Silk-Serif-Bold-Italic.otf') format('opentype');
-    font-weight: 700;
-    font-style: italic;
-  }
-
-  @font-face {
-    font-family: 'Silk-Serif';
-    src: url('/silk/Silk-Serif-SemiBold.otf') format('opentype');
-    font-weight: 600;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: 'Silk-Serif';
-    src: url('/silk/Silk-Serif-SemiBold-Italic.otf') format('opentype');
-    font-weight: 600;
-    font-style: italic;
-  }
-
-  @font-face {
-    font-family: 'Silk-Serif';
-    src: url('/silk/Silk-Serif-Black.otf') format('opentype');
-    font-weight: 900;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: 'Silk-Serif';
-    src: url('/silk/Silk-Serif-Black-Italic.otf') format('opentype');
-    font-weight: 900;
-    font-style: italic;
-  }
 }
 
 .padding-main {
@@ -234,11 +125,11 @@
 }
 
 .native h1:not(.article h1) {
-  @apply h1-size font-silk text-brown;
+  @apply h1-size font-cardo text-brown;
 }
 
 .native h4:not(.article h4) {
-  @apply p-size font-silk text-brown border-sand pt-2 border-t;
+  @apply p-size font-cardo text-brown border-sand pt-2 border-t;
 }
 
 .native .child {
@@ -246,7 +137,7 @@
 }
 
 .native a:not(.article a) {
-  @apply text-brown font-silk;
+  @apply text-brown font-cardo;
 }
 
 .native .article {
@@ -268,7 +159,7 @@
 }
 
 .predictive-search-result h5 {
-  @apply font-silk text-sand text-xl uppercase;
+  @apply font-cardo text-sand text-xl uppercase;
 }
 
 .predictive-search-result-item a {
@@ -276,7 +167,7 @@
 }
 
 .predictive-search-result-item p {
-  @apply font-silk text-brown text-base;
+  @apply font-cardo text-brown text-base;
 }
 
 .predictive-search-result-item small div {

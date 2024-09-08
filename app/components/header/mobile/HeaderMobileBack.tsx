@@ -6,7 +6,7 @@ export default function HeaderMobileBack() {
   const setHeader = useSetAtom(headerAtom);
   return (
     <div
-      className=" font-silk flex items-center justify-between w-full text-lg uppercase cursor-pointer"
+      className=" font-cardo flex items-center justify-between w-full text-lg uppercase cursor-pointer"
       onClick={() => setHeader(null)}
     >
       Back

@@ -38,7 +38,7 @@ export default function BundleDisplayReviews() {
         viewport={{once: false, amount: 0.1}}
       >
         <motion.h3
-          className="font-silk text-sand mb-4 text-xl text-center"
+          className="font-cardo text-sand mb-4 text-xl text-center"
           variants={itemVariants}
         >
           What Our Customers Think

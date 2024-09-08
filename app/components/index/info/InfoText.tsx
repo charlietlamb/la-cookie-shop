@@ -13,7 +13,7 @@ export default function InfoText() {
       transition={{staggerChildren: 0.2}}
     >
       <motion.h2
-        className="font-silk title-size text-xl"
+        className="font-cardo title-size text-xl"
         variants={{
           hidden: {opacity: 0, y: 20},
           visible: {opacity: 1, y: 0},

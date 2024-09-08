@@ -13,11 +13,12 @@ import StickyBundle from './sticky/StickyBundle';
 
 export default function Index() {
   const bundleRef = useRef<HTMLDivElement>(null);
+  const infoRef = useRef<HTMLDivElement>(null);
   return (
     <>
-      <Hero />
+      <Hero infoRef={infoRef} />
       <Features />
-      <Info />
+      <Info infoRef={infoRef} />
       <Bundle className="py-16" index bundleRef={bundleRef} />
       <Signature />
       <IndexCorporate />

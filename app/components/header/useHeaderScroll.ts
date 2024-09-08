@@ -1,6 +1,5 @@
 import {MotionValue, useMotionValueEvent} from 'framer-motion';
-import {SetStateAction} from 'jotai';
-import {Dispatch, useState} from 'react';
+import {useState} from 'react';
 
 export function useHeaderScroll(
   scrollYProgress: MotionValue<number>,

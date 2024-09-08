@@ -65,7 +65,7 @@ export default function BundleOrderSummary() {
       viewport={{once: true, amount: 0.1}}
     >
       <motion.h5
-        className="font-silk text-2xl uppercase"
+        className="font-cardo text-2xl uppercase"
         variants={itemVariants}
       >
         Bundle summary
@@ -87,16 +87,16 @@ export default function BundleOrderSummary() {
             start
           />
         ) : (
-          <p className="font-silk">Add cookies to your order!</p>
+          <p className="font-cardo">Add cookies to your order!</p>
         )}
-        <motion.div className="font-silk" variants={itemVariants}>
+        <motion.div className="font-cardo" variants={itemVariants}>
           Order Type:{' '}
           {subscription ? 'Subscription (Delivered every 4 weeks)' : 'One-time'}
         </motion.div>
-        <motion.div className="font-silk" variants={itemVariants}>
+        <motion.div className="font-cardo" variants={itemVariants}>
           Packaging: {luxuryPackaging ? 'Luxury' : 'Standard'}
         </motion.div>
-        <motion.div className="font-silk" variants={itemVariants}>
+        <motion.div className="font-cardo" variants={itemVariants}>
           Price: €{finalPrice.toFixed(2)}{' '}
           {subscription && <span> / month</span>}
         </motion.div>

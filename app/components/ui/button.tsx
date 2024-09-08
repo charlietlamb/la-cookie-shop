@@ -28,7 +28,7 @@ const buttonVariants = cva(
           'bg-secondary text-secondary-foreground hover:bg-secondary/80',
         ghost: 'text-sand',
         ghostBrown: 'text-brown',
-        sand: 'bg-sand text-white font-silk uppercase flex items-center leading-none',
+        sand: 'bg-sand text-white font-cardo uppercase flex items-center leading-none',
         link: 'text-primary underline-offset-4 hover:underline',
         pointer: 'bg-transparent text-sand border-sand border',
       },

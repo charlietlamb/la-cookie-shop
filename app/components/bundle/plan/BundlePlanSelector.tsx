@@ -17,7 +17,6 @@ const itemVariants = {
 
 export function BundlePlanSelector() {
   const selectedBox = useAtomValue(selectedBoxAtom);
-  console.log(selectedBox);
   const [subscription, setSubscription] = useAtom(subscriptionAtom);
   const radioClassName =
     'border-sandLight flex items-center w-full gap-2 p-2 border rounded-none cursor-pointer bg-white hover:border-sandDark transition-all duration-300';

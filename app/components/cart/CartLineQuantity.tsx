@@ -26,7 +26,7 @@ export function CartLineQuantity({line}: {line: CartLine}) {
             <Minus strokeWidth={1} />
           </Button>
         </CartLineUpdateButton>
-        <span className="font-silk mb-0.5 text-xl font-light">{quantity}</span>
+        <span className="font-cardo mb-0.5 text-xl font-light">{quantity}</span>
         <CartLineUpdateButton lines={[{id: lineId, quantity: nextQuantity}]}>
           <Button
             aria-label="Increase quantity"

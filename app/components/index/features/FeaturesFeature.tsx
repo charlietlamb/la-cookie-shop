@@ -29,7 +29,7 @@ export default function FeaturesFeature({
     >
       <p className="h1-size">{feature.icon}</p>
       <div className="flex flex-col items-center">
-        <h3 className="font-silk h4-size text-brown text-center capitalize">
+        <h3 className="font-cardo h4-size text-brown text-center capitalize">
           {feature.title}
         </h3>
         <p className="font-[200] text-center md:text-base text-sm">

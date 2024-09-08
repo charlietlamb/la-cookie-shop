@@ -13,10 +13,10 @@ export function CartSummary({cart}: CartSummaryProps) {
     <div className="flex flex-col gap-2 mt-auto">
       <Separator className="bg-brown mb-2" />
       <div className="flex flex-col">
-        <h4 className="font-silk h4-size text-brown uppercase">Totals</h4>
+        <h4 className="font-cardo h4-size text-brown uppercase">Totals</h4>
         <dl className="flex items-center gap-2">
           <dt className="text-brown font-medium">Subtotal:</dt>
-          <dd className="font-silk mt-0.5">
+          <dd className="font-cardo mt-0.5">
             {cart.cost?.subtotalAmount?.amount ? (
               <Money data={cart.cost?.subtotalAmount} />
             ) : (

@@ -14,7 +14,7 @@ export default function HeaderMobileMenuOption({
   children: React.ReactNode;
 }) {
   const setHeader = useSetAtom(headerAtom);
-  const className = 'font-silk w-full text-lg uppercase';
+  const className = 'font-cardo w-full text-lg uppercase';
   return link ? (
     <Link to={to} className={className}>
       {children}

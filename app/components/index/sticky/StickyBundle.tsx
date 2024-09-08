@@ -26,7 +26,7 @@ export default function StickyBundle({
           transition={{duration: 0.3}}
         >
           <motion.div
-            className="left-4 bottom-4 border-sand hover:bg-greenLight/80 absolute !z-50 flex items-center gap-2 pt-2 pb-1 px-4 font-silk bg-white/80 backdrop-blur-md border rounded-none cursor-pointer pointer-events-auto"
+            className="left-4 bottom-4 border-sand hover:bg-greenLight/80 absolute !z-50 flex items-center gap-2 pt-2 pb-1 px-4 font-cardo bg-white/80 backdrop-blur-md border rounded-none cursor-pointer pointer-events-auto"
             onClick={() => {
               bundleRef.current?.scrollIntoView({behavior: 'smooth'});
             }}

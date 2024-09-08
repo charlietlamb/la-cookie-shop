@@ -22,7 +22,7 @@ module.exports = {
         800: '800ms',
       },
       fontFamily: {
-        silk: ['Silk-Serif', 'Verdana', 'Segoe', 'sans-serif'],
+        silk: ['Cardo', 'Verdana', 'Segoe', 'sans-serif'],
         inter: ['Inter var', defaultTheme.fontFamily.sans],
       },
       boxShadow: {

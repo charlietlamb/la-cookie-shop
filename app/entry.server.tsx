@@ -21,7 +21,7 @@ export default async function handleRequest(
       'https://cdn.shopify.com',
       'https://shop.app',
     ],
-    styleSrc: ['https://rsms.me'],
+    styleSrc: ['https://rsms.me', 'https://fonts.googleapis.com'],
   });
 
   const body = await renderToReadableStream(

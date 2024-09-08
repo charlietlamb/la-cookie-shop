@@ -20,7 +20,6 @@ export function CartLineItem({
   layout: CartLayout;
   line: CartLine;
 }) {
-  console.log(line);
   const {id, merchandise, attributes} = line;
   const {product, title, image} = merchandise;
   const {setCartOpen} = useOpenStore();
@@ -54,7 +53,7 @@ export function CartLineItem({
               }
             }}
           >
-            <p className="font-silk text-brown uppercase">{product.title}</p>
+            <p className="font-cardo text-brown uppercase">{product.title}</p>
           </Link>
           <ProductPrice price={line?.cost?.totalAmount} />
           <CartLineQuantity line={line} />

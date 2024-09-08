@@ -17,7 +17,7 @@ export default function Faq() {
       transition={{duration: 0.6, ease: 'easeOut'}}
     >
       <motion.h3
-        className="title-size font-silk text-center"
+        className="title-size font-cardo text-center"
         initial={{opacity: 0, y: 20}}
         whileInView={{opacity: 1, y: 0}}
         viewport={{once: true}}

@@ -37,7 +37,7 @@ export default function BundleDisplayAccordion() {
               exit={{opacity: 0, y: -10}}
               transition={{duration: 0.3}}
             >
-              <AccordionTrigger className="font-silk text-xl">
+              <AccordionTrigger className="font-cardo text-xl">
                 Ingredients
               </AccordionTrigger>
               <AccordionContent>
@@ -62,7 +62,7 @@ export default function BundleDisplayAccordion() {
               exit={{opacity: 0, y: -10}}
               transition={{duration: 0.3, delay: 0.1}}
             >
-              <AccordionTrigger className="font-silk text-xl">
+              <AccordionTrigger className="font-cardo text-xl">
                 Description
               </AccordionTrigger>
               <AccordionContent>
@@ -85,7 +85,7 @@ export default function BundleDisplayAccordion() {
               exit={{opacity: 0, y: -10}}
               transition={{duration: 0.3, delay: 0.2}}
             >
-              <AccordionTrigger className="font-silk text-xl">
+              <AccordionTrigger className="font-cardo text-xl">
                 Complements
               </AccordionTrigger>
               <AccordionContent>

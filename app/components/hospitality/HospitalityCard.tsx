@@ -12,7 +12,9 @@ export default function HospitalityCard({
   return (
     <Card className="mt-6">
       <CardHeader>
-        <CardTitle className="font-silk text-sand uppercase">{title}</CardTitle>
+        <CardTitle className="font-cardo text-sand uppercase">
+          {title}
+        </CardTitle>
       </CardHeader>
       <CardContent>
         <div className="md:flex-row flex flex-col gap-6">

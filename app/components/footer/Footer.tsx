@@ -7,7 +7,7 @@ export function Footer() {
       <div className="padding-main md:grid-cols-4 grid grid-cols-1 gap-8">
         <FooterBrand />
         <div>
-          <h3 className="font-silk mb-4 text-lg uppercase">Shop</h3>
+          <h3 className="font-cardo mb-4 text-lg uppercase">Shop</h3>
           <ul className="space-y-2">
             <li>
               <Link to="/bundle" className="hover:underline">
@@ -22,7 +22,7 @@ export function Footer() {
           </ul>
         </div>
         <div>
-          <h3 className="font-silk mb-4 text-lg uppercase">About</h3>
+          <h3 className="font-cardo mb-4 text-lg uppercase">About</h3>
           <ul className="space-y-2">
             <li>
               <Link to="/story" className="hover:underline">
@@ -42,7 +42,7 @@ export function Footer() {
           </ul>
         </div>
         <div>
-          <h3 className="font-silk mb-4 text-lg uppercase">Info</h3>
+          <h3 className="font-cardo mb-4 text-lg uppercase">Info</h3>
           <ul className="space-y-2">
             <li>
               <Link to="/blogs" className="hover:underline">

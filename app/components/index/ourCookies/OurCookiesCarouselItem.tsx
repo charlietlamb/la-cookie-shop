@@ -45,7 +45,7 @@ export default function OurCookiesCarouselItem({
       >
         <h4
           className={cn(
-            'h1-size font-silk md:flex-shrink-0 font-medium leading-none uppercase',
+            'h1-size font-cardo md:flex-shrink-0 font-medium leading-none uppercase',
           )}
         >
           {cookie.name}

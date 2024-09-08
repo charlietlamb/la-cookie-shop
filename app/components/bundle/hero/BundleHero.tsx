@@ -11,7 +11,7 @@ export default function OurCookiesHero() {
       <div className="padding-main">
         <div className="relative z-10 h-[400px] flex flex-col items-center gap-4 justify-center mb-[50px] pb-20">
           <motion.h1
-            className="title-size font-silk mt-8 text-center"
+            className="title-size font-cardo mt-8 text-center"
             initial={{opacity: 0, y: 20}}
             whileInView={{opacity: 1, y: 0}}
             viewport={{once: true}}

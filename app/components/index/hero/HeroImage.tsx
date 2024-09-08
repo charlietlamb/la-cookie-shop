@@ -1,7 +1,12 @@
 import {ArrowDown} from 'lucide-react';
 import {motion} from 'framer-motion';
+import {RefObject, useEffect} from 'react';
 
-export default function HeroImage() {
+export default function HeroImage({
+  infoRef,
+}: {
+  infoRef: RefObject<HTMLDivElement>;
+}) {
   return (
     <motion.div
       initial={{opacity: 0, y: 100}}
@@ -11,8 +16,11 @@ export default function HeroImage() {
     >
       <div className="bg-sand/30 absolute inset-0" />
       <div className="absolute inset-0 z-20 flex flex-col items-center justify-end py-8">
-        <div className="hover:scale-95 flex flex-col items-center text-white transition-all cursor-pointer">
-          <p className="upper h4-size font-silk">DISCOVER</p>
+        <div
+          onClick={() => infoRef.current?.scrollIntoView({behavior: 'smooth'})}
+          className="hover:scale-95 flex flex-col items-center text-white transition-all cursor-pointer"
+        >
+          <p className="upper h4-size font-cardo">DISCOVER</p>
           <ArrowDown strokeWidth={1.5} className="size-8 flex-shrink-0" />
         </div>
       </div>

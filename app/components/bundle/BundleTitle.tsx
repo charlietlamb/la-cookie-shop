@@ -11,7 +11,7 @@ export default function BundleTitle() {
       transition={{duration: 0.6}}
     >
       <motion.h2
-        className="text-dark font-silk h2-size text-center"
+        className="text-dark font-cardo h2-size text-center"
         initial={{opacity: 0, scale: 0.9}}
         whileInView={{opacity: 1, scale: 1}}
         viewport={{once: true}}
