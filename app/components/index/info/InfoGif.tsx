@@ -4,7 +4,7 @@ import MuxPlayer from '@mux/mux-player-react';
 export default function InfoGif() {
   return (
     <motion.div
-      className="shadow-baseWhite lg:w-2/3 w-full overflow-hidden rounded-none"
+      className="shadow-baseWhite w-[300px] overflow-hidden rounded-none flex flex-col items-center justify-center"
       initial={{opacity: 0, scale: 0.9}}
       whileInView={{opacity: 1, scale: 1}}
       viewport={{once: true, amount: 0.3}}

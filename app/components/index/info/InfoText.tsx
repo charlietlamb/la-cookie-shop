@@ -13,16 +13,14 @@ export default function InfoText() {
       transition={{staggerChildren: 0.2}}
     >
       <motion.h2
-        className="font-cardo title-size text-xl"
+        className="font-cardo h1-size text-xl"
         variants={{
           hidden: {opacity: 0, y: 20},
           visible: {opacity: 1, y: 0},
         }}
         transition={{duration: 0.6, ease: 'easeOut'}}
       >
-        Where American
-        <br /> Baking Meets
-        <br /> French Pastry <br /> Artistry
+        Where American Baking Meets French Pastry Artistry
       </motion.h2>
       <motion.p
         className="text-xl font-light"

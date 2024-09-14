@@ -39,7 +39,7 @@ const buttonVariants = cva(
         xl: 'lg:h-14 md:h-12 h-12 rounded-none px-10',
         icon: 'h-10 w-10',
         auto: 'w-auto h-auto',
-        black: 'h3-size px-8 py-4 rounded-none h-auto',
+        black: 'h4-size px-4 py-2 rounded-none h-auto',
       },
     },
     defaultVariants: {
