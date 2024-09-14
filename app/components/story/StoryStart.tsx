@@ -9,7 +9,7 @@ export default function StoryStart() {
       className="md:flex-row padding-main flex flex-col items-start gap-12"
     >
       <motion.img
-        src="/images/cookie-mag-tea.jpeg"
+        src="/images/dark-cookies.jpeg"
         alt="La Cookie Shop Story"
         className="md:w-1/3 w-full rounded-none shadow-lg"
         initial={{opacity: 0, scale: 0.9}}

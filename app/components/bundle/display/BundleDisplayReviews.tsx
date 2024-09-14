@@ -1,72 +1,58 @@
 import {useAtomValue} from 'jotai';
 import {selectedCookieAtom} from '~/store/bundle';
 import {motion, AnimatePresence} from 'framer-motion';
-import {Star} from 'lucide-react';
+import {useState, useEffect} from 'react';
 
-const containerVariants = {
-  hidden: {opacity: 0, y: 20},
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.6,
-      when: 'beforeChildren',
-      staggerChildren: 0.1,
-    },
-  },
-  exit: {opacity: 0, y: -20, transition: {duration: 0.3}},
-};
-
-const itemVariants = {
-  hidden: {opacity: 0, y: 10},
-  visible: {opacity: 1, y: 0},
+const reviewVariants = {
+  enter: {opacity: 0},
+  center: {opacity: 1},
+  exit: {opacity: 0},
 };
 
 export default function BundleDisplayReviews() {
   const selectedCookie = useAtomValue(selectedCookieAtom);
+  const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentReviewIndex(
+        (prevIndex) => (prevIndex + 1) % selectedCookie.reviews.length,
+      );
+    }, 8000);
+
+    return () => clearInterval(interval);
+  }, [selectedCookie.reviews.length]);
 
   return (
-    <AnimatePresence mode="wait">
-      <motion.div
-        key={selectedCookie.name}
-        className="mt-4 bg-white rounded-none"
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-        exit="exit"
-        whileInView="visible"
-        viewport={{once: false, amount: 0.1}}
-      >
-        <motion.h3
-          className="font-cardo text-sand mb-4 text-xl text-center"
-          variants={itemVariants}
+    <motion.div
+      className="mt-4 bg-white rounded-none"
+      initial={{opacity: 0, y: 50}}
+      animate={{opacity: 1, y: 0}}
+      transition={{duration: 0.6}}
+    >
+      <h3 className="font-cardo mb-4 text-xl text-center">
+        What Our Customers Think
+      </h3>
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={currentReviewIndex}
+          variants={reviewVariants}
+          initial="enter"
+          animate="center"
+          exit="exit"
+          transition={{duration: 1}}
+          className="px-2"
         >
-          What Our Customers Think
-        </motion.h3>
-        <motion.div className="px-2 space-y-3" variants={containerVariants}>
-          {selectedCookie.reviews.map((review, index) => (
-            <motion.div
-              key={index}
-              className="bg-light p-3 rounded-none"
-              variants={itemVariants}
-              transition={{duration: 0.3}}
-            >
-              <div className="flex items-center mb-2">
-                <p className="mr-2 font-medium">{review.name}</p>
-                <div className="flex">
-                  {[...Array(review.rating)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="w-4 h-4 text-yellow-400 fill-current"
-                    />
-                  ))}
-                </div>
-              </div>
-              <p className="text-sm">{review.description}</p>
-            </motion.div>
-          ))}
+          <div className="flex flex-col p-3 rounded-none">
+            <p className="font-cardo mb-2 font-medium">
+              {selectedCookie.reviews[currentReviewIndex].name}
+            </p>
+            <p className="text-sm">
+              {selectedCookie.reviews[currentReviewIndex].description}
+            </p>
+          </div>
         </motion.div>
-      </motion.div>
-    </AnimatePresence>
+      </AnimatePresence>
+    </motion.div>
   );
 }

@@ -9,7 +9,7 @@ export default function HeroContent() {
     <>
       <div className="relative max-w-[90%] sm:max-w-[50%] text-center z-30 font-cardo hero-size text-dark">
         {words.map((word, wordIndex) => (
-          <span key={wordIndex} className="inline-block pl-3">
+          <span key={wordIndex} className="md:pl-3 inline-block pl-2">
             {word.split('').map((char, charIndex) => {
               i++;
               return (

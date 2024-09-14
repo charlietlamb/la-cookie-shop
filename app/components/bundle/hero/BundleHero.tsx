@@ -2,10 +2,11 @@ import React from 'react';
 import SignatureCookies from '~/components/signature/SignatureCookies';
 import {motion} from 'framer-motion';
 import OurCookiesHeroBackground from '~/components/index/ourCookies/OurCookiesHeroBackground';
+import {cn} from '~/lib/utils';
 
-export default function OurCookiesHero() {
+export default function BundleHero({index}: {index: boolean}) {
   return (
-    <div className="relative w-full py-20">
+    <div className={cn('relative w-full py-20', index ? 'pt-0' : '')}>
       <div className="bg-light text-dark absolute top-0 right-0 left-0 z-0 w-full h-[400px]"></div>
       <OurCookiesHeroBackground className="bundle" />
       <div className="padding-main">

@@ -3,8 +3,8 @@ import {CookieData} from '~/data/cookieData';
 import {cn} from '~/lib/utils';
 import {Separator} from '~/components/ui/separator';
 import CookieButton from '~/components/utils/CookieButton';
-import {useAtom} from 'jotai';
-import {bundleAtom} from '~/store/bundle';
+import {useAtom, useAtomValue} from 'jotai';
+import {bundleAtom, bundleQuantityAtom, MAX_QUANTITY} from '~/store/bundle';
 import {addToBundle} from '~/functions/addToBundle';
 import {useNavigate} from '@remix-run/react';
 
@@ -17,7 +17,9 @@ export default function OurCookiesCarouselItem({
 }) {
   const [bundle, setBundle] = useAtom(bundleAtom);
   const navigate = useNavigate();
+  const quantity = useAtomValue(bundleQuantityAtom);
   const handleAddToBundle = () => {
+    if (quantity === MAX_QUANTITY) return;
     const newBundle = addToBundle(bundle, cookie);
     setBundle(newBundle);
     navigate('/bundle');
@@ -32,7 +34,7 @@ export default function OurCookiesCarouselItem({
       viewport={{once: true, amount: 0.3}}
       transition={{duration: 0.6, delay: index * 0.1}}
       className={cn(
-        'flex flex-col lg:w-[80%] w-full gap-4 p-8 rounded-none shadow-md border border-sand',
+        'flex flex-col lg:w-[80%] w-full gap-4 p-8 rounded-none border border-sand',
         odd ? 'bg-light ml-auto' : 'bg-white',
       )}
     >
@@ -45,7 +47,7 @@ export default function OurCookiesCarouselItem({
       >
         <h4
           className={cn(
-            'h1-size font-cardo md:flex-shrink-0 font-medium leading-none uppercase',
+            'h1-size font-cardo md:flex-shrink-0 font-medium leading-none',
           )}
         >
           {cookie.name}
@@ -64,7 +66,7 @@ export default function OurCookiesCarouselItem({
           viewport={{once: true}}
           transition={{duration: 0.6, delay: 0.6}}
           className={cn(
-            'aspect-square lg:w-1/3 flex-shrink-0 w-full overflow-hidden border border-sand rounded-none shadow-lg',
+            'aspect-square lg:w-[25%] aspect-square flex-shrink-0 w-full overflow-hidden border border-sand rounded-none shadow-lg',
           )}
         >
           <img
@@ -80,9 +82,7 @@ export default function OurCookiesCarouselItem({
           transition={{duration: 0.6, delay: 0.9}}
           className="lg:w-2/3 flex flex-col gap-4"
         >
-          <p className="font-[200] lg:text-lg font-hanken">
-            {cookie.description}
-          </p>
+          <p className="font-[200] font-hanken">{cookie.description}</p>
           <CookieButton
             variant={'actionDarkInverse'}
             className="group p-text w-full mt-auto overflow-hidden"

@@ -21,7 +21,7 @@ export default function StoryTabs() {
           className="flex flex-col items-center w-full gap-2"
           onValueChange={setActiveTab}
         >
-          <TabsList className="grid w-full grid-cols-3 gap-2 bg-green-600">
+          <TabsList className="grid w-full grid-cols-3 gap-2 font-light bg-green-600">
             <TabsTrigger
               value="ingredients"
               className="font-cardo text-dark data-[state=active]:bg-white data-[state=active]:text-dark text-base md:text-lg"
@@ -51,7 +51,7 @@ export default function StoryTabs() {
             <TabsContent value="ingredients">
               <Card className="text-sand bg-white">
                 <CardHeader>
-                  <CardTitle className="font-cardo text-dark md:text-2xl text-xl">
+                  <CardTitle className="font-cardo text-dark md:text-2xl text-xl font-light">
                     Premium Ingredients
                   </CardTitle>
                 </CardHeader>
@@ -88,7 +88,7 @@ export default function StoryTabs() {
             <TabsContent value="crafting">
               <Card className="text-sand bg-white">
                 <CardHeader>
-                  <CardTitle className="font-cardo text-dark md:text-2xl text-xl">
+                  <CardTitle className="font-cardo text-dark md:text-2xl text-xl font-light">
                     Artisanal Craftsmanship
                   </CardTitle>
                 </CardHeader>
@@ -124,7 +124,7 @@ export default function StoryTabs() {
             <TabsContent value="quality">
               <Card className="text-sand bg-white">
                 <CardHeader>
-                  <CardTitle className="font-cardo text-dark md:text-2xl text-xl">
+                  <CardTitle className="font-cardo text-dark md:text-2xl text-xl font-light">
                     Rigorous Quality Control
                   </CardTitle>
                 </CardHeader>

@@ -29,7 +29,7 @@ export default function Hospitality() {
         >
           <div className="overflow-hidden rounded-none shadow-lg">
             <img
-              src="/images/cookie-bowl-tea.jpeg"
+              src="/images/cookie-candle.jpg"
               alt="La Cookie Shop Hospitality"
               className="w-full h-auto"
             />

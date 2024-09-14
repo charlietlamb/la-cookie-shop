@@ -65,7 +65,7 @@ export default function Blog() {
             }}
           >
             <motion.div
-              className="w-80 xl:w-[500px] lg:h-[700px] h-[400px] md:h-[500px] flex flex-col items-center justify-center overflow-hidden"
+              className="w-80 xl:w-[500px] xl:h-[500px] h-80 aspect-square flex flex-col items-center justify-center overflow-hidden"
               initial={{opacity: 0, scale: 0.9}}
               whileInView={{opacity: 1, scale: 1}}
               viewport={{once: true}}

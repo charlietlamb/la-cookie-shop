@@ -24,7 +24,7 @@ export default function Bundle({
   useSetBundleOpen(setBundleOpen, bundleRef);
   return (
     <div>
-      <BundleHero />
+      <BundleHero index={index} />
       <div
         className={cn(
           'padding-main bundle md:flex-row relative flex flex-col py-8 gap-4 md:gap-0',

@@ -9,7 +9,7 @@ export const cookieData = [
       'Lychee-White Chocolate',
     ],
     image: '/cookies/RoseBerry.png',
-    description: `The Rose Berry cookie features fresh raspberries and strawberries, floral vanilla, and white chocolate, accented with a hint of rose. This blend creates a flavorful experience, perfect for any occasion, especially afternoon tea. The raspberries add a fresh tartness, while the white chocolate introduces a creamy sweetness. The vanilla enhances the cookie's depth, and the rose adds a subtle, aromatic kiss. This cookie is designed for those who enjoy a sophisticated treat that pairs well with a variety of beverages or stands out on its own.`,
+    description: `The Rose Berry cookie features raspberries and strawberries, floral vanilla, and white chocolate, accented with a hint of rose. This blend creates a flavorful experience, perfect for any occasion, especially afternoon tea. The raspberries add a fresh tartness, while the white chocolate introduces a creamy sweetness. The vanilla enhances the cookie's depth, and the rose adds a subtle, aromatic kiss. This cookie is designed for those who enjoy a sophisticated treat that pairs well with a variety of beverages or stands out on its own.`,
     complement: `This delicate cookie pairs exquisitely with a glass of Moët & Chandon Rosé Impérial Champagne, enhancing the berry notes and floral undertones. For a non-alcoholic option, try it with a cup of Mariage Frères Marco Polo tea.`,
     reviews: [
       {

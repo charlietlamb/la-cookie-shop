@@ -86,7 +86,7 @@ export default function BundleSelectionOption({
         {cookie.name}
       </motion.h5>
       <motion.p
-        className={cn('font-light text-center')}
+        className={cn('font-light text-center hidden md:flex')}
         initial={{opacity: 0}}
         whileInView={{opacity: 1}}
         viewport={{once: true}}

@@ -12,7 +12,7 @@ export const featuresData = [
     icon: '🇵🇹',
   },
   {
-    title: 'Unique Parisian-Inspired Flavors',
+    title: 'Unique Patisserie-Inspired Flavors',
     description:
       'Experience a fusion of Parisian elegance and bold flavors, with cookies inspired by iconic French desserts like Ispahan, creating a taste adventure in every bite.',
     icon: '🍰',

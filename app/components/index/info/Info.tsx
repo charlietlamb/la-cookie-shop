@@ -8,10 +8,8 @@ export default function Info({infoRef}: {infoRef: RefObject<HTMLDivElement>}) {
       ref={infoRef}
       className="padding-main md:flex-row text-dark bg-light flex flex-col items-stretch gap-4 py-16"
     >
+      <InfoText />
       <InfoGif />
-      <div className="flex-1">
-        <InfoText />
-      </div>
     </div>
   );
 }

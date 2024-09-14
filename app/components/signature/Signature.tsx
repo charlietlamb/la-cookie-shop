@@ -25,7 +25,7 @@ const itemVariants = {
 export default function Signature() {
   return (
     <motion.div
-      className="padding-main md:flex-row relative flex flex-col py-16"
+      className="padding-main relative flex flex-col py-16"
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
@@ -35,16 +35,13 @@ export default function Signature() {
         <SignatureText />
       </motion.div>
       <motion.div
-        className="lg:w-1/2 flex flex-col items-center justify-start w-full gap-4"
+        className="flex flex-col items-center justify-start w-full gap-4 pt-4"
         variants={itemVariants}
       >
-        <motion.div variants={itemVariants}>
-          <SignatureGif />
-        </motion.div>
+        <SignatureButton />
         <motion.div variants={itemVariants}>
           <SignatureGifText />
         </motion.div>
-        <SignatureButton />
       </motion.div>
     </motion.div>
   );
