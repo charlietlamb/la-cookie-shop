@@ -7,7 +7,12 @@ import {cn} from '~/lib/utils';
 export default function BundleHero({index}: {index: boolean}) {
   return (
     <div className={cn('relative w-full py-20', index ? 'pt-0' : '')}>
-      <div className="bg-light text-dark absolute top-0 right-0 left-0 z-0 w-full h-[400px]"></div>
+      <div
+        className={cn(
+          'bg-light text-dark absolute top-0 right-0 left-0 z-0 w-full h-[380px]',
+          index && 'h-[300px]',
+        )}
+      ></div>
       <OurCookiesHeroBackground className="bundle" />
       <div className="padding-main">
         <div className="relative z-10 h-[400px] flex flex-col items-center gap-4 justify-center mb-[50px]">

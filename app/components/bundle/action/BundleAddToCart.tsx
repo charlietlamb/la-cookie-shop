@@ -106,10 +106,7 @@ export default function BundleAddToCart() {
         <motion.div variants={buttonVariants}>
           <Button
             variant="actionDarkInverse"
-            className={cn(
-              'p-size mt-4',
-              quantity != MAX_QUANTITY && 'bg-red-500/50',
-            )}
+            className={cn('p-size mt-4')}
             disabled={quantity != MAX_QUANTITY}
           >
             {quantity == MAX_QUANTITY

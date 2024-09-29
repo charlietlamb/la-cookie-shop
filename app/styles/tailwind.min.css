@@ -846,6 +846,18 @@ body {
   top: 100%;
 }
 
+.-bottom-\[80px\] {
+  bottom: -80px;
+}
+
+.-bottom-\[120px\] {
+  bottom: -120px;
+}
+
+.-bottom-\[110px\] {
+  bottom: -110px;
+}
+
 .\!z-50 {
   z-index: 50 !important;
 }
@@ -1284,16 +1296,16 @@ body {
   height: 100px;
 }
 
-.h-\[10px\] {
-  height: 10px;
-}
-
 .h-\[1px\] {
   height: 1px;
 }
 
 .h-\[300px\] {
   height: 300px;
+}
+
+.h-\[380px\] {
+  height: 380px;
 }
 
 .h-\[400px\] {
@@ -1325,18 +1337,6 @@ body {
   height: 1px;
 }
 
-.h-\[50px\] {
-  height: 50px;
-}
-
-.h-\[200px\] {
-  height: 200px;
-}
-
-.h-\[500px\] {
-  height: 500px;
-}
-
 .max-h-96 {
   max-height: 24rem;
 }
@@ -1347,6 +1347,26 @@ body {
 
 .max-h-screen {
   max-height: 100vh;
+}
+
+.max-h-\[600px\] {
+  max-height: 600px;
+}
+
+.max-h-\[800px\] {
+  max-height: 800px;
+}
+
+.max-h-\[900px\] {
+  max-height: 900px;
+}
+
+.max-h-\[700px\] {
+  max-height: 700px;
+}
+
+.max-h-\[500px\] {
+  max-height: 500px;
 }
 
 .min-h-20 {
@@ -1429,8 +1449,16 @@ body {
   width: 10rem;
 }
 
+.w-48 {
+  width: 12rem;
+}
+
 .w-5 {
   width: 1.25rem;
+}
+
+.w-52 {
+  width: 13rem;
 }
 
 .w-6 {
@@ -1496,6 +1524,10 @@ body {
 
 .w-px {
   width: 1px;
+}
+
+.w-\[90\%\] {
+  width: 90%;
 }
 
 .min-w-0 {
@@ -2243,6 +2275,10 @@ body {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
+.bg-black\/10 {
+  background-color: rgb(0 0 0 / 0.1);
+}
+
 .bg-black\/50 {
   background-color: rgb(0 0 0 / 0.5);
 }
@@ -2325,10 +2361,6 @@ body {
 .bg-sand {
   --tw-bg-opacity: 1;
   background-color: rgb(211 191 148 / var(--tw-bg-opacity));
-}
-
-.bg-sand\/30 {
-  background-color: rgb(211 191 148 / 0.3);
 }
 
 .bg-sandDark {
@@ -2727,6 +2759,10 @@ body {
   font-size: 0.8rem;
 }
 
+.text-\[32px\] {
+  font-size: 32px;
+}
+
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -2752,12 +2788,20 @@ body {
   line-height: 1rem;
 }
 
+.font-\[100\] {
+  font-weight: 100;
+}
+
 .font-\[200\] {
   font-weight: 200;
 }
 
 .font-bold {
   font-weight: 700;
+}
+
+.font-extralight {
+  font-weight: 200;
 }
 
 .font-light {
@@ -2774,10 +2818,6 @@ body {
 
 .font-semibold {
   font-weight: 600;
-}
-
-.font-extralight {
-  font-weight: 200;
 }
 
 .uppercase {
@@ -2881,6 +2921,11 @@ body {
   color: rgb(107 114 128 / var(--tw-text-opacity));
 }
 
+.text-light {
+  --tw-text-opacity: 1;
+  color: rgb(252 248 241 / var(--tw-text-opacity));
+}
+
 .text-muted-foreground {
   color: hsl(var(--muted-foreground));
 }
@@ -2929,11 +2974,6 @@ body {
 .text-yellow-400 {
   --tw-text-opacity: 1;
   color: rgb(250 204 21 / var(--tw-text-opacity));
-}
-
-.text-light {
-  --tw-text-opacity: 1;
-  color: rgb(252 248 241 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -3316,6 +3356,35 @@ body {
   .title-size {
     font-size: 6rem;
     line-height: 1;
+  }
+}
+
+.sub-size {
+  font-size: 32px;
+}
+
+@media (min-width: 768px) {
+  .sub-size {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  .sub-size {
+    font-size: 44px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .sub-size {
+    font-size: 52px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .sub-size {
+    font-size: 60px;
   }
 }
 
@@ -4704,6 +4773,18 @@ mux-player {
     height: 3rem;
   }
 
+  .md\:max-h-\[500px\] {
+    max-height: 500px;
+  }
+
+  .md\:max-h-\[600px\] {
+    max-height: 600px;
+  }
+
+  .md\:max-h-\[700px\] {
+    max-height: 700px;
+  }
+
   .md\:w-1\/2 {
     width: 50%;
   }
@@ -4784,10 +4865,6 @@ mux-player {
     gap: 2rem;
   }
 
-  .md\:gap-10 {
-    gap: 2.5rem;
-  }
-
   .md\:whitespace-nowrap {
     white-space: nowrap;
   }
@@ -4811,12 +4888,12 @@ mux-player {
     padding-bottom: 4rem;
   }
 
-  .md\:pt-\[60px\] {
-    padding-top: 60px;
-  }
-
   .md\:pl-3 {
     padding-left: 0.75rem;
+  }
+
+  .md\:pt-\[60px\] {
+    padding-top: 60px;
   }
 
   .md\:text-2xl {
@@ -4864,12 +4941,12 @@ mux-player {
     height: 3.5rem;
   }
 
-  .lg\:w-1\/2 {
-    width: 50%;
+  .lg\:max-h-\[700px\] {
+    max-height: 700px;
   }
 
-  .lg\:w-1\/3 {
-    width: 33.333333%;
+  .lg\:w-1\/2 {
+    width: 50%;
   }
 
   .lg\:w-2\/3 {
@@ -4880,12 +4957,12 @@ mux-player {
     width: 220px;
   }
 
-  .lg\:w-\[80\%\] {
-    width: 80%;
-  }
-
   .lg\:w-\[25\%\] {
     width: 25%;
+  }
+
+  .lg\:w-\[80\%\] {
+    width: 80%;
   }
 
   .lg\:grid-cols-4 {
@@ -4937,6 +5014,10 @@ mux-player {
   .lg\:text-7xl {
     font-size: 4.5rem;
     line-height: 1;
+  }
+
+  .lg\:text-\[44px\] {
+    font-size: 44px;
   }
 
   .lg\:text-lg {
@@ -5011,6 +5092,10 @@ mux-player {
     line-height: 1;
   }
 
+  .xl\:text-\[52px\] {
+    font-size: 52px;
+  }
+
   .xl\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
@@ -5060,6 +5145,10 @@ mux-player {
   .\32xl\:text-9xl {
     font-size: 8rem;
     line-height: 1;
+  }
+
+  .\32xl\:text-\[60px\] {
+    font-size: 60px;
   }
 }
 

@@ -6,7 +6,7 @@ export default function Info({infoRef}: {infoRef: RefObject<HTMLDivElement>}) {
   return (
     <div
       ref={infoRef}
-      className="padding-main md:flex-row text-dark bg-light flex flex-col items-stretch gap-4 py-16"
+      className="padding-main text-dark bg-light md:grid-cols-2 grid grid-cols-1 gap-4 py-16"
     >
       <InfoText />
       <InfoGif />

@@ -1,7 +1,7 @@
 import {motion} from 'framer-motion';
 
 export default function HeroContent() {
-  const text = 'American Style Cookies crafted by our European Patisserie';
+  const text = 'Patisserie Inspired Twists on the Classic American Cookie';
   const words = text.split(' ');
   let i = 0;
 
@@ -32,7 +32,7 @@ export default function HeroContent() {
         ))}
       </div>
       <h1 className="absolute opacity-0 pointer-events-none">
-        American Style Cookies crafted by our European Patisserie
+        Patisserie Inspired Twists on the Classic American Cookie
       </h1>
     </>
   );

@@ -6,7 +6,7 @@ export default function HeaderPopoverContent() {
       <HeaderPopoverContentItem
         to="/story"
         title="Our story"
-        image="/images/cookie-mag-tea.jpeg"
+        image="/images/cookies.jpeg"
         index={0}
       />
       <HeaderPopoverContentItem
@@ -24,7 +24,7 @@ export default function HeaderPopoverContent() {
       <HeaderPopoverContentItem
         to="/blogs"
         title="Blog"
-        image="/images/cookies-mag.jpeg"
+        image="/images/cookie-tea.jpeg"
         index={3}
       />
       <HeaderPopoverContentItem

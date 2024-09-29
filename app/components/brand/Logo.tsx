@@ -4,7 +4,7 @@ export default function Logo({className}: {className?: string}) {
   return (
     <div
       className={cn(
-        'font-cardo text-dark flex flex-col items-center justify-center w-40',
+        'font-cardo text-dark flex flex-col items-center justify-center w-52',
         className,
       )}
     >

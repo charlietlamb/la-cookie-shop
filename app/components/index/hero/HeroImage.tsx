@@ -14,7 +14,7 @@ export default function HeroImage({
       transition={{duration: 1, delay: 0.2}}
       className="md:w-[400px] w-[300px] aspect-square flex items-center justify-center absolute -bottom-[100px] z-10 overflow-hidden rounded-full"
     >
-      <div className="bg-sand/30 absolute inset-0" />
+      <div className="bg-black/10 absolute inset-0" />
       <div className="absolute inset-0 z-20 flex flex-col items-center justify-end py-8">
         <div
           onClick={() => infoRef.current?.scrollIntoView({behavior: 'smooth'})}

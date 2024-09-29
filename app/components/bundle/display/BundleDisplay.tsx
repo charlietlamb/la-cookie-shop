@@ -28,7 +28,7 @@ export default function BundleDisplay() {
               transition={{duration: 0.6}}
             >
               <svg
-                className=" h-ful absolute w-full"
+                className="absolute w-[90%]"
                 viewBox="0 0 200 200"
                 xmlns="http://www.w3.org/2000/svg"
               >
